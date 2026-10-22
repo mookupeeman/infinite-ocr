@@ -1,0 +1,1466 @@
+{
+ "google/gemini-3.1-flash-lite": {
+  "cell": {
+   "questions": 274,
+   "answered": 274,
+   "reading_right": 114,
+   "final_right": 116,
+   "before_right": 97,
+   "made_worse": 35,
+   "fixed": 54,
+   "final_right_scanned": [
+    99,
+    217
+   ],
+   "final_right_born_digital": [
+    17,
+    57
+   ],
+   "final_right_boxed": [
+    54,
+    114
+   ],
+   "final_right_not_boxed": [
+    62,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 121,
+   "answered": 121,
+   "reading_right": 54,
+   "final_right": 54,
+   "before_right": 86,
+   "made_worse": 32,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 4,
+   "false_flags": 32,
+   "final_right_scanned": [
+    30,
+    55
+   ],
+   "final_right_born_digital": [
+    24,
+    66
+   ],
+   "final_right_boxed": [
+    48,
+    115
+   ],
+   "final_right_not_boxed": [
+    6,
+    6
+   ]
+  },
+  "cost_inr": 4.285,
+  "by_lang": {
+   "bn": [
+    44,
+    121
+   ],
+   "en": [
+    30,
+    30
+   ],
+   "hi": [
+    19,
+    36
+   ],
+   "mr": [
+    28,
+    37
+   ],
+   "ta": [
+    34,
+    121
+   ],
+   "te": [
+    15,
+    50
+   ]
+  },
+  "wall_s": 103.6
+ },
+ "anthropic/claude-haiku-5.5": {
+  "cell": {
+   "questions": 274,
+   "answered": 274,
+   "reading_right": 104,
+   "final_right": 101,
+   "before_right": 97,
+   "made_worse": 38,
+   "fixed": 42,
+   "final_right_scanned": [
+    85,
+    217
+   ],
+   "final_right_born_digital": [
+    16,
+    57
+   ],
+   "final_right_boxed": [
+    39,
+    114
+   ],
+   "final_right_not_boxed": [
+    62,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 121,
+   "answered": 121,
+   "reading_right": 50,
+   "final_right": 50,
+   "before_right": 86,
+   "made_worse": 36,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 13,
+   "false_flags": 36,
+   "final_right_scanned": [
+    29,
+    55
+   ],
+   "final_right_born_digital": [
+    21,
+    66
+   ],
+   "final_right_boxed": [
+    48,
+    115
+   ],
+   "final_right_not_boxed": [
+    2,
+    6
+   ]
+  },
+  "cost_inr": 1.76,
+  "by_lang": {
+   "bn": [
+    47,
+    121
+   ],
+   "en": [
+    29,
+    30
+   ],
+   "hi": [
+    13,
+    36
+   ],
+   "mr": [
+    27,
+    37
+   ],
+   "ta": [
+    25,
+    121
+   ],
+   "te": [
+    10,
+    50
+   ]
+  },
+  "wall_s": 127.5
+ },
+ "openai/gpt-5.6-luna": {
+  "cell": {
+   "questions": 274,
+   "answered": 274,
+   "reading_right": 119,
+   "final_right": 119,
+   "before_right": 97,
+   "made_worse": 20,
+   "fixed": 42,
+   "final_right_scanned": [
+    92,
+    217
+   ],
+   "final_right_born_digital": [
+    27,
+    57
+   ],
+   "final_right_boxed": [
+    52,
+    114
+   ],
+   "final_right_not_boxed": [
+    67,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 121,
+   "answered": 121,
+   "reading_right": 39,
+   "final_right": 39,
+   "before_right": 86,
+   "made_worse": 47,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 20,
+   "false_flags": 47,
+   "final_right_scanned": [
+    20,
+    55
+   ],
+   "final_right_born_digital": [
+    19,
+    66
+   ],
+   "final_right_boxed": [
+    38,
+    115
+   ],
+   "final_right_not_boxed": [
+    1,
+    6
+   ]
+  },
+  "cost_inr": 5.542,
+  "by_lang": {
+   "bn": [
+    55,
+    121
+   ],
+   "en": [
+    29,
+    30
+   ],
+   "hi": [
+    10,
+    36
+   ],
+   "mr": [
+    18,
+    37
+   ],
+   "ta": [
+    33,
+    121
+   ],
+   "te": [
+    13,
+    50
+   ]
+  },
+  "wall_s": 370.7
+ },
+ "google/gemini-3.8-flash": {
+  "cell": {
+   "questions": 274,
+   "answered": 274,
+   "reading_right": 138,
+   "final_right": 136,
+   "before_right": 97,
+   "made_worse": 30,
+   "fixed": 69,
+   "final_right_scanned": [
+    111,
+    217
+   ],
+   "final_right_born_digital": [
+    25,
+    57
+   ],
+   "final_right_boxed": [
+    57,
+    114
+   ],
+   "final_right_not_boxed": [
+    79,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 121,
+   "answered": 112,
+   "reading_right": 63,
+   "final_right": 63,
+   "before_right": 86,
+   "made_worse": 23,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 3,
+   "false_flags": 14,
+   "final_right_scanned": [
+    40,
+    55
+   ],
+   "final_right_born_digital": [
+    23,
+    66
+   ],
+   "final_right_boxed": [
+    57,
+    115
+   ],
+   "final_right_not_boxed": [
+    6,
+    6
+   ]
+  },
+  "cost_inr": 12.651,
+  "by_lang": {
+   "bn": [
+    61,
+    121
+   ],
+   "en": [
+    30,
+    30
+   ],
+   "hi": [
+    20,
+    36
+   ],
+   "mr": [
+    25,
+    37
+   ],
+   "ta": [
+    39,
+    121
+   ],
+   "te": [
+    24,
+    50
+   ]
+  },
+  "wall_s": 209.7
+ },
+ "anthropic/claude-sonnet-5.5": {
+  "cell": {
+   "questions": 274,
+   "answered": 274,
+   "reading_right": 126,
+   "final_right": 126,
+   "before_right": 97,
+   "made_worse": 34,
+   "fixed": 63,
+   "final_right_scanned": [
+    101,
+    217
+   ],
+   "final_right_born_digital": [
+    25,
+    57
+   ],
+   "final_right_boxed": [
+    49,
+    114
+   ],
+   "final_right_not_boxed": [
+    77,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 121,
+   "answered": 121,
+   "reading_right": 80,
+   "final_right": 80,
+   "before_right": 86,
+   "made_worse": 6,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 12,
+   "false_flags": 6,
+   "final_right_scanned": [
+    38,
+    55
+   ],
+   "final_right_born_digital": [
+    42,
+    66
+   ],
+   "final_right_boxed": [
+    75,
+    115
+   ],
+   "final_right_not_boxed": [
+    5,
+    6
+   ]
+  },
+  "cost_inr": 35.318,
+  "by_lang": {
+   "bn": [
+    60,
+    121
+   ],
+   "en": [
+    30,
+    30
+   ],
+   "hi": [
+    18,
+    36
+   ],
+   "mr": [
+    27,
+    37
+   ],
+   "ta": [
+    31,
+    121
+   ],
+   "te": [
+    40,
+    50
+   ]
+  },
+  "wall_s": 164.4
+ },
+ "qwen/qwen3.8-27b qwen/qwen3.5-397b-a17b deepseek/deepseek-v4.1-flash-1017 meta/muse-spark-open nvidia/nemotron-3.5-super-vl z-ai/glm-5.3-flash xiaomi/mimo-v2.6-pro google/gemma-4-31b-it-trial": {
+  "cell": {
+   "questions": 8,
+   "answered": 0,
+   "reading_right": 0,
+   "final_right": 0,
+   "before_right": 8,
+   "made_worse": 8,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    0,
+    8
+   ],
+   "final_right_boxed": [
+    0,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.0,
+  "by_lang": {
+   "ta": [
+    0,
+    8
+   ]
+  },
+  "wall_s": 1.0
+ },
+ "qwen/qwen3.8-27b-trial": {
+  "cell": {
+   "questions": 8,
+   "answered": 8,
+   "reading_right": 8,
+   "final_right": 8,
+   "before_right": 8,
+   "made_worse": 0,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    8,
+    8
+   ],
+   "final_right_boxed": [
+    8,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.084,
+  "by_lang": {
+   "ta": [
+    8,
+    8
+   ]
+  },
+  "wall_s": 5.0
+ },
+ "qwen/qwen3.5-397b-a17b-trial": {
+  "cell": {
+   "questions": 8,
+   "answered": 8,
+   "reading_right": 7,
+   "final_right": 7,
+   "before_right": 8,
+   "made_worse": 1,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    7,
+    8
+   ],
+   "final_right_boxed": [
+    7,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.112,
+  "by_lang": {
+   "ta": [
+    7,
+    8
+   ]
+  },
+  "wall_s": 11.9
+ },
+ "deepseek/deepseek-v4.1-flash-1017-trial": {
+  "cell": {
+   "questions": 8,
+   "answered": 8,
+   "reading_right": 0,
+   "final_right": 0,
+   "before_right": 8,
+   "made_worse": 8,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    0,
+    8
+   ],
+   "final_right_boxed": [
+    0,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.27,
+  "by_lang": {
+   "ta": [
+    0,
+    8
+   ]
+  },
+  "wall_s": 11.8
+ },
+ "meta/muse-spark-open-trial": {
+  "cell": {
+   "questions": 8,
+   "answered": 8,
+   "reading_right": 0,
+   "final_right": 0,
+   "before_right": 8,
+   "made_worse": 8,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    0,
+    8
+   ],
+   "final_right_boxed": [
+    0,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.422,
+  "by_lang": {
+   "ta": [
+    0,
+    8
+   ]
+  },
+  "wall_s": 7.3
+ },
+ "nvidia/nemotron-3.5-super-vl-trial": {
+  "cell": {
+   "questions": 8,
+   "answered": 8,
+   "reading_right": 8,
+   "final_right": 8,
+   "before_right": 8,
+   "made_worse": 0,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    8,
+    8
+   ],
+   "final_right_boxed": [
+    8,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.158,
+  "by_lang": {
+   "ta": [
+    8,
+    8
+   ]
+  },
+  "wall_s": 22.0
+ },
+ "z-ai/glm-5.3-flash-trial": {
+  "cell": {
+   "questions": 8,
+   "answered": 8,
+   "reading_right": 0,
+   "final_right": 0,
+   "before_right": 8,
+   "made_worse": 8,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    0,
+    8
+   ],
+   "final_right_boxed": [
+    0,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.03,
+  "by_lang": {
+   "ta": [
+    0,
+    8
+   ]
+  },
+  "wall_s": 2.6
+ },
+ "xiaomi/mimo-v2.6-pro-trial": {
+  "cell": {
+   "questions": 8,
+   "answered": 8,
+   "reading_right": 1,
+   "final_right": 1,
+   "before_right": 8,
+   "made_worse": 7,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    1,
+    8
+   ],
+   "final_right_boxed": [
+    1,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.332,
+  "by_lang": {
+   "ta": [
+    1,
+    8
+   ]
+  },
+  "wall_s": 52.5
+ },
+ "google/gemma-4-31b-it-trial": {
+  "cell": {
+   "questions": 8,
+   "answered": 8,
+   "reading_right": 8,
+   "final_right": 8,
+   "before_right": 8,
+   "made_worse": 0,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    8,
+    8
+   ],
+   "final_right_boxed": [
+    8,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.037,
+  "by_lang": {
+   "ta": [
+    8,
+    8
+   ]
+  },
+  "wall_s": 36.0
+ },
+ "openai/gpt-5.6-luna-A12rows": {
+  "cell": {
+   "questions": 268,
+   "answered": 268,
+   "reading_right": 113,
+   "final_right": 113,
+   "before_right": 91,
+   "made_worse": 20,
+   "fixed": 42,
+   "final_right_scanned": [
+    86,
+    211
+   ],
+   "final_right_born_digital": [
+    27,
+    57
+   ],
+   "final_right_boxed": [
+    46,
+    108
+   ],
+   "final_right_not_boxed": [
+    67,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 123,
+   "answered": 123,
+   "reading_right": 41,
+   "final_right": 41,
+   "before_right": 88,
+   "made_worse": 47,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 20,
+   "false_flags": 47,
+   "final_right_scanned": [
+    22,
+    57
+   ],
+   "final_right_born_digital": [
+    19,
+    66
+   ],
+   "final_right_boxed": [
+    40,
+    117
+   ],
+   "final_right_not_boxed": [
+    1,
+    6
+   ]
+  },
+  "cost_inr": 0.423,
+  "by_lang": {
+   "bn": [
+    55,
+    121
+   ],
+   "en": [
+    31,
+    32
+   ],
+   "hi": [
+    10,
+    36
+   ],
+   "mr": [
+    17,
+    36
+   ],
+   "ta": [
+    28,
+    116
+   ],
+   "te": [
+    13,
+    50
+   ]
+  },
+  "wall_s": 36.3
+ },
+ "google/gemini-3.1-flash-lite-A12rows": {
+  "cell": {
+   "questions": 268,
+   "answered": 268,
+   "reading_right": 107,
+   "final_right": 109,
+   "before_right": 91,
+   "made_worse": 36,
+   "fixed": 54,
+   "final_right_scanned": [
+    92,
+    211
+   ],
+   "final_right_born_digital": [
+    17,
+    57
+   ],
+   "final_right_boxed": [
+    47,
+    108
+   ],
+   "final_right_not_boxed": [
+    62,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 123,
+   "answered": 123,
+   "reading_right": 56,
+   "final_right": 56,
+   "before_right": 88,
+   "made_worse": 32,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 4,
+   "false_flags": 32,
+   "final_right_scanned": [
+    32,
+    57
+   ],
+   "final_right_born_digital": [
+    24,
+    66
+   ],
+   "final_right_boxed": [
+    50,
+    117
+   ],
+   "final_right_not_boxed": [
+    6,
+    6
+   ]
+  },
+  "cost_inr": 0.439,
+  "by_lang": {
+   "bn": [
+    44,
+    121
+   ],
+   "en": [
+    32,
+    32
+   ],
+   "hi": [
+    19,
+    36
+   ],
+   "mr": [
+    27,
+    36
+   ],
+   "ta": [
+    28,
+    116
+   ],
+   "te": [
+    15,
+    50
+   ]
+  },
+  "wall_s": 8.4
+ },
+ "openai/gpt-5.6-luna-B24cellchoose": {
+  "cell": {
+   "questions": 268,
+   "answered": 268,
+   "reading_right": 107,
+   "final_right": 107,
+   "before_right": 91,
+   "made_worse": 24,
+   "fixed": 40,
+   "final_right_scanned": [
+    84,
+    211
+   ],
+   "final_right_born_digital": [
+    23,
+    57
+   ],
+   "final_right_boxed": [
+    43,
+    108
+   ],
+   "final_right_not_boxed": [
+    64,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 123,
+   "answered": 123,
+   "reading_right": 38,
+   "final_right": 38,
+   "before_right": 88,
+   "made_worse": 50,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 19,
+   "false_flags": 50,
+   "final_right_scanned": [
+    19,
+    57
+   ],
+   "final_right_born_digital": [
+    19,
+    66
+   ],
+   "final_right_boxed": [
+    37,
+    117
+   ],
+   "final_right_not_boxed": [
+    1,
+    6
+   ]
+  },
+  "cost_inr": 3.95,
+  "by_lang": {
+   "bn": [
+    51,
+    121
+   ],
+   "en": [
+    30,
+    32
+   ],
+   "hi": [
+    11,
+    36
+   ],
+   "mr": [
+    16,
+    36
+   ],
+   "ta": [
+    27,
+    116
+   ],
+   "te": [
+    10,
+    50
+   ]
+  },
+  "wall_s": 98.1
+ },
+ "google/gemini-3.1-flash-lite-B24cellchoose": {
+  "cell": {
+   "questions": 268,
+   "answered": 101,
+   "reading_right": 34,
+   "final_right": 34,
+   "before_right": 91,
+   "made_worse": 66,
+   "fixed": 9,
+   "final_right_scanned": [
+    32,
+    211
+   ],
+   "final_right_born_digital": [
+    2,
+    57
+   ],
+   "final_right_boxed": [
+    28,
+    108
+   ],
+   "final_right_not_boxed": [
+    6,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 123,
+   "answered": 123,
+   "reading_right": 54,
+   "final_right": 54,
+   "before_right": 88,
+   "made_worse": 34,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 11,
+   "false_flags": 34,
+   "final_right_scanned": [
+    30,
+    57
+   ],
+   "final_right_born_digital": [
+    24,
+    66
+   ],
+   "final_right_boxed": [
+    48,
+    117
+   ],
+   "final_right_not_boxed": [
+    6,
+    6
+   ]
+  },
+  "cost_inr": 2.213,
+  "by_lang": {
+   "bn": [
+    2,
+    121
+   ],
+   "en": [
+    30,
+    32
+   ],
+   "hi": [
+    7,
+    36
+   ],
+   "mr": [
+    24,
+    36
+   ],
+   "ta": [
+    12,
+    116
+   ],
+   "te": [
+    13,
+    50
+   ]
+  },
+  "wall_s": 27.6
+ },
+ "openai/gpt-5.6-luna-C24cell": {
+  "cell": {
+   "questions": 268,
+   "answered": 268,
+   "reading_right": 110,
+   "final_right": 110,
+   "before_right": 91,
+   "made_worse": 14,
+   "fixed": 33,
+   "final_right_scanned": [
+    80,
+    211
+   ],
+   "final_right_born_digital": [
+    30,
+    57
+   ],
+   "final_right_boxed": [
+    50,
+    108
+   ],
+   "final_right_not_boxed": [
+    60,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 123,
+   "answered": 123,
+   "reading_right": 38,
+   "final_right": 38,
+   "before_right": 88,
+   "made_worse": 50,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 19,
+   "false_flags": 50,
+   "final_right_scanned": [
+    19,
+    57
+   ],
+   "final_right_born_digital": [
+    19,
+    66
+   ],
+   "final_right_boxed": [
+    37,
+    117
+   ],
+   "final_right_not_boxed": [
+    1,
+    6
+   ]
+  },
+  "cost_inr": 2.715,
+  "by_lang": {
+   "bn": [
+    50,
+    121
+   ],
+   "en": [
+    29,
+    32
+   ],
+   "hi": [
+    8,
+    36
+   ],
+   "mr": [
+    16,
+    36
+   ],
+   "ta": [
+    33,
+    116
+   ],
+   "te": [
+    12,
+    50
+   ]
+  },
+  "wall_s": 76.0
+ },
+ "google/gemini-3.1-flash-lite-C24cell": {
+  "cell": {
+   "questions": 268,
+   "answered": 268,
+   "reading_right": 115,
+   "final_right": 118,
+   "before_right": 91,
+   "made_worse": 27,
+   "fixed": 54,
+   "final_right_scanned": [
+    96,
+    211
+   ],
+   "final_right_born_digital": [
+    22,
+    57
+   ],
+   "final_right_boxed": [
+    41,
+    108
+   ],
+   "final_right_not_boxed": [
+    77,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 123,
+   "answered": 123,
+   "reading_right": 54,
+   "final_right": 54,
+   "before_right": 88,
+   "made_worse": 34,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 11,
+   "false_flags": 34,
+   "final_right_scanned": [
+    30,
+    57
+   ],
+   "final_right_born_digital": [
+    24,
+    66
+   ],
+   "final_right_boxed": [
+    48,
+    117
+   ],
+   "final_right_not_boxed": [
+    6,
+    6
+   ]
+  },
+  "cost_inr": 2.301,
+  "by_lang": {
+   "bn": [
+    57,
+    121
+   ],
+   "en": [
+    30,
+    32
+   ],
+   "hi": [
+    21,
+    36
+   ],
+   "mr": [
+    27,
+    36
+   ],
+   "ta": [
+    25,
+    116
+   ],
+   "te": [
+    12,
+    50
+   ]
+  },
+  "wall_s": 22.4
+ },
+ "google/gemini-3.5-flash-lite-smoke": {
+  "cell": {
+   "questions": 8,
+   "answered": 0,
+   "reading_right": 0,
+   "final_right": 0,
+   "before_right": 8,
+   "made_worse": 8,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    0,
+    8
+   ],
+   "final_right_boxed": [
+    0,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.0,
+  "by_lang": {
+   "ta": [
+    0,
+    8
+   ]
+  },
+  "wall_s": 1.3
+ },
+ "google/gemini-3.5-flash-lite-smoke-min": {
+  "cell": {
+   "questions": 8,
+   "answered": 8,
+   "reading_right": 0,
+   "final_right": 0,
+   "before_right": 8,
+   "made_worse": 8,
+   "fixed": 0,
+   "final_right_scanned": [
+    0,
+    0
+   ],
+   "final_right_born_digital": [
+    0,
+    8
+   ],
+   "final_right_boxed": [
+    0,
+    8
+   ],
+   "final_right_not_boxed": [
+    0,
+    0
+   ]
+  },
+  "cost_inr": 0.113,
+  "by_lang": {
+   "ta": [
+    0,
+    8
+   ]
+  },
+  "wall_s": 3.7
+ },
+ "google/gemini-3.5-flash-lite-min": {
+  "cell": {
+   "questions": 268,
+   "answered": 268,
+   "reading_right": 105,
+   "final_right": 105,
+   "before_right": 91,
+   "made_worse": 34,
+   "fixed": 48,
+   "final_right_scanned": [
+    87,
+    211
+   ],
+   "final_right_born_digital": [
+    18,
+    57
+   ],
+   "final_right_boxed": [
+    47,
+    108
+   ],
+   "final_right_not_boxed": [
+    58,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 123,
+   "answered": 123,
+   "reading_right": 51,
+   "final_right": 51,
+   "before_right": 88,
+   "made_worse": 37,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 9,
+   "false_flags": 37,
+   "final_right_scanned": [
+    29,
+    57
+   ],
+   "final_right_born_digital": [
+    22,
+    66
+   ],
+   "final_right_boxed": [
+    46,
+    117
+   ],
+   "final_right_not_boxed": [
+    5,
+    6
+   ]
+  },
+  "cost_inr": 5.98,
+  "by_lang": {
+   "bn": [
+    44,
+    121
+   ],
+   "en": [
+    30,
+    32
+   ],
+   "hi": [
+    15,
+    36
+   ],
+   "mr": [
+    24,
+    36
+   ],
+   "ta": [
+    27,
+    116
+   ],
+   "te": [
+    16,
+    50
+   ]
+  },
+  "wall_s": 49.3
+ },
+ "google/gemini-3.5-flash-lite-default": {
+  "cell": {
+   "questions": 268,
+   "answered": 268,
+   "reading_right": 100,
+   "final_right": 101,
+   "before_right": 91,
+   "made_worse": 37,
+   "fixed": 47,
+   "final_right_scanned": [
+    82,
+    211
+   ],
+   "final_right_born_digital": [
+    19,
+    57
+   ],
+   "final_right_boxed": [
+    47,
+    108
+   ],
+   "final_right_not_boxed": [
+    54,
+    160
+   ]
+  },
+  "audit": {
+   "questions": 123,
+   "answered": 123,
+   "reading_right": 55,
+   "final_right": 55,
+   "before_right": 88,
+   "made_worse": 33,
+   "fixed": 0,
+   "wrong_agreed": 35,
+   "caught": 9,
+   "false_flags": 33,
+   "final_right_scanned": [
+    32,
+    57
+   ],
+   "final_right_born_digital": [
+    23,
+    66
+   ],
+   "final_right_boxed": [
+    50,
+    117
+   ],
+   "final_right_not_boxed": [
+    5,
+    6
+   ]
+  },
+  "cost_inr": 6.14,
+  "by_lang": {
+   "bn": [
+    38,
+    121
+   ],
+   "en": [
+    32,
+    32
+   ],
+   "hi": [
+    18,
+    36
+   ],
+   "mr": [
+    24,
+    36
+   ],
+   "ta": [
+    29,
+    116
+   ],
+   "te": [
+    15,
+    50
+   ]
+  },
+  "wall_s": 42.9
+ }
+}

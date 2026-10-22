@@ -1,0 +1,22 @@
+.env
+cache/
+out/
+models/
+__pycache__
+.venv
+.DS_Store
+*.log
+*.pyc
+# validation sets: transferred by hand, not kept in git
+samples/val-*/
+samples/val-dataset-*.zip
+# benchmark render cache, rebuilt by bench/run_bench.py
+bench/work/
+.DS_Store
+*.log
+*.pyc
+# validation sets: transferred by hand, not kept in git
+samples/val-*/
+samples/val-dataset-*.zip
+# benchmark render cache, rebuilt by bench/run_bench.py
+bench/work/

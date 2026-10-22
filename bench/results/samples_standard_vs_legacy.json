@@ -1,0 +1,390 @@
+{
+ "union-receipt-budget-2026-27-hindi-9a598064": {
+  "legacy": {
+   "tables": "12->1",
+   "status": {},
+   "questions": {},
+   "joins": [
+    [
+     [
+      90,
+      91
+     ],
+     true
+    ],
+    [
+     [
+      91,
+      92
+     ],
+     true
+    ],
+    [
+     [
+      92,
+      93
+     ],
+     true
+    ],
+    [
+     [
+      93,
+      94
+     ],
+     true
+    ],
+    [
+     [
+      94,
+      95
+     ],
+     true
+    ],
+    [
+     [
+      95,
+      96
+     ],
+     true
+    ],
+    [
+     [
+      96,
+      97
+     ],
+     true
+    ],
+    [
+     [
+      97,
+      98
+     ],
+     true
+    ],
+    [
+     [
+      98,
+      99
+     ],
+     true
+    ],
+    [
+     [
+      99,
+      100
+     ],
+     true
+    ],
+    [
+     [
+      100,
+      101
+     ],
+     true
+    ]
+   ],
+   "cost_inr": 0.0
+  },
+  "standard": {
+   "tables": "12->1",
+   "status": {
+    "needs_review": 1
+   },
+   "questions": {
+    "cell": 28,
+    "audit": 30,
+    "structure": 4
+   },
+   "joins": [
+    [
+     [
+      90,
+      91
+     ],
+     true
+    ],
+    [
+     [
+      91,
+      92
+     ],
+     true
+    ],
+    [
+     [
+      92,
+      93
+     ],
+     true
+    ],
+    [
+     [
+      93,
+      94
+     ],
+     true
+    ],
+    [
+     [
+      94,
+      95
+     ],
+     true
+    ],
+    [
+     [
+      95,
+      96
+     ],
+     true
+    ],
+    [
+     [
+      96,
+      97
+     ],
+     true
+    ],
+    [
+     [
+      97,
+      98
+     ],
+     true
+    ],
+    [
+     [
+      98,
+      99
+     ],
+     true
+    ],
+    [
+     [
+      99,
+      100
+     ],
+     true
+    ],
+    [
+     [
+      100,
+      101
+     ],
+     true
+    ]
+   ],
+   "cost_inr": 3.6242,
+   "decided_by": {
+    "image:gpt-5.6-luna": 394,
+    "cosmetic": 12,
+    "single": 44,
+    "open": 56,
+    "agree": 24,
+    "text_layer": 2
+   },
+   "image_decisions_in_text_layer": {
+    "False": 175,
+    "True": 32
+   },
+   "page92_name": {
+    "reads": {
+     "sarvam": "घोमने-टांडी को 2/4 लेन",
+     "bodhan": "घोमन-टांडा की 2/4लेन"
+    },
+    "value": "घोमन-टांडा की 2/4लेन",
+    "by": "image:gpt-5.6-luna"
+   }
+  }
+ },
+ "marathi-fiscal-report-be40ab1b": {
+  "legacy": {
+   "tables": "8->8",
+   "status": {},
+   "questions": {},
+   "joins": [
+    [
+     [
+      1,
+      2
+     ],
+     false
+    ],
+    [
+     [
+      2,
+      3
+     ],
+     false
+    ],
+    [
+     [
+      4,
+      5
+     ],
+     false
+    ]
+   ],
+   "cost_inr": 0.0
+  },
+  "standard": {
+   "tables": "8->8",
+   "status": {
+    "needs_review": 5,
+    "verified": 2,
+    "repaired": 1
+   },
+   "questions": {
+    "structure": 3,
+    "cell": 12,
+    "audit": 9
+   },
+   "joins": [
+    [
+     [
+      1,
+      2
+     ],
+     false
+    ],
+    [
+     [
+      2,
+      3
+     ],
+     false
+    ],
+    [
+     [
+      4,
+      5
+     ],
+     false
+    ]
+   ],
+   "cost_inr": 2.3677,
+   "decided_by": {
+    "open": 12,
+    "image:gpt-5.6-luna": 173,
+    "agree": 11,
+    "cosmetic": 2
+   },
+   "image_decisions_in_text_layer": {
+    "False": 15,
+    "True": 3,
+    "None": 5
+   }
+  }
+ },
+ "economic-survey-2025-26-ch4-external-sec-8e0bbafe": {
+  "legacy": {
+   "tables": "3->1",
+   "status": {},
+   "questions": {},
+   "joins": [
+    [
+     [
+      16,
+      17
+     ],
+     true
+    ],
+    [
+     [
+      17,
+      18
+     ],
+     true
+    ]
+   ],
+   "cost_inr": 0.0
+  },
+  "standard": {
+   "tables": "3->1",
+   "status": {
+    "needs_review": 1
+   },
+   "questions": {
+    "audit": 2
+   },
+   "joins": [
+    [
+     [
+      16,
+      17
+     ],
+     true
+    ],
+    [
+     [
+      17,
+      18
+     ],
+     true
+    ]
+   ],
+   "cost_inr": 0.0856,
+   "decided_by": {
+    "agree": 1,
+    "cosmetic": 26,
+    "image:gpt-5.6-luna": 8
+   },
+   "image_decisions_in_text_layer": {
+    "False": 4
+   }
+  }
+ },
+ "ncert-class12-maths-hindi-ch6-9b638c42": {
+  "legacy": {
+   "tables": "4->4",
+   "status": {},
+   "questions": {},
+   "joins": [],
+   "cost_inr": 0.0
+  },
+  "standard": {
+   "tables": "4->4",
+   "status": {
+    "needs_review": 1,
+    "verified": 1,
+    "repaired": 2
+   },
+   "questions": {
+    "cell": 1
+   },
+   "joins": [],
+   "cost_inr": 0.1409,
+   "decided_by": {
+    "cosmetic": 9,
+    "open": 1,
+    "image:gpt-5.6-luna": 7
+   },
+   "image_decisions_in_text_layer": {}
+  }
+ },
+ "yojana-telugu-march-2025-b94f65f6": {
+  "legacy": {
+   "tables": "1->1",
+   "status": {},
+   "questions": {},
+   "joins": [],
+   "cost_inr": 0.0
+  },
+  "standard": {
+   "tables": "1->1",
+   "status": {
+    "needs_review": 1
+   },
+   "questions": {
+    "audit": 7
+   },
+   "joins": [],
+   "cost_inr": 0.0,
+   "decided_by": {
+    "agree": 7,
+    "cosmetic": 24
+   },
+   "image_decisions_in_text_layer": {}
+  }
+ }
+}

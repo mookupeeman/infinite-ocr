@@ -1,0 +1,20 @@
+{
+ "v1": {
+  "tally": {
+   "ruled digital exact": 73,
+   "ruled scan exact": 73,
+   "unruled digital no grid": 46,
+   "unruled scan no grid": 46
+  },
+  "misses": []
+ },
+ "v2": {
+  "tally": {
+   "ruled digital exact": 88,
+   "ruled scan exact": 88,
+   "unruled digital no grid": 40,
+   "unruled scan no grid": 40
+  },
+  "misses": []
+ }
+}

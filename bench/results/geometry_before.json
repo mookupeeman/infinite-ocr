@@ -1,0 +1,204 @@
+{
+ "v1": {
+  "tally": {
+   "ruled digital exact": 73,
+   "ruled scan exact": 73,
+   "unruled digital no grid": 46,
+   "unruled scan no grid": 46
+  },
+  "misses": []
+ },
+ "v2": {
+  "tally": {
+   "ruled digital exact": 88,
+   "ruled scan exact": 75,
+   "ruled scan wrong": 13,
+   "unruled digital no grid": 40,
+   "unruled scan no grid": 40
+  },
+  "misses": [
+   {
+    "case": "v2-hi-text-split-6000",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     14,
+     5
+    ],
+    "got": [
+     "rules",
+     14,
+     4
+    ]
+   },
+   {
+    "case": "v2-ta-mixed-split-6002",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     11,
+     6
+    ],
+    "got": [
+     "rules",
+     11,
+     5
+    ]
+   },
+   {
+    "case": "v2-bn-merged-split-6004",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     12,
+     6
+    ],
+    "got": [
+     "rules",
+     12,
+     5
+    ]
+   },
+   {
+    "case": "v2-en-sparse-split-6005",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     11,
+     6
+    ],
+    "got": [
+     "rules",
+     11,
+     5
+    ]
+   },
+   {
+    "case": "v2-bn-sparse-split_repeat-6014",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     19,
+     6
+    ],
+    "got": [
+     "rules",
+     19,
+     5
+    ]
+   },
+   {
+    "case": "v2-hi-text-split_cut-6020",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     5,
+     5
+    ],
+    "got": [
+     "rules",
+     5,
+     4
+    ]
+   },
+   {
+    "case": "v2-mr-dates-split_cut-6021",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     11,
+     4
+    ],
+    "got": [
+     "rules",
+     11,
+     3
+    ]
+   },
+   {
+    "case": "v2-ta-text-split_cut-6022",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     7,
+     5
+    ],
+    "got": [
+     "rules",
+     7,
+     4
+    ]
+   },
+   {
+    "case": "v2-te-dates-split_cut-6023",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     14,
+     4
+    ],
+    "got": [
+     "rules",
+     14,
+     3
+    ]
+   },
+   {
+    "case": "v2-en-dates-split_cut-6025",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     5,
+     4
+    ],
+    "got": [
+     "rules",
+     5,
+     3
+    ]
+   },
+   {
+    "case": "v2-mr-wide-two_tables-6051",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     6,
+     6
+    ],
+    "got": [
+     "rules",
+     6,
+     5
+    ]
+   },
+   {
+    "case": "v2-ta-text-two_tables-6052",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     13,
+     4
+    ],
+    "got": [
+     "rules",
+     13,
+     3
+    ]
+   },
+   {
+    "case": "v2-te-numeric-two_tables-6053",
+    "page": 2,
+    "kind": "scan",
+    "truth": [
+     9,
+     6
+    ],
+    "got": [
+     "rules",
+     9,
+     5
+    ]
+   }
+  ]
+ }
+}

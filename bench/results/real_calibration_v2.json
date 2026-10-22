@@ -1,0 +1,10609 @@
+{
+ "summary": {
+  "pages": 22,
+  "cells": 2562,
+  "detected": {
+   "sarvam": 22,
+   "bodhan": 22
+  },
+  "exact_pages": {
+   "sarvam": 10,
+   "bodhan": 11
+  },
+  "cells_all": {
+   "cells": 2544,
+   "sarvam_wrong": 225,
+   "bodhan_wrong": 174,
+   "union_error_rate": 0.1222,
+   "disagree": 223,
+   "shared_same": 16,
+   "both_wrong_different": 72,
+   "shared_share_of_errors": 0.0514,
+   "empty_when_truth_filled": 18
+  },
+  "cells_body": {
+   "cells": 2267,
+   "sarvam_wrong": 221,
+   "bodhan_wrong": 154,
+   "union_error_rate": 0.1266,
+   "disagree": 199,
+   "shared_same": 16,
+   "both_wrong_different": 72,
+   "shared_share_of_errors": 0.0557,
+   "empty_when_truth_filled": 17
+  },
+  "cells_header": {
+   "cells": 277,
+   "sarvam_wrong": 4,
+   "bodhan_wrong": 20,
+   "union_error_rate": 0.0866,
+   "disagree": 24,
+   "shared_same": 0,
+   "both_wrong_different": 0,
+   "shared_share_of_errors": 0.0,
+   "empty_when_truth_filled": 1
+  },
+  "cells_number": {
+   "cells": 1610,
+   "sarvam_wrong": 170,
+   "bodhan_wrong": 92,
+   "union_error_rate": 0.1242,
+   "disagree": 138,
+   "shared_same": 12,
+   "both_wrong_different": 50,
+   "shared_share_of_errors": 0.06,
+   "empty_when_truth_filled": 13
+  },
+  "cells_text": {
+   "cells": 657,
+   "sarvam_wrong": 51,
+   "bodhan_wrong": 62,
+   "union_error_rate": 0.1324,
+   "disagree": 61,
+   "shared_same": 4,
+   "both_wrong_different": 22,
+   "shared_share_of_errors": 0.046,
+   "empty_when_truth_filled": 4
+  },
+  "by_mode": {
+   "born-digital": {
+    "cells": 1452,
+    "sarvam_wrong": 15,
+    "bodhan_wrong": 16,
+    "union_error_rate": 0.0207,
+    "disagree": 29,
+    "shared_same": 0,
+    "both_wrong_different": 1,
+    "shared_share_of_errors": 0.0,
+    "empty_when_truth_filled": 2
+   },
+   "scanned": {
+    "cells": 1092,
+    "sarvam_wrong": 210,
+    "bodhan_wrong": 158,
+    "union_error_rate": 0.2573,
+    "disagree": 194,
+    "shared_same": 16,
+    "both_wrong_different": 71,
+    "shared_share_of_errors": 0.0569,
+    "empty_when_truth_filled": 16
+   }
+  },
+  "by_lang": {
+   "bn": {
+    "cells": 652,
+    "sarvam_wrong": 161,
+    "bodhan_wrong": 101,
+    "union_error_rate": 0.3083,
+    "disagree": 140,
+    "shared_same": 8,
+    "both_wrong_different": 53,
+    "shared_share_of_errors": 0.0398,
+    "empty_when_truth_filled": 18
+   },
+   "en": {
+    "cells": 224,
+    "sarvam_wrong": 0,
+    "bodhan_wrong": 2,
+    "union_error_rate": 0.0089,
+    "disagree": 2,
+    "shared_same": 0,
+    "both_wrong_different": 0,
+    "shared_share_of_errors": 0.0,
+    "empty_when_truth_filled": 0
+   },
+   "hi": {
+    "cells": 568,
+    "sarvam_wrong": 27,
+    "bodhan_wrong": 17,
+    "union_error_rate": 0.0634,
+    "disagree": 28,
+    "shared_same": 4,
+    "both_wrong_different": 4,
+    "shared_share_of_errors": 0.1111,
+    "empty_when_truth_filled": 0
+   },
+   "mr": {
+    "cells": 712,
+    "sarvam_wrong": 18,
+    "bodhan_wrong": 22,
+    "union_error_rate": 0.0435,
+    "disagree": 22,
+    "shared_same": 3,
+    "both_wrong_different": 6,
+    "shared_share_of_errors": 0.0968,
+    "empty_when_truth_filled": 0
+   },
+   "ta": {
+    "cells": 200,
+    "sarvam_wrong": 13,
+    "bodhan_wrong": 29,
+    "union_error_rate": 0.17,
+    "disagree": 26,
+    "shared_same": 0,
+    "both_wrong_different": 8,
+    "shared_share_of_errors": 0.0,
+    "empty_when_truth_filled": 0
+   },
+   "te": {
+    "cells": 188,
+    "sarvam_wrong": 6,
+    "bodhan_wrong": 3,
+    "union_error_rate": 0.0372,
+    "disagree": 5,
+    "shared_same": 1,
+    "both_wrong_different": 1,
+    "shared_share_of_errors": 0.1429,
+    "empty_when_truth_filled": 0
+   }
+  },
+  "structure": {
+   "sarvam": {
+    "tables": 22,
+    "rows_missing": 1,
+    "rows_extra": 0,
+    "cols_not_ok": 0,
+    "header_depth_off": 2,
+    "split_into_pieces": 0,
+    "uses_rowspan": 10,
+    "uses_colspan": 11
+   },
+   "bodhan": {
+    "tables": 22,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_not_ok": 1,
+    "header_depth_off": 0,
+    "split_into_pieces": 0,
+    "uses_rowspan": 9,
+    "uses_colspan": 10
+   }
+  },
+  "stage2_on_real": {
+   "legacy/born-digital": {
+    "tables": 11,
+    "exact": 8,
+    "accepted": 10,
+    "accepted_and_wrong": 2,
+    "needs_review": 0,
+    "needs_review_and_wrong": 0,
+    "cells": 1457,
+    "correct": 1440,
+    "questions": {
+     "cell": 0,
+     "audit": 0,
+     "structure": 0
+    }
+   },
+   "legacy/scanned": {
+    "tables": 9,
+    "exact": 1,
+    "accepted": 2,
+    "accepted_and_wrong": 2,
+    "needs_review": 0,
+    "needs_review_and_wrong": 0,
+    "cells": 1100,
+    "correct": 901,
+    "questions": {
+     "cell": 0,
+     "audit": 0,
+     "structure": 0
+    }
+   },
+   "standard/born-digital": {
+    "tables": 11,
+    "exact": 9,
+    "accepted": 7,
+    "accepted_and_wrong": 0,
+    "needs_review": 4,
+    "needs_review_and_wrong": 2,
+    "cells": 1457,
+    "correct": 1446,
+    "questions": {
+     "cell": 26,
+     "audit": 13,
+     "structure": 0
+    }
+   },
+   "standard/scanned": {
+    "tables": 9,
+    "exact": 1,
+    "accepted": 0,
+    "accepted_and_wrong": 0,
+    "needs_review": 9,
+    "needs_review_and_wrong": 8,
+    "cells": 1100,
+    "correct": 890,
+    "questions": {
+     "cell": 258,
+     "audit": 24,
+     "structure": 1
+    }
+   },
+   "standard+image/born-digital": {
+    "tables": 11,
+    "exact": 9,
+    "accepted": 7,
+    "accepted_and_wrong": 0,
+    "needs_review": 4,
+    "needs_review_and_wrong": 2,
+    "cells": 1457,
+    "correct": 1454,
+    "questions": {
+     "cell": 1,
+     "audit": 8,
+     "structure": 0
+    }
+   },
+   "standard+image/scanned": {
+    "tables": 9,
+    "exact": 1,
+    "accepted": 0,
+    "accepted_and_wrong": 0,
+    "needs_review": 9,
+    "needs_review_and_wrong": 8,
+    "cells": 1100,
+    "correct": 899,
+    "questions": {
+     "cell": 218,
+     "audit": 23,
+     "structure": 1
+    }
+   }
+  },
+  "joins_on_real/legacy": {
+   "tp": 2,
+   "fn": 0,
+   "fp": 0
+  },
+  "joins_on_real/standard": {
+   "tp": 2,
+   "fn": 0,
+   "fp": 0
+  },
+  "joins_on_real/standard+image": {
+   "tp": 2,
+   "fn": 0,
+   "fp": 0
+  },
+  "confusions": {
+   "sarvam": [
+    [
+     "९",
+     "१",
+     20
+    ],
+    [
+     "৫",
+     "০",
+     15
+    ],
+    [
+     "২",
+     "১",
+     12
+    ],
+    [
+     "৫",
+     "৩",
+     9
+    ],
+    [
+     "৪",
+     "",
+     9
+    ],
+    [
+     "৯",
+     "৬",
+     8
+    ],
+    [
+     "৬",
+     "",
+     7
+    ],
+    [
+     "",
+     "০",
+     6
+    ],
+    [
+     "",
+     "৫",
+     5
+    ],
+    [
+     "",
+     "৪",
+     5
+    ],
+    [
+     "",
+     "৩",
+     5
+    ],
+    [
+     "৬",
+     "১",
+     5
+    ],
+    [
+     "৬",
+     "৯",
+     5
+    ],
+    [
+     "ं",
+     "",
+     4
+    ],
+    [
+     "২",
+     "",
+     4
+    ],
+    [
+     "৯",
+     "",
+     4
+    ],
+    [
+     "১",
+     "",
+     4
+    ],
+    [
+     ",",
+     ".",
+     4
+    ],
+    [
+     "",
+     "২",
+     4
+    ],
+    [
+     "",
+     ",",
+     3
+    ],
+    [
+     "",
+     "১",
+     3
+    ],
+    [
+     "৪",
+     "৫",
+     3
+    ],
+    [
+     "৩",
+     "",
+     3
+    ],
+    [
+     "৮",
+     "",
+     3
+    ],
+    [
+     "",
+     ".",
+     3
+    ],
+    [
+     "९",
+     "",
+     2
+    ],
+    [
+     "",
+     "१",
+     2
+    ],
+    [
+     "",
+     "ं",
+     2
+    ],
+    [
+     "",
+     "৬",
+     2
+    ],
+    [
+     "০",
+     "৩",
+     2
+    ],
+    [
+     "৬",
+     "৫",
+     2
+    ],
+    [
+     "৪",
+     "২",
+     2
+    ],
+    [
+     "৯",
+     "০",
+     2
+    ],
+    [
+     "াঁধ",
+     "ীথ",
+     2
+    ],
+    [
+     "৩",
+     "৬",
+     2
+    ],
+    [
+     "यी",
+     "ई",
+     2
+    ],
+    [
+     "ன்",
+     "",
+     2
+    ],
+    [
+     "ள",
+     "ன",
+     2
+    ],
+    [
+     "ந",
+     "த",
+     2
+    ],
+    [
+     "",
+     "৯",
+     2
+    ],
+    [
+     "",
+     ":",
+     1
+    ],
+    [
+     "",
+     "२.",
+     1
+    ],
+    [
+     ".९",
+     "",
+     1
+    ],
+    [
+     "इ",
+     "ठ",
+     1
+    ],
+    [
+     "१",
+     "२",
+     1
+    ],
+    [
+     "़",
+     "",
+     1
+    ],
+    [
+     "६",
+     "१",
+     1
+    ],
+    [
+     "७",
+     "०",
+     1
+    ],
+    [
+     "ँ",
+     "ं",
+     1
+    ],
+    [
+     "९९",
+     "११",
+     1
+    ],
+    [
+     "१",
+     "५",
+     1
+    ],
+    [
+     "१०",
+     "२0",
+     1
+    ],
+    [
+     "6",
+     "8",
+     1
+    ],
+    [
+     "्त",
+     "",
+     1
+    ],
+    [
+     "म",
+     "भ",
+     1
+    ],
+    [
+     "प",
+     "य",
+     1
+    ],
+    [
+     "6",
+     "4",
+     1
+    ],
+    [
+     "ळ",
+     "ख",
+     1
+    ],
+    [
+     "ल",
+     "झ",
+     1
+    ],
+    [
+     "श",
+     "स",
+     1
+    ]
+   ],
+   "bodhan": [
+    [
+     "৩",
+     "০",
+     27
+    ],
+    [
+     "৬",
+     "৯",
+     22
+    ],
+    [
+     "২",
+     "১",
+     7
+    ],
+    [
+     "৬",
+     "১",
+     7
+    ],
+    [
+     "৫",
+     "০",
+     7
+    ],
+    [
+     "९",
+     "१",
+     5
+    ],
+    [
+     "",
+     "৯",
+     5
+    ],
+    [
+     "ஏ",
+     "எ",
+     5
+    ],
+    [
+     "ं",
+     "",
+     4
+    ],
+    [
+     "৬",
+     "",
+     4
+    ],
+    [
+     "र",
+     "स",
+     3
+    ],
+    [
+     "क",
+     "ष",
+     3
+    ],
+    [
+     "",
+     "অনু",
+     3
+    ],
+    [
+     "ট",
+     "দিত",
+     3
+    ],
+    [
+     "ন",
+     "ণ",
+     3
+    ],
+    [
+     "দ",
+     "ম",
+     3
+    ],
+    [
+     "டி",
+     "யர்",
+     3
+    ],
+    [
+     "த",
+     "",
+     3
+    ],
+    [
+     "டி",
+     "ய",
+     3
+    ],
+    [
+     "१",
+     "२",
+     2
+    ],
+    [
+     "ु",
+     "ू",
+     2
+    ],
+    [
+     "ो",
+     "ी",
+     2
+    ],
+    [
+     "ों",
+     "ाँ",
+     2
+    ],
+    [
+     "श",
+     "स",
+     2
+    ],
+    [
+     "৬",
+     "৫",
+     2
+    ],
+    [
+     "",
+     "মো",
+     2
+    ],
+    [
+     "াকা",
+     "",
+     2
+    ],
+    [
+     "৯",
+     "৬",
+     2
+    ],
+    [
+     "াঁ",
+     "ী",
+     2
+    ],
+    [
+     "৬৫",
+     "৯০",
+     2
+    ],
+    [
+     "ய",
+     "ப்ப",
+     2
+    ],
+    [
+     "வ",
+     "ல",
+     2
+    ],
+    [
+     "१",
+     "९",
+     1
+    ],
+    [
+     "च",
+     "ध",
+     1
+    ],
+    [
+     "ँ",
+     "ं",
+     1
+    ],
+    [
+     "",
+     ".",
+     1
+    ],
+    [
+     "घ",
+     "ध",
+     1
+    ],
+    [
+     "अ",
+     "क्र",
+     1
+    ],
+    [
+     "प",
+     "त्",
+     1
+    ],
+    [
+     "1",
+     "9",
+     1
+    ],
+    [
+     "",
+     "1",
+     1
+    ],
+    [
+     "य",
+     "ईच",
+     1
+    ],
+    [
+     "म",
+     "भ",
+     1
+    ],
+    [
+     "प",
+     "षा",
+     1
+    ],
+    [
+     "6",
+     "4",
+     1
+    ],
+    [
+     "न",
+     "व",
+     1
+    ],
+    [
+     "य",
+     "ष",
+     1
+    ],
+    [
+     "ळ",
+     "ख",
+     1
+    ],
+    [
+     "व",
+     "ध",
+     1
+    ],
+    [
+     "ध",
+     "",
+     1
+    ],
+    [
+     "",
+     "प",
+     1
+    ],
+    [
+     "य",
+     "पं",
+     1
+    ],
+    [
+     "ार",
+     "त",
+     1
+    ],
+    [
+     "1",
+     "7",
+     1
+    ],
+    [
+     "6",
+     "8",
+     1
+    ],
+    [
+     "तू",
+     "",
+     1
+    ],
+    [
+     "ब",
+     "घ",
+     1
+    ],
+    [
+     "लब",
+     "टण",
+     1
+    ],
+    [
+     "I",
+     "i",
+     1
+    ],
+    [
+     "8",
+     "6",
+     1
+    ]
+   ]
+  }
+ },
+ "pages": [
+  {
+   "case": "v2-hi-wide-single-5006",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "hi",
+   "kind": "wide",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 13,
+   "truth_cols": 10,
+   "truth_header_rows": 3,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": true,
+    "rows": 13,
+    "cols": 10,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": true,
+    "rows": 13,
+    "cols": 10,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-hi-wide-single-5006",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "hi",
+   "kind": "wide",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 13,
+   "truth_cols": 10,
+   "truth_header_rows": 3,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": false,
+    "rows": 13,
+    "cols": 10,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9606,
+    "teds_s": 0.9926,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": false,
+    "rows": 13,
+    "cols": 10,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9754,
+    "teds_s": 0.9853,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-mr-wide-single-5016",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "mr",
+   "kind": "wide",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 13,
+   "truth_cols": 13,
+   "truth_header_rows": 3,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": true,
+    "rows": 13,
+    "cols": 13,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": true,
+    "rows": 13,
+    "cols": 13,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-mr-wide-single-5016",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "mr",
+   "kind": "wide",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 13,
+   "truth_cols": 13,
+   "truth_header_rows": 3,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "page-number",
+     "paragraph",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": false,
+    "rows": 13,
+    "cols": 13,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9957,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": false,
+    "rows": 13,
+    "cols": 13,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9794,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-en-wide-single-5056",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "en",
+   "kind": "wide",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 12,
+   "truth_cols": 10,
+   "truth_header_rows": 3,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 0,
+    "detected": true,
+    "exact": true,
+    "rows": 12,
+    "cols": 10,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": true
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": true,
+    "rows": 12,
+    "cols": 10,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-en-wide-single-5056",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "en",
+   "kind": "wide",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 12,
+   "truth_cols": 10,
+   "truth_header_rows": 3,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 0,
+    "detected": true,
+    "exact": true,
+    "rows": 12,
+    "cols": 10,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9841,
+    "teds_s": 0.9841,
+    "header_depth_off": true
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": false,
+    "rows": 12,
+    "cols": 10,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9987,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-bn-wide-single-5046",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "bn",
+   "kind": "wide",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 17,
+   "truth_cols": 13,
+   "truth_header_rows": 3,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": false,
+    "rows": 17,
+    "cols": 13,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9817,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": false,
+    "rows": 17,
+    "cols": 15,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": false,
+    "teds": 0.9073,
+    "teds_s": 0.9073,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-bn-wide-single-5046",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "bn",
+   "kind": "wide",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 17,
+   "truth_cols": 13,
+   "truth_header_rows": 3,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": false,
+    "rows": 17,
+    "cols": 13,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.8876,
+    "teds_s": 0.9651,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 3,
+    "detected": true,
+    "exact": false,
+    "rows": 17,
+    "cols": 13,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9636,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-hi-text-single-5000",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "hi",
+   "kind": "text",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 18,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 18,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 18,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-hi-text-single-5000",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "hi",
+   "kind": "text",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 18,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 18,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9991,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 18,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9917,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-mr-mixed-single-5012",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "mr",
+   "kind": "mixed",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 16,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 16,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9991,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 16,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9994,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-mr-mixed-single-5012",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "mr",
+   "kind": "mixed",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 16,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 16,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9916,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 16,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9972,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-ta-text-single-5020",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "ta",
+   "kind": "text",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 20,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 20,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 20,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-ta-text-single-5020",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "ta",
+   "kind": "text",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 20,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 20,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9906,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 20,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9745,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-te-numeric-single-5031",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "te",
+   "kind": "numeric",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 19,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 19,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 19,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-te-numeric-single-5031",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "te",
+   "kind": "numeric",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 19,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": true,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 19,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9734,
+    "teds_s": 0.9826,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 19,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9943,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-bn-merged-single-5044",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "bn",
+   "kind": "merged",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 22,
+   "truth_cols": 6,
+   "truth_header_rows": 2,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 2,
+    "detected": true,
+    "exact": false,
+    "rows": 22,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.8593,
+    "teds_s": 0.86,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 2,
+    "detected": true,
+    "exact": true,
+    "rows": 22,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.8667,
+    "teds_s": 0.8667,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-bn-merged-single-5044",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "bn",
+   "kind": "merged",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 22,
+   "truth_cols": 6,
+   "truth_header_rows": 2,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 2,
+    "detected": true,
+    "exact": false,
+    "rows": 21,
+    "cols": 6,
+    "rows_missing": 1,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.7298,
+    "teds_s": 0.8194,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 2,
+    "detected": true,
+    "exact": false,
+    "rows": 22,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9595,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-hi-numeric-split_repeat-6010",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "hi",
+   "kind": "numeric",
+   "style": "split_repeat",
+   "page": 1,
+   "truth_rows": 6,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 6,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 6,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-hi-numeric-split_repeat-6010",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "hi",
+   "kind": "numeric",
+   "style": "split_repeat",
+   "page": 2,
+   "truth_rows": 23,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 23,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 23,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-mr-numeric-split-6001",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "mr",
+   "kind": "numeric",
+   "style": "split",
+   "page": 1,
+   "truth_rows": 20,
+   "truth_cols": 7,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 20,
+    "cols": 7,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9994,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 20,
+    "cols": 7,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "v2-mr-numeric-split-6001",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "mr",
+   "kind": "numeric",
+   "style": "split",
+   "page": 2,
+   "truth_rows": 11,
+   "truth_cols": 7,
+   "truth_header_rows": 0,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 0,
+    "detected": true,
+    "exact": true,
+    "rows": 11,
+    "cols": 7,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 0,
+    "detected": true,
+    "exact": true,
+    "rows": 11,
+    "cols": 7,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  }
+ ],
+ "assembled": [
+  {
+   "case": {
+    "id": "v2-hi-wide-single-5006",
+    "lang": "hi",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 122,
+     "correct": 122,
+     "filled": 122,
+     "found": 122,
+     "by_kind": {
+      "header": [
+       22,
+       22
+      ],
+      "text": [
+       10,
+       10
+      ],
+      "number": [
+       90,
+       90
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-hi-wide-single-5006",
+    "lang": "hi",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 122,
+     "correct": 122,
+     "filled": 122,
+     "found": 122,
+     "by_kind": {
+      "header": [
+       22,
+       22
+      ],
+      "text": [
+       10,
+       10
+      ],
+      "number": [
+       90,
+       90
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-hi-wide-single-5006",
+    "lang": "hi",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 122,
+     "correct": 122,
+     "filled": 122,
+     "found": 122,
+     "by_kind": {
+      "header": [
+       22,
+       22
+      ],
+      "text": [
+       10,
+       10
+      ],
+      "number": [
+       90,
+       90
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-hi-wide-single-5006",
+    "lang": "hi",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 122,
+     "correct": 110,
+     "filled": 122,
+     "found": 110,
+     "by_kind": {
+      "header": [
+       22,
+       22
+      ],
+      "text": [
+       5,
+       10
+      ],
+      "number": [
+       83,
+       90
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9762,
+     "teds_s": 0.9853,
+     "wrong": [
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "text",
+       "truth": "कुल बिजली लंबीं प्रदत्त मध्य प्रांत",
+       "got": "कुल बिजली लंबी प्रदत्त मध्य प्रांत"
+      },
+      {
+       "row": 3,
+       "col": 5,
+       "kind": "number",
+       "truth": "७७१.९१",
+       "got": "७७२.९१"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "text",
+       "truth": "आइए रही डाला क्षण सिंचाई",
+       "got": "आइए रही डाला क्षण सिचाई"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "text",
+       "truth": "मानों बुलबुले गई अचर प्रति इनमें रुपये",
+       "got": "मानों बुलबुले गई अधर प्रति इनमें रूपये"
+      },
+      {
+       "row": 8,
+       "col": 7,
+       "kind": "number",
+       "truth": "९५,४९४.१०",
+       "got": "१५,४९४.१०"
+      },
+      {
+       "row": 8,
+       "col": 8,
+       "kind": "number",
+       "truth": "९६,२९५.४४",
+       "got": "१६,२९५.४४"
+      },
+      {
+       "row": 9,
+       "col": 2,
+       "kind": "text",
+       "truth": "आलेख चूँकि पाते वास्तविक करता",
+       "got": "आलेख चूंकि पाते वास्तविक करता"
+      },
+      {
+       "row": 9,
+       "col": 7,
+       "kind": "number",
+       "truth": "(९५.१८)",
+       "got": "(१५.१८)"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "८",
+       "got": "८."
+      },
+      {
+       "row": 11,
+       "col": 6,
+       "kind": "number",
+       "truth": "६१,२२०.७३",
+       "got": "६२,२२०.७३"
+      },
+      {
+       "row": 11,
+       "col": 9,
+       "kind": "number",
+       "truth": "१,५७,८९२.९०",
+       "got": "१,५७,८९२.१०"
+      },
+      {
+       "row": 12,
+       "col": 2,
+       "kind": "text",
+       "truth": "घन विद्यालय कुल इसके",
+       "got": "धन विद्यालय कुल इसके"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "checks_failed",
+     "unresolved_cells"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-hi-wide-single-5006",
+    "lang": "hi",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 26,
+      "audit": 3,
+      "structure": 0
+     },
+     "cells": 122,
+     "correct": 97,
+     "filled": 122,
+     "found": 97,
+     "by_kind": {
+      "header": [
+       21,
+       22
+      ],
+      "text": [
+       5,
+       10
+      ],
+      "number": [
+       71,
+       90
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9623,
+     "teds_s": 0.9926,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 2,
+       "kind": "header",
+       "truth": "३",
+       "got": "३:"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "text",
+       "truth": "कुल बिजली लंबीं प्रदत्त मध्य प्रांत",
+       "got": "कुल बिजली लंबी प्रदत्त मध्य प्रांत"
+      },
+      {
+       "row": 3,
+       "col": 5,
+       "kind": "number",
+       "truth": "७७१.९१",
+       "got": "७७२.११"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "text",
+       "truth": "आइए रही डाला क्षण सिंचाई",
+       "got": "आठए रही डाला क्षण सिचाई"
+      },
+      {
+       "row": 4,
+       "col": 5,
+       "kind": "number",
+       "truth": "४०,०४२.९७",
+       "got": "४०,०४२.१७"
+      },
+      {
+       "row": 4,
+       "col": 8,
+       "kind": "number",
+       "truth": "२६,३४१.७९",
+       "got": "२६,३४२.७९"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "text",
+       "truth": "चौड़ाई ऋणात्मक निम्नलिखित गति पहा उपयोग संख्याओं",
+       "got": "चौडाई ऋणात्मक निम्नलिखित गति पहा उपयोग संख्याओं"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "number",
+       "truth": "३५,९४७.९४",
+       "got": "३५,१४७.९४"
+      },
+      {
+       "row": 6,
+       "col": 7,
+       "kind": "number",
+       "truth": "६३,००७.३६",
+       "got": "६३,०००.३६"
+      },
+      {
+       "row": 7,
+       "col": 2,
+       "kind": "text",
+       "truth": "अभिप्राय कर्नाटक सकता संतत अवकलज अभीष्ट स्तर",
+       "got": "अभिप्राय कर्नाटक सकता संतत प्रयकलज अभीष्ट स्तर"
+      },
+      {
+       "row": 8,
+       "col": 7,
+       "kind": "number",
+       "truth": "९५,४९४.१०",
+       "got": "१५,४९४.१०"
+      },
+      {
+       "row": 8,
+       "col": 8,
+       "kind": "number",
+       "truth": "९६,२९५.४४",
+       "got": "१६,२१५.४४"
+      },
+      {
+       "row": 8,
+       "col": 9,
+       "kind": "number",
+       "truth": "९६,६१५.९७",
+       "got": "१६,६१५.१७"
+      },
+      {
+       "row": 9,
+       "col": 1,
+       "kind": "number",
+       "truth": "०३९१",
+       "got": "०३११"
+      },
+      {
+       "row": 9,
+       "col": 2,
+       "kind": "text",
+       "truth": "आलेख चूँकि पाते वास्तविक करता",
+       "got": "आलेख चूंकि पाते वास्तविक करता"
+      },
+      {
+       "row": 9,
+       "col": 7,
+       "kind": "number",
+       "truth": "(९५.१८)",
+       "got": "(१५.१८)"
+      },
+      {
+       "row": 9,
+       "col": 9,
+       "kind": "number",
+       "truth": "९९,९०६.३२",
+       "got": "११,१०६.३२"
+      },
+      {
+       "row": 10,
+       "col": 4,
+       "kind": "number",
+       "truth": "२४.९१",
+       "got": "२४.११"
+      },
+      {
+       "row": 10,
+       "col": 9,
+       "kind": "number",
+       "truth": "११,१३१.५९",
+       "got": "१५,१३१.५१"
+      },
+      {
+       "row": 11,
+       "col": 7,
+       "kind": "number",
+       "truth": "२७,९२६.१०",
+       "got": "२७,१२६.१०"
+      },
+      {
+       "row": 11,
+       "col": 9,
+       "kind": "number",
+       "truth": "१,५७,८९२.९०",
+       "got": "१,५७,८१२.१०"
+      },
+      {
+       "row": 12,
+       "col": 1,
+       "kind": "number",
+       "truth": "४१०३",
+       "got": "४२0३"
+      },
+      {
+       "row": 12,
+       "col": 5,
+       "kind": "number",
+       "truth": "७६,२४०.९०",
+       "got": "७६,२४०.१०"
+      },
+      {
+       "row": 12,
+       "col": 7,
+       "kind": "number",
+       "truth": "९२,२२१.२३",
+       "got": "१२,२२१.२३"
+      },
+      {
+       "row": 12,
+       "col": 8,
+       "kind": "number",
+       "truth": "९२,२३५.५०",
+       "got": "१२,२३५.५०"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-hi-wide-single-5006",
+    "lang": "hi",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 26,
+      "audit": 3,
+      "structure": 0
+     },
+     "cells": 122,
+     "correct": 97,
+     "filled": 122,
+     "found": 97,
+     "by_kind": {
+      "header": [
+       21,
+       22
+      ],
+      "text": [
+       5,
+       10
+      ],
+      "number": [
+       71,
+       90
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9623,
+     "teds_s": 0.9926,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 2,
+       "kind": "header",
+       "truth": "३",
+       "got": "३:"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "text",
+       "truth": "कुल बिजली लंबीं प्रदत्त मध्य प्रांत",
+       "got": "कुल बिजली लंबी प्रदत्त मध्य प्रांत"
+      },
+      {
+       "row": 3,
+       "col": 5,
+       "kind": "number",
+       "truth": "७७१.९१",
+       "got": "७७२.११"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "text",
+       "truth": "आइए रही डाला क्षण सिंचाई",
+       "got": "आठए रही डाला क्षण सिचाई"
+      },
+      {
+       "row": 4,
+       "col": 5,
+       "kind": "number",
+       "truth": "४०,०४२.९७",
+       "got": "४०,०४२.१७"
+      },
+      {
+       "row": 4,
+       "col": 8,
+       "kind": "number",
+       "truth": "२६,३४१.७९",
+       "got": "२६,३४२.७९"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "text",
+       "truth": "चौड़ाई ऋणात्मक निम्नलिखित गति पहा उपयोग संख्याओं",
+       "got": "चौडाई ऋणात्मक निम्नलिखित गति पहा उपयोग संख्याओं"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "number",
+       "truth": "३५,९४७.९४",
+       "got": "३५,१४७.९४"
+      },
+      {
+       "row": 6,
+       "col": 7,
+       "kind": "number",
+       "truth": "६३,००७.३६",
+       "got": "६३,०००.३६"
+      },
+      {
+       "row": 7,
+       "col": 2,
+       "kind": "text",
+       "truth": "अभिप्राय कर्नाटक सकता संतत अवकलज अभीष्ट स्तर",
+       "got": "अभिप्राय कर्नाटक सकता संतत प्रयकलज अभीष्ट स्तर"
+      },
+      {
+       "row": 8,
+       "col": 7,
+       "kind": "number",
+       "truth": "९५,४९४.१०",
+       "got": "१५,४९४.१०"
+      },
+      {
+       "row": 8,
+       "col": 8,
+       "kind": "number",
+       "truth": "९६,२९५.४४",
+       "got": "१६,२१५.४४"
+      },
+      {
+       "row": 8,
+       "col": 9,
+       "kind": "number",
+       "truth": "९६,६१५.९७",
+       "got": "१६,६१५.१७"
+      },
+      {
+       "row": 9,
+       "col": 1,
+       "kind": "number",
+       "truth": "०३९१",
+       "got": "०३११"
+      },
+      {
+       "row": 9,
+       "col": 2,
+       "kind": "text",
+       "truth": "आलेख चूँकि पाते वास्तविक करता",
+       "got": "आलेख चूंकि पाते वास्तविक करता"
+      },
+      {
+       "row": 9,
+       "col": 7,
+       "kind": "number",
+       "truth": "(९५.१८)",
+       "got": "(१५.१८)"
+      },
+      {
+       "row": 9,
+       "col": 9,
+       "kind": "number",
+       "truth": "९९,९०६.३२",
+       "got": "११,१०६.३२"
+      },
+      {
+       "row": 10,
+       "col": 4,
+       "kind": "number",
+       "truth": "२४.९१",
+       "got": "२४.११"
+      },
+      {
+       "row": 10,
+       "col": 9,
+       "kind": "number",
+       "truth": "११,१३१.५९",
+       "got": "१५,१३१.५१"
+      },
+      {
+       "row": 11,
+       "col": 7,
+       "kind": "number",
+       "truth": "२७,९२६.१०",
+       "got": "२७,१२६.१०"
+      },
+      {
+       "row": 11,
+       "col": 9,
+       "kind": "number",
+       "truth": "१,५७,८९२.९०",
+       "got": "१,५७,८१२.१०"
+      },
+      {
+       "row": 12,
+       "col": 1,
+       "kind": "number",
+       "truth": "४१०३",
+       "got": "४२0३"
+      },
+      {
+       "row": 12,
+       "col": 5,
+       "kind": "number",
+       "truth": "७६,२४०.९०",
+       "got": "७६,२४०.१०"
+      },
+      {
+       "row": 12,
+       "col": 7,
+       "kind": "number",
+       "truth": "९२,२२१.२३",
+       "got": "१२,२२१.२३"
+      },
+      {
+       "row": 12,
+       "col": 8,
+       "kind": "number",
+       "truth": "९२,२३५.५०",
+       "got": "१२,२३५.५०"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-mr-wide-single-5016",
+    "lang": "mr",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 159,
+     "correct": 159,
+     "filled": 159,
+     "found": 159,
+     "by_kind": {
+      "header": [
+       29,
+       29
+      ],
+      "text": [
+       12,
+       12
+      ],
+      "number": [
+       118,
+       118
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-mr-wide-single-5016",
+    "lang": "mr",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 159,
+     "correct": 159,
+     "filled": 159,
+     "found": 159,
+     "by_kind": {
+      "header": [
+       29,
+       29
+      ],
+      "text": [
+       12,
+       12
+      ],
+      "number": [
+       118,
+       118
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-mr-wide-single-5016",
+    "lang": "mr",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 159,
+     "correct": 159,
+     "filled": 159,
+     "found": 159,
+     "by_kind": {
+      "header": [
+       29,
+       29
+      ],
+      "text": [
+       12,
+       12
+      ],
+      "number": [
+       118,
+       118
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-mr-wide-single-5016",
+    "lang": "mr",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 159,
+     "correct": 142,
+     "filled": 159,
+     "found": 142,
+     "by_kind": {
+      "header": [
+       25,
+       29
+      ],
+      "text": [
+       2,
+       12
+      ],
+      "number": [
+       115,
+       118
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.981,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 0,
+       "col": 0,
+       "kind": "header",
+       "truth": "अ.क्र.",
+       "got": "क्र.क्र."
+      },
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "header",
+       "truth": "रक्कम",
+       "got": "सक्षम"
+      },
+      {
+       "row": 1,
+       "col": 6,
+       "kind": "header",
+       "truth": "रक्कम",
+       "got": "सक्षम"
+      },
+      {
+       "row": 1,
+       "col": 9,
+       "kind": "header",
+       "truth": "रक्कम",
+       "got": "सक्षम"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "text",
+       "truth": "फलन उपपत्ति",
+       "got": "फलन उत्पत्ति"
+      },
+      {
+       "row": 3,
+       "col": 6,
+       "kind": "number",
+       "truth": "91940.25",
+       "got": "99940.25"
+      },
+      {
+       "row": 3,
+       "col": 9,
+       "kind": "number",
+       "truth": "336.63",
+       "got": "1336.63"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "text",
+       "truth": "जा वीज लंबायीं",
+       "got": "जा वीज लंबाईची"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "text",
+       "truth": "टिप्पणी डाला पुन हो परिमाप",
+       "got": "टिप्पणी डाला पून ही परिभाषा"
+      },
+      {
+       "row": 5,
+       "col": 11,
+       "kind": "number",
+       "truth": "10563.16",
+       "got": "10543.16"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "text",
+       "truth": "गति नाशिक नियम राशियों आइए",
+       "got": "गति नाशिक विषम राशियाँ लढाई"
+      },
+      {
+       "row": 7,
+       "col": 2,
+       "kind": "text",
+       "truth": "शाळा की",
+       "got": "शाखा की"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "text",
+       "truth": "वर्धमान प्रति यथा तब करके भाग",
+       "got": "धर्मपान प्रति पंथा तब करके भाग"
+      },
+      {
+       "row": 9,
+       "col": 2,
+       "kind": "text",
+       "truth": "स्पष्ट गति जिससे दीवार",
+       "got": "स्पष्ट गति जिससे दीवत"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "text",
+       "truth": "जो झील महाराष्ट्र शेती वृत्ताकार",
+       "got": "जी झील महाराष्ट्र सेती इलाकार"
+      },
+      {
+       "row": 11,
+       "col": 2,
+       "kind": "text",
+       "truth": "अभीष्ट शंकु वाहतूक पृष्ठ बुलबुले धुळे",
+       "got": "अभीष्ट संकु यात्राहक पृष्ठ घुटणुले धुळे"
+      },
+      {
+       "row": 12,
+       "col": 2,
+       "kind": "text",
+       "truth": "होता संतत अवयव इकाई का रस्ता",
+       "got": "होता सतत अवयव इकाई का रस्ता"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "checks_failed",
+     "unresolved_cells"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-mr-wide-single-5016",
+    "lang": "mr",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 18,
+      "audit": 8,
+      "structure": 0
+     },
+     "cells": 159,
+     "correct": 149,
+     "filled": 159,
+     "found": 149,
+     "by_kind": {
+      "header": [
+       28,
+       29
+      ],
+      "text": [
+       5,
+       12
+      ],
+      "number": [
+       116,
+       118
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9957,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 0,
+       "col": 12,
+       "kind": "header",
+       "truth": "एकूण (6+9+12)",
+       "got": "एकूण (8+9+12)"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "text",
+       "truth": "फलन उपपत्ति",
+       "got": "फलन उपपति"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "text",
+       "truth": "टिप्पणी डाला पुन हो परिमाप",
+       "got": "टिप्पणी डाला पुन हो परिभाय"
+      },
+      {
+       "row": 5,
+       "col": 11,
+       "kind": "number",
+       "truth": "10563.16",
+       "got": "10543.16"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "text",
+       "truth": "गति नाशिक नियम राशियों आइए",
+       "got": "गति नाशिक नियम राशियो आइए"
+      },
+      {
+       "row": 7,
+       "col": 2,
+       "kind": "text",
+       "truth": "शाळा की",
+       "got": "शाखा की"
+      },
+      {
+       "row": 7,
+       "col": 4,
+       "kind": "number",
+       "truth": "11777.79",
+       "got": "11,777.79"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "text",
+       "truth": "जो झील महाराष्ट्र शेती वृत्ताकार",
+       "got": "जो झीझ महाराष्ट्र सेती वृत्ताकार"
+      },
+      {
+       "row": 11,
+       "col": 2,
+       "kind": "text",
+       "truth": "अभीष्ट शंकु वाहतूक पृष्ठ बुलबुले धुळे",
+       "got": "अभीष्ट शंकु वाहतूक पृष्ठ बुलबुले धूठें"
+      },
+      {
+       "row": 12,
+       "col": 2,
+       "kind": "text",
+       "truth": "होता संतत अवयव इकाई का रस्ता",
+       "got": "होता सतत अवयव इकाई का रस्ता"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-mr-wide-single-5016",
+    "lang": "mr",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 3,
+      "audit": 10,
+      "structure": 0
+     },
+     "cells": 159,
+     "correct": 150,
+     "filled": 159,
+     "found": 150,
+     "by_kind": {
+      "header": [
+       28,
+       29
+      ],
+      "text": [
+       5,
+       12
+      ],
+      "number": [
+       117,
+       118
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.996,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 0,
+       "col": 12,
+       "kind": "header",
+       "truth": "एकूण (6+9+12)",
+       "got": "एकूण (8+9+12)"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "text",
+       "truth": "फलन उपपत्ति",
+       "got": "फलन उपपति"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "text",
+       "truth": "टिप्पणी डाला पुन हो परिमाप",
+       "got": "टिप्पणी डाला पुन हो परिभाय"
+      },
+      {
+       "row": 5,
+       "col": 11,
+       "kind": "number",
+       "truth": "10563.16",
+       "got": "10543.16"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "text",
+       "truth": "गति नाशिक नियम राशियों आइए",
+       "got": "गति नाशिक नियम राशियो आइए"
+      },
+      {
+       "row": 7,
+       "col": 2,
+       "kind": "text",
+       "truth": "शाळा की",
+       "got": "शाखा की"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "text",
+       "truth": "जो झील महाराष्ट्र शेती वृत्ताकार",
+       "got": "जो झीझ महाराष्ट्र सेती वृत्ताकार"
+      },
+      {
+       "row": 11,
+       "col": 2,
+       "kind": "text",
+       "truth": "अभीष्ट शंकु वाहतूक पृष्ठ बुलबुले धुळे",
+       "got": "अभीष्ट शंकु वाहतूक पृष्ठ बुलबुले धूठें"
+      },
+      {
+       "row": 12,
+       "col": 2,
+       "kind": "text",
+       "truth": "होता संतत अवयव इकाई का रस्ता",
+       "got": "होता सतत अवयव इकाई का रस्ता"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.2734,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-en-wide-single-5056",
+    "lang": "en",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 112,
+     "correct": 112,
+     "filled": 112,
+     "found": 112,
+     "by_kind": {
+      "header": [
+       22,
+       22
+      ],
+      "text": [
+       11,
+       11
+      ],
+      "number": [
+       79,
+       79
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-en-wide-single-5056",
+    "lang": "en",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 9,
+      "structure": 0
+     },
+     "cells": 112,
+     "correct": 112,
+     "filled": 112,
+     "found": 112,
+     "by_kind": {
+      "header": [
+       22,
+       22
+      ],
+      "text": [
+       11,
+       11
+      ],
+      "number": [
+       79,
+       79
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-en-wide-single-5056",
+    "lang": "en",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 4,
+      "structure": 0
+     },
+     "cells": 112,
+     "correct": 112,
+     "filled": 112,
+     "found": 112,
+     "by_kind": {
+      "header": [
+       22,
+       22
+      ],
+      "text": [
+       11,
+       11
+      ],
+      "number": [
+       79,
+       79
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0274,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-en-wide-single-5056",
+    "lang": "en",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 112,
+     "correct": 112,
+     "filled": 112,
+     "found": 112,
+     "by_kind": {
+      "header": [
+       22,
+       22
+      ],
+      "text": [
+       11,
+       11
+      ],
+      "number": [
+       79,
+       79
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 0.9841,
+     "teds_s": 0.9841,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "unresolved_cells"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-en-wide-single-5056",
+    "lang": "en",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 3,
+      "audit": 11,
+      "structure": 0
+     },
+     "cells": 112,
+     "correct": 112,
+     "filled": 112,
+     "found": 112,
+     "by_kind": {
+      "header": [
+       22,
+       22
+      ],
+      "text": [
+       11,
+       11
+      ],
+      "number": [
+       79,
+       79
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 0.9841,
+     "teds_s": 0.9841,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-en-wide-single-5056",
+    "lang": "en",
+    "kind": "wide",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     10
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 2,
+      "audit": 6,
+      "structure": 0
+     },
+     "cells": 112,
+     "correct": 112,
+     "filled": 112,
+     "found": 112,
+     "by_kind": {
+      "header": [
+       22,
+       22
+      ],
+      "text": [
+       11,
+       11
+      ],
+      "number": [
+       79,
+       79
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 10,
+     "cols_pred": 10,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 0.9841,
+     "teds_s": 0.9841,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.153,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-bn-wide-single-5046",
+    "lang": "bn",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     17
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 211,
+     "correct": 196,
+     "filled": 211,
+     "found": 211,
+     "by_kind": {
+      "header": [
+       14,
+       29
+      ],
+      "text": [
+       17,
+       17
+      ],
+      "number": [
+       165,
+       165
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 17,
+     "rows_pred": 17,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 15,
+     "cols_ok": false,
+     "exact": false,
+     "teds": 0.9073,
+     "teds_s": 0.9073,
+     "wrong": [
+      {
+       "row": 0,
+       "col": 1,
+       "kind": "header",
+       "truth": "কোড",
+       "got": "ক্রম"
+      },
+      {
+       "row": 0,
+       "col": 2,
+       "kind": "header",
+       "truth": "বিবরণ",
+       "got": "কোড"
+      },
+      {
+       "row": 0,
+       "col": 3,
+       "kind": "header",
+       "truth": "২০২৪-২৫",
+       "got": "বিবরণ"
+      },
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "header",
+       "truth": "টাকা",
+       "got": ""
+      },
+      {
+       "row": 1,
+       "col": 4,
+       "kind": "header",
+       "truth": "অনুমোদিত",
+       "got": "টাকা"
+      },
+      {
+       "row": 1,
+       "col": 5,
+       "kind": "header",
+       "truth": "মোট",
+       "got": "অনুমোদিত"
+      },
+      {
+       "row": 0,
+       "col": 6,
+       "kind": "header",
+       "truth": "২০২৫-২৬",
+       "got": "২০২৪-২৫"
+      },
+      {
+       "row": 1,
+       "col": 6,
+       "kind": "header",
+       "truth": "টাকা",
+       "got": "মোট"
+      },
+      {
+       "row": 1,
+       "col": 7,
+       "kind": "header",
+       "truth": "অনুমোদিত",
+       "got": "টাকা"
+      },
+      {
+       "row": 1,
+       "col": 8,
+       "kind": "header",
+       "truth": "মোট",
+       "got": "অনুমোদিত"
+      },
+      {
+       "row": 0,
+       "col": 9,
+       "kind": "header",
+       "truth": "২০২৬-২৭",
+       "got": "২০২৫-২৬"
+      },
+      {
+       "row": 1,
+       "col": 9,
+       "kind": "header",
+       "truth": "টাকা",
+       "got": "মোট"
+      },
+      {
+       "row": 1,
+       "col": 10,
+       "kind": "header",
+       "truth": "অনুমোদিত",
+       "got": "টাকা"
+      },
+      {
+       "row": 1,
+       "col": 11,
+       "kind": "header",
+       "truth": "মোট",
+       "got": "অনুমোদিত"
+      },
+      {
+       "row": 0,
+       "col": 12,
+       "kind": "header",
+       "truth": "মোট (৬+৯+১২)",
+       "got": "২০২৬-২৭"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "engines_disagree_on_shape"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-bn-wide-single-5046",
+    "lang": "bn",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     17
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 25,
+      "audit": 1,
+      "structure": 0
+     },
+     "cells": 211,
+     "correct": 201,
+     "filled": 211,
+     "found": 204,
+     "by_kind": {
+      "header": [
+       29,
+       29
+      ],
+      "text": [
+       14,
+       17
+      ],
+      "number": [
+       158,
+       165
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 17,
+     "rows_pred": 17,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9842,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "text",
+       "truth": "শিক্ষা প্রকল্প কলকাতা জল পশ্চিমবঙ্গ স্বাস্থ্য",
+       "got": "শিক্ষা প্রকল্প কলকাতা পশ্চিমবঙ্গ স্বাস্থ্য"
+      },
+      {
+       "row": 9,
+       "col": 10,
+       "kind": "number",
+       "truth": "২.৪৫",
+       "got": "২,৪৫"
+      },
+      {
+       "row": 10,
+       "col": 10,
+       "kind": "number",
+       "truth": "৮১৩.৯২",
+       "got": "৮৫,৯৮৭.১৯"
+      },
+      {
+       "row": 10,
+       "col": 11,
+       "kind": "number",
+       "truth": "৮৫,৯৮৭.১৯",
+       "got": "৮৬,২৫১.৫১"
+      },
+      {
+       "row": 10,
+       "col": 12,
+       "kind": "number",
+       "truth": "৮৬,২৫১.৫১",
+       "got": ""
+      },
+      {
+       "row": 12,
+       "col": 2,
+       "kind": "text",
+       "truth": "হাসপাতাল বিদ্যালয় জেলা স্বাস্থ্য মালদা স্বাস্থ্য",
+       "got": "হাসপাতাল জেলা স্বাস্থ্য মালদা স্বাস্থ্য"
+      },
+      {
+       "row": 16,
+       "col": 2,
+       "kind": "text",
+       "truth": "বাঁধ পরিবহন উন্নয়ন জল বিদ্যালয় জেলা",
+       "got": "বাঁধ পরিবহন উন্নয়ন জল বিদ্যালয়"
+      },
+      {
+       "row": 16,
+       "col": 3,
+       "kind": "number",
+       "truth": "১১.৩৪",
+       "got": "১১০.৩৪"
+      },
+      {
+       "row": 16,
+       "col": 9,
+       "kind": "number",
+       "truth": "১৫.২৩",
+       "got": "১১,২৯০.৯১"
+      },
+      {
+       "row": 16,
+       "col": 10,
+       "kind": "number",
+       "truth": "১১,২৯০.৯১",
+       "got": "১১,৩০৬.১৪"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-bn-wide-single-5046",
+    "lang": "bn",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     17
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 0,
+      "audit": 1,
+      "structure": 0
+     },
+     "cells": 211,
+     "correct": 209,
+     "filled": 211,
+     "found": 209,
+     "by_kind": {
+      "header": [
+       29,
+       29
+      ],
+      "text": [
+       17,
+       17
+      ],
+      "number": [
+       163,
+       165
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 17,
+     "rows_pred": 17,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9965,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 16,
+       "col": 3,
+       "kind": "number",
+       "truth": "১১.৩৪",
+       "got": "১১০.৩৪"
+      },
+      {
+       "row": 16,
+       "col": 9,
+       "kind": "number",
+       "truth": "১৫.২৩",
+       "got": "১১,২৯০.৯১"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-bn-wide-single-5046",
+    "lang": "bn",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     17
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 211,
+     "correct": 122,
+     "filled": 211,
+     "found": 130,
+     "by_kind": {
+      "header": [
+       29,
+       29
+      ],
+      "text": [
+       9,
+       17
+      ],
+      "number": [
+       84,
+       165
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 17,
+     "rows_pred": 17,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8881,
+     "teds_s": 0.9651,
+     "wrong": [
+      {
+       "row": 3,
+       "col": 1,
+       "kind": "number",
+       "truth": "০৯৫৬",
+       "got": "০৯৩৬"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "number",
+       "truth": "৩০৩.৮২",
+       "got": "৩৩৩.৮২"
+      },
+      {
+       "row": 3,
+       "col": 6,
+       "kind": "number",
+       "truth": "২০.৬০",
+       "got": "১০.৫০"
+      },
+      {
+       "row": 3,
+       "col": 9,
+       "kind": "number",
+       "truth": "৪৪,৫২৮.২৫",
+       "got": "৪৪,৫২৮.১৫"
+      },
+      {
+       "row": 4,
+       "col": 1,
+       "kind": "number",
+       "truth": "৬৬২৫",
+       "got": "৬১৬৩"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "text",
+       "truth": "কৃষি বাজেট দার্জিলিং বর্ধমান হাসপাতাল",
+       "got": "কৃষি বাজেট হাজিলিং বর্ধমান হাসপাতাল"
+      },
+      {
+       "row": 4,
+       "col": 3,
+       "kind": "number",
+       "truth": "৯৭,৯৫১.৮৪",
+       "got": "৯৭,৯৩১.৮৪"
+      },
+      {
+       "row": 4,
+       "col": 12,
+       "kind": "number",
+       "truth": "১,৪২,২৭৭.৫৩",
+       "got": "১,৪২,১৭৭.৩৩"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "text",
+       "truth": "শিক্ষা প্রকল্প কলকাতা জল পশ্চিমবঙ্গ স্বাস্থ্য",
+       "got": "শিক্ষা প্রকল্প কলকাতায় জল পশ্চিমবঙ্গ স্বাস্থ্য"
+      },
+      {
+       "row": 5,
+       "col": 9,
+       "kind": "number",
+       "truth": "৭৭.৫৭",
+       "got": "৭৭.০৭"
+      },
+      {
+       "row": 6,
+       "col": 1,
+       "kind": "number",
+       "truth": "৯৮৪৯",
+       "got": "৯৪৮৯"
+      },
+      {
+       "row": 6,
+       "col": 4,
+       "kind": "number",
+       "truth": "৬২,৬৬৪.৬৩",
+       "got": "১২,৬৬২.৯৩"
+      },
+      {
+       "row": 6,
+       "col": 7,
+       "kind": "number",
+       "truth": "৩৮৬.৫৪",
+       "got": "৪৩৩.২৭"
+      },
+      {
+       "row": 6,
+       "col": 8,
+       "kind": "number",
+       "truth": "৪৩৩.২৭",
+       "got": "৫০,৪৬৯.৭৪"
+      },
+      {
+       "row": 6,
+       "col": 9,
+       "kind": "number",
+       "truth": "৫০,৪৬৯.৭৪",
+       "got": "৬৪,০৭২.০০"
+      },
+      {
+       "row": 6,
+       "col": 10,
+       "kind": "number",
+       "truth": "৬৪,৫৭২.০৫",
+       "got": "১,১৫,০৪১.৭৯"
+      },
+      {
+       "row": 6,
+       "col": 11,
+       "kind": "number",
+       "truth": "১,১৫,০৪১.৭৯",
+       "got": "১,৭৮,১৮৮.১০"
+      },
+      {
+       "row": 6,
+       "col": 12,
+       "kind": "number",
+       "truth": "১,৭৮,১৭৮.১০",
+       "got": ""
+      },
+      {
+       "row": 7,
+       "col": 4,
+       "kind": "number",
+       "truth": "৯৫,৮২২.৪৮",
+       "got": "৯৫,৮১২.৪৮"
+      },
+      {
+       "row": 7,
+       "col": 5,
+       "kind": "number",
+       "truth": "৯৫,৮৮৮.৬৪",
+       "got": "৯৫,৮৮৮.৬৫"
+      },
+      {
+       "row": 7,
+       "col": 6,
+       "kind": "number",
+       "truth": "৪৭.২৫",
+       "got": "৪৭.১৫"
+      },
+      {
+       "row": 7,
+       "col": 9,
+       "kind": "number",
+       "truth": "৮৫,০৫৯.২৭",
+       "got": "৮৫,০৫৯.১৭"
+      },
+      {
+       "row": 7,
+       "col": 10,
+       "kind": "number",
+       "truth": "৫৮,৫৬৮.৪৭",
+       "got": "৫৮,০৬৬.৪৭"
+      },
+      {
+       "row": 7,
+       "col": 11,
+       "kind": "number",
+       "truth": "১,৪৩,৬২৭.৭৪",
+       "got": "১,৪৩,৬১৭.৭৪"
+      },
+      {
+       "row": 7,
+       "col": 12,
+       "kind": "number",
+       "truth": "২,৩৯,৫৭৬.৬৩",
+       "got": "২,৩০,০৭৬.৩৩"
+      },
+      {
+       "row": 8,
+       "col": 1,
+       "kind": "number",
+       "truth": "৫০৫৬",
+       "got": "৫০০৬"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "text",
+       "truth": "পরিবহন কলকাতা",
+       "got": "পরিবহন কলকাতায় বাজার"
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "number",
+       "truth": "৪৪.৪৫",
+       "got": "৪৪.৫০"
+      },
+      {
+       "row": 8,
+       "col": 5,
+       "kind": "number",
+       "truth": "৭৩.৮৮",
+       "got": "৭০.৮৮"
+      },
+      {
+       "row": 8,
+       "col": 12,
+       "kind": "number",
+       "truth": "৫৩,৭৮৯.৬৮",
+       "got": "৫৩,৭৮২.৬৮"
+      },
+      {
+       "row": 9,
+       "col": 5,
+       "kind": "number",
+       "truth": "৫৬,৮১৮.৫৪",
+       "got": "৩৬,৮১৮.৫৪"
+      },
+      {
+       "row": 9,
+       "col": 6,
+       "kind": "number",
+       "truth": "৩৪,৪৫১.৯৯",
+       "got": "৩৪,৪০১.৯৬"
+      },
+      {
+       "row": 9,
+       "col": 7,
+       "kind": "number",
+       "truth": "২৭৯.৯৭",
+       "got": "৩৫,৮৩১.৯৬"
+      },
+      {
+       "row": 9,
+       "col": 8,
+       "kind": "number",
+       "truth": "৩৪,৭৩১.৯৬",
+       "got": "১৫,৮৬৪.৭০"
+      },
+      {
+       "row": 9,
+       "col": 9,
+       "kind": "number",
+       "truth": "১৪,৮৬৪.৭০",
+       "got": "২.৪০"
+      },
+      {
+       "row": 9,
+       "col": 10,
+       "kind": "number",
+       "truth": "২.৪৫",
+       "got": "১৪,৮৬৭.১০"
+      },
+      {
+       "row": 9,
+       "col": 11,
+       "kind": "number",
+       "truth": "১৪,৮৬৭.১৫",
+       "got": "১,০৬,৪১৭.৫৫"
+      },
+      {
+       "row": 9,
+       "col": 12,
+       "kind": "number",
+       "truth": "১,০৬,৪১৭.৬৫",
+       "got": "১,০৬,৪১৭.৫৫"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "text",
+       "truth": "বিদ্যুৎ জল হাওড়া শহর বন্দর দার্জিলিং উন্নয়ন",
+       "got": "বিদ্যুৎ জল হাউড়া শহর বর্ধমান উন্নয়ন"
+      },
+      {
+       "row": 10,
+       "col": 5,
+       "kind": "number",
+       "truth": "১৮৯.৪৬",
+       "got": "১৮৬.৬১"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "checks_failed",
+     "unresolved_cells"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-bn-wide-single-5046",
+    "lang": "bn",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     17
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 95,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 211,
+     "correct": 121,
+     "filled": 211,
+     "found": 129,
+     "by_kind": {
+      "header": [
+       29,
+       29
+      ],
+      "text": [
+       9,
+       17
+      ],
+      "number": [
+       83,
+       165
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 17,
+     "rows_pred": 17,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8876,
+     "teds_s": 0.9651,
+     "wrong": [
+      {
+       "row": 3,
+       "col": 1,
+       "kind": "number",
+       "truth": "০৯৫৬",
+       "got": "০৯৩৬"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "number",
+       "truth": "৩০৩.৮২",
+       "got": "৩৩৩.৮২"
+      },
+      {
+       "row": 3,
+       "col": 6,
+       "kind": "number",
+       "truth": "২০.৬০",
+       "got": "১০.৫০"
+      },
+      {
+       "row": 3,
+       "col": 9,
+       "kind": "number",
+       "truth": "৪৪,৫২৮.২৫",
+       "got": "৪৪,৫২৮.১৫"
+      },
+      {
+       "row": 4,
+       "col": 1,
+       "kind": "number",
+       "truth": "৬৬২৫",
+       "got": "৬১৬৩"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "text",
+       "truth": "কৃষি বাজেট দার্জিলিং বর্ধমান হাসপাতাল",
+       "got": "কৃষি বাজেট হাজিলিং বর্ধমান হাসপাতাল"
+      },
+      {
+       "row": 4,
+       "col": 3,
+       "kind": "number",
+       "truth": "৯৭,৯৫১.৮৪",
+       "got": "৯৭,৯৩১.৮৪"
+      },
+      {
+       "row": 4,
+       "col": 12,
+       "kind": "number",
+       "truth": "১,৪২,২৭৭.৫৩",
+       "got": "১,৪২,১৭৭.৩৩"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "text",
+       "truth": "শিক্ষা প্রকল্প কলকাতা জল পশ্চিমবঙ্গ স্বাস্থ্য",
+       "got": "শিক্ষা প্রকল্প কলকাতায় জল পশ্চিমবঙ্গ স্বাস্থ্য"
+      },
+      {
+       "row": 5,
+       "col": 9,
+       "kind": "number",
+       "truth": "৭৭.৫৭",
+       "got": "৭৭.০৭"
+      },
+      {
+       "row": 5,
+       "col": 12,
+       "kind": "number",
+       "truth": "৭১,৮৪০.১৮",
+       "got": "৭১,৮৪০.১৪"
+      },
+      {
+       "row": 6,
+       "col": 1,
+       "kind": "number",
+       "truth": "৯৮৪৯",
+       "got": "৯৪৮৯"
+      },
+      {
+       "row": 6,
+       "col": 4,
+       "kind": "number",
+       "truth": "৬২,৬৬৪.৬৩",
+       "got": "১২,৬৬২.৯৩"
+      },
+      {
+       "row": 6,
+       "col": 7,
+       "kind": "number",
+       "truth": "৩৮৬.৫৪",
+       "got": "৪৩৩.২৭"
+      },
+      {
+       "row": 6,
+       "col": 8,
+       "kind": "number",
+       "truth": "৪৩৩.২৭",
+       "got": "৫০,৪৬৯.৭৪"
+      },
+      {
+       "row": 6,
+       "col": 9,
+       "kind": "number",
+       "truth": "৫০,৪৬৯.৭৪",
+       "got": "৬৪,০৭২.০০"
+      },
+      {
+       "row": 6,
+       "col": 10,
+       "kind": "number",
+       "truth": "৬৪,৫৭২.০৫",
+       "got": "১,১৫,০৪১.৭৯"
+      },
+      {
+       "row": 6,
+       "col": 11,
+       "kind": "number",
+       "truth": "১,১৫,০৪১.৭৯",
+       "got": "১,৭৮,১৮৮.১০"
+      },
+      {
+       "row": 6,
+       "col": 12,
+       "kind": "number",
+       "truth": "১,৭৮,১৭৮.১০",
+       "got": ""
+      },
+      {
+       "row": 7,
+       "col": 4,
+       "kind": "number",
+       "truth": "৯৫,৮২২.৪৮",
+       "got": "৯৫,৮১২.৪৮"
+      },
+      {
+       "row": 7,
+       "col": 5,
+       "kind": "number",
+       "truth": "৯৫,৮৮৮.৬৪",
+       "got": "৯৫,৮৮৮.৬৫"
+      },
+      {
+       "row": 7,
+       "col": 6,
+       "kind": "number",
+       "truth": "৪৭.২৫",
+       "got": "৪৭.১৫"
+      },
+      {
+       "row": 7,
+       "col": 9,
+       "kind": "number",
+       "truth": "৮৫,০৫৯.২৭",
+       "got": "৮৫,০৫৯.১৭"
+      },
+      {
+       "row": 7,
+       "col": 10,
+       "kind": "number",
+       "truth": "৫৮,৫৬৮.৪৭",
+       "got": "৫৮,০৬৬.৪৭"
+      },
+      {
+       "row": 7,
+       "col": 11,
+       "kind": "number",
+       "truth": "১,৪৩,৬২৭.৭৪",
+       "got": "১,৪৩,৬১৭.৭৪"
+      },
+      {
+       "row": 7,
+       "col": 12,
+       "kind": "number",
+       "truth": "২,৩৯,৫৭৬.৬৩",
+       "got": "২,৩০,০৭৬.৩৩"
+      },
+      {
+       "row": 8,
+       "col": 1,
+       "kind": "number",
+       "truth": "৫০৫৬",
+       "got": "৫০০৬"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "text",
+       "truth": "পরিবহন কলকাতা",
+       "got": "পরিবহন কলকাতায় বাজার"
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "number",
+       "truth": "৪৪.৪৫",
+       "got": "৪৪.৫০"
+      },
+      {
+       "row": 8,
+       "col": 5,
+       "kind": "number",
+       "truth": "৭৩.৮৮",
+       "got": "৭০.৮৮"
+      },
+      {
+       "row": 8,
+       "col": 12,
+       "kind": "number",
+       "truth": "৫৩,৭৮৯.৬৮",
+       "got": "৫৩,৭৮২.৬৮"
+      },
+      {
+       "row": 9,
+       "col": 5,
+       "kind": "number",
+       "truth": "৫৬,৮১৮.৫৪",
+       "got": "৩৬,৮১৮.৫৪"
+      },
+      {
+       "row": 9,
+       "col": 6,
+       "kind": "number",
+       "truth": "৩৪,৪৫১.৯৯",
+       "got": "৩৪,৪০১.৯৬"
+      },
+      {
+       "row": 9,
+       "col": 7,
+       "kind": "number",
+       "truth": "২৭৯.৯৭",
+       "got": "৩৫,৮৩১.৯৬"
+      },
+      {
+       "row": 9,
+       "col": 8,
+       "kind": "number",
+       "truth": "৩৪,৭৩১.৯৬",
+       "got": "১৫,৮৬৪.৭০"
+      },
+      {
+       "row": 9,
+       "col": 9,
+       "kind": "number",
+       "truth": "১৪,৮৬৪.৭০",
+       "got": "২.৪০"
+      },
+      {
+       "row": 9,
+       "col": 10,
+       "kind": "number",
+       "truth": "২.৪৫",
+       "got": "১৪,৮৬৭.১০"
+      },
+      {
+       "row": 9,
+       "col": 11,
+       "kind": "number",
+       "truth": "১৪,৮৬৭.১৫",
+       "got": "১,০৬,৪১৭.৫৫"
+      },
+      {
+       "row": 9,
+       "col": 12,
+       "kind": "number",
+       "truth": "১,০৬,৪১৭.৬৫",
+       "got": "১,০৬,৪১৭.৫৫"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "text",
+       "truth": "বিদ্যুৎ জল হাওড়া শহর বন্দর দার্জিলিং উন্নয়ন",
+       "got": "বিদ্যুৎ জল হাউড়া শহর বর্ধমান উন্নয়ন"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-bn-wide-single-5046",
+    "lang": "bn",
+    "kind": "wide",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     17
+    ],
+    "cols": [
+     13
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 95,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 211,
+     "correct": 121,
+     "filled": 211,
+     "found": 129,
+     "by_kind": {
+      "header": [
+       29,
+       29
+      ],
+      "text": [
+       9,
+       17
+      ],
+      "number": [
+       83,
+       165
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 17,
+     "rows_pred": 17,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 13,
+     "cols_pred": 13,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8876,
+     "teds_s": 0.9651,
+     "wrong": [
+      {
+       "row": 3,
+       "col": 1,
+       "kind": "number",
+       "truth": "০৯৫৬",
+       "got": "০৯৩৬"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "number",
+       "truth": "৩০৩.৮২",
+       "got": "৩৩৩.৮২"
+      },
+      {
+       "row": 3,
+       "col": 6,
+       "kind": "number",
+       "truth": "২০.৬০",
+       "got": "১০.৫০"
+      },
+      {
+       "row": 3,
+       "col": 9,
+       "kind": "number",
+       "truth": "৪৪,৫২৮.২৫",
+       "got": "৪৪,৫২৮.১৫"
+      },
+      {
+       "row": 4,
+       "col": 1,
+       "kind": "number",
+       "truth": "৬৬২৫",
+       "got": "৬১৬৩"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "text",
+       "truth": "কৃষি বাজেট দার্জিলিং বর্ধমান হাসপাতাল",
+       "got": "কৃষি বাজেট হাজিলিং বর্ধমান হাসপাতাল"
+      },
+      {
+       "row": 4,
+       "col": 3,
+       "kind": "number",
+       "truth": "৯৭,৯৫১.৮৪",
+       "got": "৯৭,৯৩১.৮৪"
+      },
+      {
+       "row": 4,
+       "col": 12,
+       "kind": "number",
+       "truth": "১,৪২,২৭৭.৫৩",
+       "got": "১,৪২,১৭৭.৩৩"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "text",
+       "truth": "শিক্ষা প্রকল্প কলকাতা জল পশ্চিমবঙ্গ স্বাস্থ্য",
+       "got": "শিক্ষা প্রকল্প কলকাতায় জল পশ্চিমবঙ্গ স্বাস্থ্য"
+      },
+      {
+       "row": 5,
+       "col": 9,
+       "kind": "number",
+       "truth": "৭৭.৫৭",
+       "got": "৭৭.০৭"
+      },
+      {
+       "row": 5,
+       "col": 12,
+       "kind": "number",
+       "truth": "৭১,৮৪০.১৮",
+       "got": "৭১,৮৪০.১৪"
+      },
+      {
+       "row": 6,
+       "col": 1,
+       "kind": "number",
+       "truth": "৯৮৪৯",
+       "got": "৯৪৮৯"
+      },
+      {
+       "row": 6,
+       "col": 4,
+       "kind": "number",
+       "truth": "৬২,৬৬৪.৬৩",
+       "got": "১২,৬৬২.৯৩"
+      },
+      {
+       "row": 6,
+       "col": 7,
+       "kind": "number",
+       "truth": "৩৮৬.৫৪",
+       "got": "৪৩৩.২৭"
+      },
+      {
+       "row": 6,
+       "col": 8,
+       "kind": "number",
+       "truth": "৪৩৩.২৭",
+       "got": "৫০,৪৬৯.৭৪"
+      },
+      {
+       "row": 6,
+       "col": 9,
+       "kind": "number",
+       "truth": "৫০,৪৬৯.৭৪",
+       "got": "৬৪,০৭২.০০"
+      },
+      {
+       "row": 6,
+       "col": 10,
+       "kind": "number",
+       "truth": "৬৪,৫৭২.০৫",
+       "got": "১,১৫,০৪১.৭৯"
+      },
+      {
+       "row": 6,
+       "col": 11,
+       "kind": "number",
+       "truth": "১,১৫,০৪১.৭৯",
+       "got": "১,৭৮,১৮৮.১০"
+      },
+      {
+       "row": 6,
+       "col": 12,
+       "kind": "number",
+       "truth": "১,৭৮,১৭৮.১০",
+       "got": ""
+      },
+      {
+       "row": 7,
+       "col": 4,
+       "kind": "number",
+       "truth": "৯৫,৮২২.৪৮",
+       "got": "৯৫,৮১২.৪৮"
+      },
+      {
+       "row": 7,
+       "col": 5,
+       "kind": "number",
+       "truth": "৯৫,৮৮৮.৬৪",
+       "got": "৯৫,৮৮৮.৬৫"
+      },
+      {
+       "row": 7,
+       "col": 6,
+       "kind": "number",
+       "truth": "৪৭.২৫",
+       "got": "৪৭.১৫"
+      },
+      {
+       "row": 7,
+       "col": 9,
+       "kind": "number",
+       "truth": "৮৫,০৫৯.২৭",
+       "got": "৮৫,০৫৯.১৭"
+      },
+      {
+       "row": 7,
+       "col": 10,
+       "kind": "number",
+       "truth": "৫৮,৫৬৮.৪৭",
+       "got": "৫৮,০৬৬.৪৭"
+      },
+      {
+       "row": 7,
+       "col": 11,
+       "kind": "number",
+       "truth": "১,৪৩,৬২৭.৭৪",
+       "got": "১,৪৩,৬১৭.৭৪"
+      },
+      {
+       "row": 7,
+       "col": 12,
+       "kind": "number",
+       "truth": "২,৩৯,৫৭৬.৬৩",
+       "got": "২,৩০,০৭৬.৩৩"
+      },
+      {
+       "row": 8,
+       "col": 1,
+       "kind": "number",
+       "truth": "৫০৫৬",
+       "got": "৫০০৬"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "text",
+       "truth": "পরিবহন কলকাতা",
+       "got": "পরিবহন কলকাতায় বাজার"
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "number",
+       "truth": "৪৪.৪৫",
+       "got": "৪৪.৫০"
+      },
+      {
+       "row": 8,
+       "col": 5,
+       "kind": "number",
+       "truth": "৭৩.৮৮",
+       "got": "৭০.৮৮"
+      },
+      {
+       "row": 8,
+       "col": 12,
+       "kind": "number",
+       "truth": "৫৩,৭৮৯.৬৮",
+       "got": "৫৩,৭৮২.৬৮"
+      },
+      {
+       "row": 9,
+       "col": 5,
+       "kind": "number",
+       "truth": "৫৬,৮১৮.৫৪",
+       "got": "৩৬,৮১৮.৫৪"
+      },
+      {
+       "row": 9,
+       "col": 6,
+       "kind": "number",
+       "truth": "৩৪,৪৫১.৯৯",
+       "got": "৩৪,৪০১.৯৬"
+      },
+      {
+       "row": 9,
+       "col": 7,
+       "kind": "number",
+       "truth": "২৭৯.৯৭",
+       "got": "৩৫,৮৩১.৯৬"
+      },
+      {
+       "row": 9,
+       "col": 8,
+       "kind": "number",
+       "truth": "৩৪,৭৩১.৯৬",
+       "got": "১৫,৮৬৪.৭০"
+      },
+      {
+       "row": 9,
+       "col": 9,
+       "kind": "number",
+       "truth": "১৪,৮৬৪.৭০",
+       "got": "২.৪০"
+      },
+      {
+       "row": 9,
+       "col": 10,
+       "kind": "number",
+       "truth": "২.৪৫",
+       "got": "১৪,৮৬৭.১০"
+      },
+      {
+       "row": 9,
+       "col": 11,
+       "kind": "number",
+       "truth": "১৪,৮৬৭.১৫",
+       "got": "১,০৬,৪১৭.৫৫"
+      },
+      {
+       "row": 9,
+       "col": 12,
+       "kind": "number",
+       "truth": "১,০৬,৪১৭.৬৫",
+       "got": "১,০৬,৪১৭.৫৫"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "text",
+       "truth": "বিদ্যুৎ জল হাওড়া শহর বন্দর দার্জিলিং উন্নয়ন",
+       "got": "বিদ্যুৎ জল হাউড়া শহর বর্ধমান উন্নয়ন"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-hi-text-single-5000",
+    "lang": "hi",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     18
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 90,
+     "correct": 90,
+     "filled": 90,
+     "found": 90,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       68,
+       68
+      ],
+      "number": [
+       17,
+       17
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 18,
+     "rows_pred": 18,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-hi-text-single-5000",
+    "lang": "hi",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     18
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 0,
+      "audit": 1,
+      "structure": 0
+     },
+     "cells": 90,
+     "correct": 90,
+     "filled": 90,
+     "found": 90,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       68,
+       68
+      ],
+      "number": [
+       17,
+       17
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 18,
+     "rows_pred": 18,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-hi-text-single-5000",
+    "lang": "hi",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     18
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 0,
+      "audit": 1,
+      "structure": 0
+     },
+     "cells": 90,
+     "correct": 90,
+     "filled": 90,
+     "found": 90,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       68,
+       68
+      ],
+      "number": [
+       17,
+       17
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 18,
+     "rows_pred": 18,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-hi-text-single-5000",
+    "lang": "hi",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     18
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 90,
+     "correct": 89,
+     "filled": 90,
+     "found": 89,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       67,
+       68
+      ],
+      "number": [
+       17,
+       17
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 18,
+     "rows_pred": 18,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9991,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 12,
+       "col": 1,
+       "kind": "text",
+       "truth": "हमें रुपये",
+       "got": "हमें रुपयै"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-hi-text-single-5000",
+    "lang": "hi",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     18
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 5,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 90,
+     "correct": 89,
+     "filled": 90,
+     "found": 89,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       67,
+       68
+      ],
+      "number": [
+       17,
+       17
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 18,
+     "rows_pred": 18,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9991,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 12,
+       "col": 1,
+       "kind": "text",
+       "truth": "हमें रुपये",
+       "got": "हमें रुपयै"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-hi-text-single-5000",
+    "lang": "hi",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     18
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 5,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 90,
+     "correct": 89,
+     "filled": 90,
+     "found": 89,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       67,
+       68
+      ],
+      "number": [
+       17,
+       17
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 18,
+     "rows_pred": 18,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9991,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 12,
+       "col": 1,
+       "kind": "text",
+       "truth": "हमें रुपये",
+       "got": "हमें रुपयै"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-mr-mixed-single-5012",
+    "lang": "mr",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 96,
+     "correct": 95,
+     "filled": 89,
+     "found": 88,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       59,
+       60
+      ],
+      "number": [
+       23,
+       23
+      ],
+      "empty": [
+       7,
+       7
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9991,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 10,
+       "col": 5,
+       "kind": "text",
+       "truth": "लंबायीं बिंदु इस",
+       "got": "लंबाईं बिंदु इस"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-mr-mixed-single-5012",
+    "lang": "mr",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 1,
+      "audit": 1,
+      "structure": 0
+     },
+     "cells": 96,
+     "correct": 95,
+     "filled": 89,
+     "found": 88,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       59,
+       60
+      ],
+      "number": [
+       23,
+       23
+      ],
+      "empty": [
+       7,
+       7
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9991,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 10,
+       "col": 5,
+       "kind": "text",
+       "truth": "लंबायीं बिंदु इस",
+       "got": "लंबाईं बिंदु इस"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-mr-mixed-single-5012",
+    "lang": "mr",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 1,
+      "audit": 1,
+      "structure": 0
+     },
+     "cells": 96,
+     "correct": 95,
+     "filled": 89,
+     "found": 88,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       59,
+       60
+      ],
+      "number": [
+       23,
+       23
+      ],
+      "empty": [
+       7,
+       7
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9991,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 10,
+       "col": 5,
+       "kind": "text",
+       "truth": "लंबायीं बिंदु इस",
+       "got": "लंबाईं बिंदु इस"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-mr-mixed-single-5012",
+    "lang": "mr",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 96,
+     "correct": 90,
+     "filled": 89,
+     "found": 83,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       57,
+       60
+      ],
+      "number": [
+       20,
+       23
+      ],
+      "empty": [
+       7,
+       7
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9916,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 1,
+       "kind": "text",
+       "truth": "अतः करके",
+       "got": "अंतः करके"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "५३५.०९",
+       "got": "५३५.०१"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "number",
+       "truth": "४२६१",
+       "got": "४२६९"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "७१९५८.०१",
+       "got": "७११५८.०१"
+      },
+      {
+       "row": 10,
+       "col": 5,
+       "kind": "text",
+       "truth": "लंबायीं बिंदु इस",
+       "got": "लंबाईं बिंदु इस"
+      },
+      {
+       "row": 12,
+       "col": 0,
+       "kind": "text",
+       "truth": "A-९५",
+       "got": "A-१५"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "unresolved_cells"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-mr-mixed-single-5012",
+    "lang": "mr",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 8,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 96,
+     "correct": 90,
+     "filled": 89,
+     "found": 83,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       57,
+       60
+      ],
+      "number": [
+       20,
+       23
+      ],
+      "empty": [
+       7,
+       7
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9916,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 1,
+       "kind": "text",
+       "truth": "अतः करके",
+       "got": "अंतः करके"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "५३५.०९",
+       "got": "५३५.०१"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "number",
+       "truth": "४२६१",
+       "got": "४२६९"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "७१९५८.०१",
+       "got": "७११५८.०१"
+      },
+      {
+       "row": 10,
+       "col": 5,
+       "kind": "text",
+       "truth": "लंबायीं बिंदु इस",
+       "got": "लंबाईं बिंदु इस"
+      },
+      {
+       "row": 12,
+       "col": 0,
+       "kind": "text",
+       "truth": "A-९५",
+       "got": "A-१५"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-mr-mixed-single-5012",
+    "lang": "mr",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 8,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 96,
+     "correct": 90,
+     "filled": 89,
+     "found": 83,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       57,
+       60
+      ],
+      "number": [
+       20,
+       23
+      ],
+      "empty": [
+       7,
+       7
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9916,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 1,
+       "kind": "text",
+       "truth": "अतः करके",
+       "got": "अंतः करके"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "५३५.०९",
+       "got": "५३५.०१"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "number",
+       "truth": "४२६१",
+       "got": "४२६९"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "७१९५८.०१",
+       "got": "७११५८.०१"
+      },
+      {
+       "row": 10,
+       "col": 5,
+       "kind": "text",
+       "truth": "लंबायीं बिंदु इस",
+       "got": "लंबाईं बिंदु इस"
+      },
+      {
+       "row": 12,
+       "col": 0,
+       "kind": "text",
+       "truth": "A-९५",
+       "got": "A-१५"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-ta-text-single-5020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     20
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 100,
+     "correct": 100,
+     "filled": 100,
+     "found": 100,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       76,
+       76
+      ],
+      "number": [
+       19,
+       19
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 20,
+     "rows_pred": 20,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-ta-text-single-5020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     20
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 100,
+     "correct": 100,
+     "filled": 100,
+     "found": 100,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       76,
+       76
+      ],
+      "number": [
+       19,
+       19
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 20,
+     "rows_pred": 20,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-ta-text-single-5020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     20
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 100,
+     "correct": 100,
+     "filled": 100,
+     "found": 100,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       76,
+       76
+      ],
+      "number": [
+       19,
+       19
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 20,
+     "rows_pred": 20,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-ta-text-single-5020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     20
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 100,
+     "correct": 87,
+     "filled": 100,
+     "found": 87,
+     "by_kind": {
+      "header": [
+       4,
+       5
+      ],
+      "text": [
+       64,
+       76
+      ],
+      "number": [
+       19,
+       19
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 20,
+     "rows_pred": 20,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9906,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 0,
+       "col": 0,
+       "kind": "header",
+       "truth": "வ.எண்",
+       "got": "உ.எண்"
+      },
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "text",
+       "truth": "காலத்தில் தென்மேற்குத் அங்கு செல்வோமாக கணவாய்களை",
+       "got": "காலத்தில் தென்னேற்குத் அங்கு செல்வோமாக கணவாய்களை"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "text",
+       "truth": "இன்றைக்குத்",
+       "got": "இறைக்குத்"
+      },
+      {
+       "row": 4,
+       "col": 1,
+       "kind": "text",
+       "truth": "கடல் மாளிகை",
+       "got": "கடல் மானிகை"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "text",
+       "truth": "பரிகசித்துச் நினைவு கிராமம் இன்றைக்குத் பனைமரக்",
+       "got": "பரிகசித்துச் நினைவு கிராமம் இறைக்குத் பனைமரக்"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "text",
+       "truth": "வழக்கம் நேயர்களை ஆதித்த காரணமாகவும் வந்தியத்தேவன்",
+       "got": "வழக்கம் நேர்களை ஆதித்த காரணமாகவும் வந்தியத்தேவன்"
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "text",
+       "truth": "படகுகள் வீரர்கள் ஏரித் நூற்றாண்டு",
+       "got": "படகுக்கள் வீரர்கள் எரித் நூற்றாண்டு"
+      },
+      {
+       "row": 12,
+       "col": 3,
+       "kind": "text",
+       "truth": "அவன் காலத்தில் வேறு நாராயண ஆடித்திருநாள்",
+       "got": "அவன் காலத்தில் வேறு தார்யண ஆடியிருந்தான்"
+      },
+      {
+       "row": 13,
+       "col": 1,
+       "kind": "text",
+       "truth": "வல்லவரையன்",
+       "got": "மல்லையரசன்"
+      },
+      {
+       "row": 14,
+       "col": 3,
+       "kind": "text",
+       "truth": "கிராமம் திருமுனைப்பாடி ஏரிக்கரை",
+       "got": "கிராமம் திருமுனைப்பாய் ஏரிக்கரை"
+      },
+      {
+       "row": 16,
+       "col": 3,
+       "kind": "text",
+       "truth": "சிரித்தார்கள் பரிகசித்துச் வெள்ளத்தில்",
+       "got": "சித்தார்கள் பரிகசித்துச் வெள்ளத்தில்"
+      },
+      {
+       "row": 18,
+       "col": 1,
+       "kind": "text",
+       "truth": "இடையில் படகில்",
+       "got": "இடையில படகில்"
+      },
+      {
+       "row": 18,
+       "col": 3,
+       "kind": "text",
+       "truth": "கொண்டிருந்தான் மீது நேயர்களை",
+       "got": "கொண்டிருந்தான் மீது தேயவர்களை"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-ta-text-single-5020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     20
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 28,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 100,
+     "correct": 87,
+     "filled": 100,
+     "found": 87,
+     "by_kind": {
+      "header": [
+       4,
+       5
+      ],
+      "text": [
+       64,
+       76
+      ],
+      "number": [
+       19,
+       19
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 20,
+     "rows_pred": 20,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9906,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 0,
+       "col": 0,
+       "kind": "header",
+       "truth": "வ.எண்",
+       "got": "உ.எண்"
+      },
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "text",
+       "truth": "காலத்தில் தென்மேற்குத் அங்கு செல்வோமாக கணவாய்களை",
+       "got": "காலத்தில் தென்னேற்குத் அங்கு செல்வோமாக கணவாய்களை"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "text",
+       "truth": "இன்றைக்குத்",
+       "got": "இறைக்குத்"
+      },
+      {
+       "row": 4,
+       "col": 1,
+       "kind": "text",
+       "truth": "கடல் மாளிகை",
+       "got": "கடல் மானிகை"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "text",
+       "truth": "பரிகசித்துச் நினைவு கிராமம் இன்றைக்குத் பனைமரக்",
+       "got": "பரிகசித்துச் நினைவு கிராமம் இறைக்குத் பனைமரக்"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "text",
+       "truth": "வழக்கம் நேயர்களை ஆதித்த காரணமாகவும் வந்தியத்தேவன்",
+       "got": "வழக்கம் நேர்களை ஆதித்த காரணமாகவும் வந்தியத்தேவன்"
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "text",
+       "truth": "படகுகள் வீரர்கள் ஏரித் நூற்றாண்டு",
+       "got": "படகுக்கள் வீரர்கள் எரித் நூற்றாண்டு"
+      },
+      {
+       "row": 12,
+       "col": 3,
+       "kind": "text",
+       "truth": "அவன் காலத்தில் வேறு நாராயண ஆடித்திருநாள்",
+       "got": "அவன் காலத்தில் வேறு தார்யண ஆடியிருந்தான்"
+      },
+      {
+       "row": 13,
+       "col": 1,
+       "kind": "text",
+       "truth": "வல்லவரையன்",
+       "got": "மல்லையரசன்"
+      },
+      {
+       "row": 14,
+       "col": 3,
+       "kind": "text",
+       "truth": "கிராமம் திருமுனைப்பாடி ஏரிக்கரை",
+       "got": "கிராமம் திருமுனைப்பாய் ஏரிக்கரை"
+      },
+      {
+       "row": 16,
+       "col": 3,
+       "kind": "text",
+       "truth": "சிரித்தார்கள் பரிகசித்துச் வெள்ளத்தில்",
+       "got": "சித்தார்கள் பரிகசித்துச் வெள்ளத்தில்"
+      },
+      {
+       "row": 18,
+       "col": 1,
+       "kind": "text",
+       "truth": "இடையில் படகில்",
+       "got": "இடையில படகில்"
+      },
+      {
+       "row": 18,
+       "col": 3,
+       "kind": "text",
+       "truth": "கொண்டிருந்தான் மீது நேயர்களை",
+       "got": "கொண்டிருந்தான் மீது தேயவர்களை"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-ta-text-single-5020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     20
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 9,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 100,
+     "correct": 92,
+     "filled": 100,
+     "found": 92,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       68,
+       76
+      ],
+      "number": [
+       19,
+       19
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 20,
+     "rows_pred": 20,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9948,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "text",
+       "truth": "காலத்தில் தென்மேற்குத் அங்கு செல்வோமாக கணவாய்களை",
+       "got": "காலத்தில் தென்னேற்குத் அங்கு செல்வோமாக கணவாய்களை"
+      },
+      {
+       "row": 4,
+       "col": 1,
+       "kind": "text",
+       "truth": "கடல் மாளிகை",
+       "got": "கடல் மானிகை"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "text",
+       "truth": "பரிகசித்துச் நினைவு கிராமம் இன்றைக்குத் பனைமரக்",
+       "got": "பரிகசித்துச் நினைவு கிராமம் இறைக்குத் பனைமரக்"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "text",
+       "truth": "வழக்கம் நேயர்களை ஆதித்த காரணமாகவும் வந்தியத்தேவன்",
+       "got": "வழக்கம் நேர்களை ஆதித்த காரணமாகவும் வந்தியத்தேவன்"
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "text",
+       "truth": "படகுகள் வீரர்கள் ஏரித் நூற்றாண்டு",
+       "got": "படகுகள் வீரர்கள் எரித் நூற்றாண்டு"
+      },
+      {
+       "row": 12,
+       "col": 3,
+       "kind": "text",
+       "truth": "அவன் காலத்தில் வேறு நாராயண ஆடித்திருநாள்",
+       "got": "அவன் காலத்தில் வேறு நாராயண ஆயத்திருந்தால்"
+      },
+      {
+       "row": 13,
+       "col": 1,
+       "kind": "text",
+       "truth": "வல்லவரையன்",
+       "got": "மல்லையரசன்"
+      },
+      {
+       "row": 14,
+       "col": 3,
+       "kind": "text",
+       "truth": "கிராமம் திருமுனைப்பாடி ஏரிக்கரை",
+       "got": "கிராமம் திருமுனைப்பாய் ஏரிக்கரை"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.2214,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-te-numeric-single-5031",
+    "lang": "te",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     19
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 95,
+     "correct": 95,
+     "filled": 94,
+     "found": 94,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       18,
+       18
+      ],
+      "number": [
+       71,
+       71
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 19,
+     "rows_pred": 19,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-te-numeric-single-5031",
+    "lang": "te",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     19
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 95,
+     "correct": 95,
+     "filled": 94,
+     "found": 94,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       18,
+       18
+      ],
+      "number": [
+       71,
+       71
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 19,
+     "rows_pred": 19,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-te-numeric-single-5031",
+    "lang": "te",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     19
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 95,
+     "correct": 95,
+     "filled": 94,
+     "found": 94,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       18,
+       18
+      ],
+      "number": [
+       71,
+       71
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 19,
+     "rows_pred": 19,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-te-numeric-single-5031",
+    "lang": "te",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     19
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 95,
+     "correct": 92,
+     "filled": 94,
+     "found": 91,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       16,
+       18
+      ],
+      "number": [
+       70,
+       71
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 19,
+     "rows_pred": 19,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9943,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 2,
+       "kind": "number",
+       "truth": "557.11",
+       "got": "557.31"
+      },
+      {
+       "row": 3,
+       "col": 1,
+       "kind": "text",
+       "truth": "విశాఖపట్నం చేర్చడం",
+       "got": "నిశాఖపట్నం చేర్చడం"
+      },
+      {
+       "row": 12,
+       "col": 1,
+       "kind": "text",
+       "truth": "గృహ కోట్లతో",
+       "got": "గృహ కేబుల్"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "checks_failed",
+     "unresolved_cells"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-te-numeric-single-5031",
+    "lang": "te",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     19
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 7,
+      "audit": 2,
+      "structure": 0
+     },
+     "cells": 95,
+     "correct": 88,
+     "filled": 94,
+     "found": 88,
+     "by_kind": {
+      "header": [
+       4,
+       5
+      ],
+      "text": [
+       17,
+       18
+      ],
+      "number": [
+       67,
+       71
+      ],
+      "empty": [
+       0,
+       1
+      ]
+     },
+     "rows_truth": 19,
+     "rows_pred": 19,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9734,
+     "teds_s": 0.9826,
+     "wrong": [
+      {
+       "row": 0,
+       "col": 0,
+       "kind": "header",
+       "truth": "క్ర.సం",
+       "got": "క్ష.సం"
+      },
+      {
+       "row": 1,
+       "col": 2,
+       "kind": "number",
+       "truth": "557.11",
+       "got": "557.31"
+      },
+      {
+       "row": 12,
+       "col": 1,
+       "kind": "text",
+       "truth": "గృహ కోట్లతో",
+       "got": "గృహ కొబ్బరి"
+      },
+      {
+       "row": 13,
+       "col": 4,
+       "kind": "number",
+       "truth": "11,976.15",
+       "got": "17,976.15"
+      },
+      {
+       "row": 14,
+       "col": 4,
+       "kind": "number",
+       "truth": "17,934.79",
+       "got": "-17,934.79"
+      },
+      {
+       "row": 15,
+       "col": 2,
+       "kind": "number",
+       "truth": "29,718.80",
+       "got": "29,716.80"
+      },
+      {
+       "row": 18,
+       "col": 0,
+       "kind": "empty",
+       "truth": "",
+       "got": "మొత్తం"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-te-numeric-single-5031",
+    "lang": "te",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     19
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 2,
+      "audit": 4,
+      "structure": 0
+     },
+     "cells": 95,
+     "correct": 91,
+     "filled": 94,
+     "found": 91,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       17,
+       18
+      ],
+      "number": [
+       69,
+       71
+      ],
+      "empty": [
+       0,
+       1
+      ]
+     },
+     "rows_truth": 19,
+     "rows_pred": 19,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9762,
+     "teds_s": 0.9826,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 2,
+       "kind": "number",
+       "truth": "557.11",
+       "got": "557.31"
+      },
+      {
+       "row": 12,
+       "col": 1,
+       "kind": "text",
+       "truth": "గృహ కోట్లతో",
+       "got": "గృహ కొబ్బరి"
+      },
+      {
+       "row": 13,
+       "col": 4,
+       "kind": "number",
+       "truth": "11,976.15",
+       "got": "17,976.15"
+      },
+      {
+       "row": 18,
+       "col": 0,
+       "kind": "empty",
+       "truth": "",
+       "got": "మొత్తం"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.203,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-bn-merged-single-5044",
+    "lang": "bn",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     22
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 115,
+     "correct": 115,
+     "filled": 115,
+     "found": 115,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       28,
+       28
+      ],
+      "number": [
+       80,
+       80
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 22,
+     "rows_pred": 22,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 0.8667,
+     "teds_s": 0.8667,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-bn-merged-single-5044",
+    "lang": "bn",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     22
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "repaired",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 115,
+     "correct": 115,
+     "filled": 115,
+     "found": 115,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       28,
+       28
+      ],
+      "number": [
+       80,
+       80
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 22,
+     "rows_pred": 22,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 0.86,
+     "teds_s": 0.86,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "repaired"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-bn-merged-single-5044",
+    "lang": "bn",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     22
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "repaired",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 115,
+     "correct": 115,
+     "filled": 115,
+     "found": 115,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       28,
+       28
+      ],
+      "number": [
+       80,
+       80
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 22,
+     "rows_pred": 22,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 0.86,
+     "teds_s": 0.86,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "repaired"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-bn-merged-single-5044",
+    "lang": "bn",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     22
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 115,
+     "correct": 57,
+     "filled": 115,
+     "found": 57,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       19,
+       28
+      ],
+      "number": [
+       31,
+       80
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 22,
+     "rows_pred": 21,
+     "rows_missing": 1,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.7298,
+     "teds_s": 0.8194,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 3,
+       "kind": "number",
+       "truth": "৮১৯.৯৫",
+       "got": "৮০৯.৯৫"
+      },
+      {
+       "row": 2,
+       "col": 5,
+       "kind": "number",
+       "truth": "১,৩৪৫.৫৩",
+       "got": "১,৩৪০.৫৩"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "number",
+       "truth": "৩৩.৯৫",
+       "got": "৩৩.৯০"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "number",
+       "truth": "৩৩,৪২১.৮৫",
+       "got": "৩৩.৪১.৮৫"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "number",
+       "truth": "২,৩৪৭.০৯",
+       "got": "২,৩৭২.০৯"
+      },
+      {
+       "row": 4,
+       "col": 3,
+       "kind": "number",
+       "truth": "২৩২.৬৯",
+       "got": "২৩২.৬৬"
+      },
+      {
+       "row": 4,
+       "col": 4,
+       "kind": "number",
+       "truth": "১৯.৬৭",
+       "got": "১৯.২৭"
+      },
+      {
+       "row": 4,
+       "col": 5,
+       "kind": "number",
+       "truth": "২,৫৯৯.৪৫",
+       "got": "২,০৯৯.৪৩"
+      },
+      {
+       "row": 5,
+       "col": 1,
+       "kind": "text",
+       "truth": "বিদ্যালয় মালদা",
+       "got": "হাসপাতাল"
+      },
+      {
+       "row": 5,
+       "col": 4,
+       "kind": "number",
+       "truth": "৫৬১.৫৬",
+       "got": "৩৫১.৩৬"
+      },
+      {
+       "row": 5,
+       "col": 5,
+       "kind": "number",
+       "truth": "১,২৬৩.৬৭",
+       "got": "১,২৮৩.৬৭"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "১৩.৬৭",
+       "got": "১৩.১৭"
+      },
+      {
+       "row": 6,
+       "col": 3,
+       "kind": "number",
+       "truth": "৭৩,৭৬৩.৭৮",
+       "got": "৭০.৭৬০.৩৮"
+      },
+      {
+       "row": 6,
+       "col": 5,
+       "kind": "number",
+       "truth": "৭৩,৮২৫.৪৫",
+       "got": "৭৩,২৮০.৩০"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "number",
+       "truth": "৮৬৮.৭২",
+       "got": "৮৬.৭২"
+      },
+      {
+       "row": 7,
+       "col": 4,
+       "kind": "number",
+       "truth": "৪১,৮১৫.৪৫",
+       "got": "৪১.৮১৫.৫৫"
+      },
+      {
+       "row": 7,
+       "col": 5,
+       "kind": "number",
+       "truth": "৪২,৭২৮.৩০",
+       "got": "৪২,৭২৮.০০"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "text",
+       "truth": "সড়ক",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 1,
+       "kind": "text",
+       "truth": "বিদ্যালয় কৃষি",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "২০,৭৪৯.৩৮",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "number",
+       "truth": "৮৮.৩৭",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 4,
+       "kind": "number",
+       "truth": "২০৪.৯৮",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 5,
+       "kind": "number",
+       "truth": "২১,০৪২.৭৩",
+       "got": null
+      },
+      {
+       "row": 9,
+       "col": 4,
+       "kind": "number",
+       "truth": "৮৯,৮৩১.৪৫",
+       "got": "৮৯.৮৩১.৪৫"
+      },
+      {
+       "row": 9,
+       "col": 5,
+       "kind": "number",
+       "truth": "৮৯,৯১৩.৮৭",
+       "got": "৮৯,৯১৬.৮৭"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "text",
+       "truth": "শহর",
+       "got": "নগর"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "number",
+       "truth": "৫৪,৫৭০.৫৪",
+       "got": "৫৪,৭৭০.৩৪"
+      },
+      {
+       "row": 10,
+       "col": 4,
+       "kind": "number",
+       "truth": "৫৪৩.২২",
+       "got": "৫৪.২২"
+      },
+      {
+       "row": 10,
+       "col": 5,
+       "kind": "number",
+       "truth": "৫৫,১৪৭.৬০",
+       "got": "৫০,১৪৭.৬০"
+      },
+      {
+       "row": 11,
+       "col": 1,
+       "kind": "text",
+       "truth": "বাজেট",
+       "got": "বাজার"
+      },
+      {
+       "row": 11,
+       "col": 5,
+       "kind": "number",
+       "truth": "৭২৯.৮১",
+       "got": "৭২৯.৮৩"
+      },
+      {
+       "row": 12,
+       "col": 3,
+       "kind": "number",
+       "truth": "৩,৪৩৪.৯৬",
+       "got": "৩,৫০৪.৯১"
+      },
+      {
+       "row": 12,
+       "col": 5,
+       "kind": "number",
+       "truth": "২৮,৩৬৫.৪৯",
+       "got": "২৮,৩৬০.৪৯"
+      },
+      {
+       "row": 13,
+       "col": 2,
+       "kind": "number",
+       "truth": "৬৪,২৫৬.৮৯",
+       "got": "৬৫,২০১.৮৯"
+      },
+      {
+       "row": 13,
+       "col": 5,
+       "kind": "number",
+       "truth": "৯২,৮৭৩.১৭",
+       "got": "৬২,৮৭৩.১৭"
+      },
+      {
+       "row": 14,
+       "col": 2,
+       "kind": "number",
+       "truth": "৫০,২১৫.৩৪",
+       "got": "৫০,২১৩.৩৪"
+      },
+      {
+       "row": 14,
+       "col": 3,
+       "kind": "number",
+       "truth": "২.৭২",
+       "got": "১.৭১"
+      },
+      {
+       "row": 15,
+       "col": 1,
+       "kind": "text",
+       "truth": "দার্জিলিং জল",
+       "got": "মার্জিলিং জল"
+      },
+      {
+       "row": 15,
+       "col": 2,
+       "kind": "number",
+       "truth": "২০.৮৯",
+       "got": "১০.৮৯"
+      },
+      {
+       "row": 15,
+       "col": 5,
+       "kind": "number",
+       "truth": "৫৬৬.০৮",
+       "got": "৫৬১.০৮"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "engines_disagree_on_shape"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-bn-merged-single-5044",
+    "lang": "bn",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     22
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 68,
+      "audit": 0,
+      "structure": 1
+     },
+     "cells": 115,
+     "correct": 57,
+     "filled": 115,
+     "found": 57,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       19,
+       28
+      ],
+      "number": [
+       31,
+       80
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 22,
+     "rows_pred": 21,
+     "rows_missing": 1,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.7298,
+     "teds_s": 0.8194,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 3,
+       "kind": "number",
+       "truth": "৮১৯.৯৫",
+       "got": "৮০৯.৯৫"
+      },
+      {
+       "row": 2,
+       "col": 5,
+       "kind": "number",
+       "truth": "১,৩৪৫.৫৩",
+       "got": "১,৩৪০.৫৩"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "number",
+       "truth": "৩৩.৯৫",
+       "got": "৩৩.৯০"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "number",
+       "truth": "৩৩,৪২১.৮৫",
+       "got": "৩৩.৪১.৮৫"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "number",
+       "truth": "২,৩৪৭.০৯",
+       "got": "২,৩৭২.০৯"
+      },
+      {
+       "row": 4,
+       "col": 3,
+       "kind": "number",
+       "truth": "২৩২.৬৯",
+       "got": "২৩২.৬৬"
+      },
+      {
+       "row": 4,
+       "col": 4,
+       "kind": "number",
+       "truth": "১৯.৬৭",
+       "got": "১৯.২৭"
+      },
+      {
+       "row": 4,
+       "col": 5,
+       "kind": "number",
+       "truth": "২,৫৯৯.৪৫",
+       "got": "২,০৯৯.৪৩"
+      },
+      {
+       "row": 5,
+       "col": 1,
+       "kind": "text",
+       "truth": "বিদ্যালয় মালদা",
+       "got": "হাসপাতাল"
+      },
+      {
+       "row": 5,
+       "col": 4,
+       "kind": "number",
+       "truth": "৫৬১.৫৬",
+       "got": "৩৫১.৩৬"
+      },
+      {
+       "row": 5,
+       "col": 5,
+       "kind": "number",
+       "truth": "১,২৬৩.৬৭",
+       "got": "১,২৮৩.৬৭"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "১৩.৬৭",
+       "got": "১৩.১৭"
+      },
+      {
+       "row": 6,
+       "col": 3,
+       "kind": "number",
+       "truth": "৭৩,৭৬৩.৭৮",
+       "got": "৭০.৭৬০.৩৮"
+      },
+      {
+       "row": 6,
+       "col": 5,
+       "kind": "number",
+       "truth": "৭৩,৮২৫.৪৫",
+       "got": "৭৩,২৮০.৩০"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "number",
+       "truth": "৮৬৮.৭২",
+       "got": "৮৬.৭২"
+      },
+      {
+       "row": 7,
+       "col": 4,
+       "kind": "number",
+       "truth": "৪১,৮১৫.৪৫",
+       "got": "৪১.৮১৫.৫৫"
+      },
+      {
+       "row": 7,
+       "col": 5,
+       "kind": "number",
+       "truth": "৪২,৭২৮.৩০",
+       "got": "৪২,৭২৮.০০"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "text",
+       "truth": "সড়ক",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 1,
+       "kind": "text",
+       "truth": "বিদ্যালয় কৃষি",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "২০,৭৪৯.৩৮",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "number",
+       "truth": "৮৮.৩৭",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 4,
+       "kind": "number",
+       "truth": "২০৪.৯৮",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 5,
+       "kind": "number",
+       "truth": "২১,০৪২.৭৩",
+       "got": null
+      },
+      {
+       "row": 9,
+       "col": 4,
+       "kind": "number",
+       "truth": "৮৯,৮৩১.৪৫",
+       "got": "৮৯.৮৩১.৪৫"
+      },
+      {
+       "row": 9,
+       "col": 5,
+       "kind": "number",
+       "truth": "৮৯,৯১৩.৮৭",
+       "got": "৮৯,৯১৬.৮৭"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "text",
+       "truth": "শহর",
+       "got": "নগর"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "number",
+       "truth": "৫৪,৫৭০.৫৪",
+       "got": "৫৪,৭৭০.৩৪"
+      },
+      {
+       "row": 10,
+       "col": 4,
+       "kind": "number",
+       "truth": "৫৪৩.২২",
+       "got": "৫৪.২২"
+      },
+      {
+       "row": 10,
+       "col": 5,
+       "kind": "number",
+       "truth": "৫৫,১৪৭.৬০",
+       "got": "৫০,১৪৭.৬০"
+      },
+      {
+       "row": 11,
+       "col": 1,
+       "kind": "text",
+       "truth": "বাজেট",
+       "got": "বাজার"
+      },
+      {
+       "row": 11,
+       "col": 5,
+       "kind": "number",
+       "truth": "৭২৯.৮১",
+       "got": "৭২৯.৮৩"
+      },
+      {
+       "row": 12,
+       "col": 3,
+       "kind": "number",
+       "truth": "৩,৪৩৪.৯৬",
+       "got": "৩,৫০৪.৯১"
+      },
+      {
+       "row": 12,
+       "col": 5,
+       "kind": "number",
+       "truth": "২৮,৩৬৫.৪৯",
+       "got": "২৮,৩৬০.৪৯"
+      },
+      {
+       "row": 13,
+       "col": 2,
+       "kind": "number",
+       "truth": "৬৪,২৫৬.৮৯",
+       "got": "৬৫,২০১.৮৯"
+      },
+      {
+       "row": 13,
+       "col": 5,
+       "kind": "number",
+       "truth": "৯২,৮৭৩.১৭",
+       "got": "৬২,৮৭৩.১৭"
+      },
+      {
+       "row": 14,
+       "col": 2,
+       "kind": "number",
+       "truth": "৫০,২১৫.৩৪",
+       "got": "৫০,২১৩.৩৪"
+      },
+      {
+       "row": 14,
+       "col": 3,
+       "kind": "number",
+       "truth": "২.৭২",
+       "got": "১.৭১"
+      },
+      {
+       "row": 15,
+       "col": 1,
+       "kind": "text",
+       "truth": "দার্জিলিং জল",
+       "got": "মার্জিলিং জল"
+      },
+      {
+       "row": 15,
+       "col": 2,
+       "kind": "number",
+       "truth": "২০.৮৯",
+       "got": "১০.৮৯"
+      },
+      {
+       "row": 15,
+       "col": 5,
+       "kind": "number",
+       "truth": "৫৬৬.০৮",
+       "got": "৫৬১.০৮"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-bn-merged-single-5044",
+    "lang": "bn",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     22
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 68,
+      "audit": 0,
+      "structure": 1
+     },
+     "cells": 115,
+     "correct": 57,
+     "filled": 115,
+     "found": 57,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       19,
+       28
+      ],
+      "number": [
+       31,
+       80
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 22,
+     "rows_pred": 21,
+     "rows_missing": 1,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.7298,
+     "teds_s": 0.8194,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 3,
+       "kind": "number",
+       "truth": "৮১৯.৯৫",
+       "got": "৮০৯.৯৫"
+      },
+      {
+       "row": 2,
+       "col": 5,
+       "kind": "number",
+       "truth": "১,৩৪৫.৫৩",
+       "got": "১,৩৪০.৫৩"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "number",
+       "truth": "৩৩.৯৫",
+       "got": "৩৩.৯০"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "number",
+       "truth": "৩৩,৪২১.৮৫",
+       "got": "৩৩.৪১.৮৫"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "number",
+       "truth": "২,৩৪৭.০৯",
+       "got": "২,৩৭২.০৯"
+      },
+      {
+       "row": 4,
+       "col": 3,
+       "kind": "number",
+       "truth": "২৩২.৬৯",
+       "got": "২৩২.৬৬"
+      },
+      {
+       "row": 4,
+       "col": 4,
+       "kind": "number",
+       "truth": "১৯.৬৭",
+       "got": "১৯.২৭"
+      },
+      {
+       "row": 4,
+       "col": 5,
+       "kind": "number",
+       "truth": "২,৫৯৯.৪৫",
+       "got": "২,০৯৯.৪৩"
+      },
+      {
+       "row": 5,
+       "col": 1,
+       "kind": "text",
+       "truth": "বিদ্যালয় মালদা",
+       "got": "হাসপাতাল"
+      },
+      {
+       "row": 5,
+       "col": 4,
+       "kind": "number",
+       "truth": "৫৬১.৫৬",
+       "got": "৩৫১.৩৬"
+      },
+      {
+       "row": 5,
+       "col": 5,
+       "kind": "number",
+       "truth": "১,২৬৩.৬৭",
+       "got": "১,২৮৩.৬৭"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "১৩.৬৭",
+       "got": "১৩.১৭"
+      },
+      {
+       "row": 6,
+       "col": 3,
+       "kind": "number",
+       "truth": "৭৩,৭৬৩.৭৮",
+       "got": "৭০.৭৬০.৩৮"
+      },
+      {
+       "row": 6,
+       "col": 5,
+       "kind": "number",
+       "truth": "৭৩,৮২৫.৪৫",
+       "got": "৭৩,২৮০.৩০"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "number",
+       "truth": "৮৬৮.৭২",
+       "got": "৮৬.৭২"
+      },
+      {
+       "row": 7,
+       "col": 4,
+       "kind": "number",
+       "truth": "৪১,৮১৫.৪৫",
+       "got": "৪১.৮১৫.৫৫"
+      },
+      {
+       "row": 7,
+       "col": 5,
+       "kind": "number",
+       "truth": "৪২,৭২৮.৩০",
+       "got": "৪২,৭২৮.০০"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "text",
+       "truth": "সড়ক",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 1,
+       "kind": "text",
+       "truth": "বিদ্যালয় কৃষি",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "২০,৭৪৯.৩৮",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "number",
+       "truth": "৮৮.৩৭",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 4,
+       "kind": "number",
+       "truth": "২০৪.৯৮",
+       "got": null
+      },
+      {
+       "row": 8,
+       "col": 5,
+       "kind": "number",
+       "truth": "২১,০৪২.৭৩",
+       "got": null
+      },
+      {
+       "row": 9,
+       "col": 4,
+       "kind": "number",
+       "truth": "৮৯,৮৩১.৪৫",
+       "got": "৮৯.৮৩১.৪৫"
+      },
+      {
+       "row": 9,
+       "col": 5,
+       "kind": "number",
+       "truth": "৮৯,৯১৩.৮৭",
+       "got": "৮৯,৯১৬.৮৭"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "text",
+       "truth": "শহর",
+       "got": "নগর"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "number",
+       "truth": "৫৪,৫৭০.৫৪",
+       "got": "৫৪,৭৭০.৩৪"
+      },
+      {
+       "row": 10,
+       "col": 4,
+       "kind": "number",
+       "truth": "৫৪৩.২২",
+       "got": "৫৪.২২"
+      },
+      {
+       "row": 10,
+       "col": 5,
+       "kind": "number",
+       "truth": "৫৫,১৪৭.৬০",
+       "got": "৫০,১৪৭.৬০"
+      },
+      {
+       "row": 11,
+       "col": 1,
+       "kind": "text",
+       "truth": "বাজেট",
+       "got": "বাজার"
+      },
+      {
+       "row": 11,
+       "col": 5,
+       "kind": "number",
+       "truth": "৭২৯.৮১",
+       "got": "৭২৯.৮৩"
+      },
+      {
+       "row": 12,
+       "col": 3,
+       "kind": "number",
+       "truth": "৩,৪৩৪.৯৬",
+       "got": "৩,৫০৪.৯১"
+      },
+      {
+       "row": 12,
+       "col": 5,
+       "kind": "number",
+       "truth": "২৮,৩৬৫.৪৯",
+       "got": "২৮,৩৬০.৪৯"
+      },
+      {
+       "row": 13,
+       "col": 2,
+       "kind": "number",
+       "truth": "৬৪,২৫৬.৮৯",
+       "got": "৬৫,২০১.৮৯"
+      },
+      {
+       "row": 13,
+       "col": 5,
+       "kind": "number",
+       "truth": "৯২,৮৭৩.১৭",
+       "got": "৬২,৮৭৩.১৭"
+      },
+      {
+       "row": 14,
+       "col": 2,
+       "kind": "number",
+       "truth": "৫০,২১৫.৩৪",
+       "got": "৫০,২১৩.৩৪"
+      },
+      {
+       "row": 14,
+       "col": 3,
+       "kind": "number",
+       "truth": "২.৭২",
+       "got": "১.৭১"
+      },
+      {
+       "row": 15,
+       "col": 1,
+       "kind": "text",
+       "truth": "দার্জিলিং জল",
+       "got": "মার্জিলিং জল"
+      },
+      {
+       "row": 15,
+       "col": 2,
+       "kind": "number",
+       "truth": "২০.৮৯",
+       "got": "১০.৮৯"
+      },
+      {
+       "row": 15,
+       "col": 5,
+       "kind": "number",
+       "truth": "৫৬৬.০৮",
+       "got": "৫৬১.০৮"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-hi-numeric-split_repeat-6010",
+    "lang": "hi",
+    "kind": "numeric",
+    "style": "split_repeat",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     28
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 140,
+     "correct": 140,
+     "filled": 139,
+     "found": 139,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       27,
+       27
+      ],
+      "number": [
+       107,
+       107
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 28,
+     "rows_pred": 28,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-hi-numeric-split_repeat-6010",
+    "lang": "hi",
+    "kind": "numeric",
+    "style": "split_repeat",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     28
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 0,
+      "audit": 1,
+      "structure": 0
+     },
+     "cells": 140,
+     "correct": 140,
+     "filled": 139,
+     "found": 139,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       27,
+       27
+      ],
+      "number": [
+       107,
+       107
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 28,
+     "rows_pred": 28,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-hi-numeric-split_repeat-6010",
+    "lang": "hi",
+    "kind": "numeric",
+    "style": "split_repeat",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "tough",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     28
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 0,
+      "audit": 1,
+      "structure": 0
+     },
+     "cells": 140,
+     "correct": 140,
+     "filled": 139,
+     "found": 139,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       27,
+       27
+      ],
+      "number": [
+       107,
+       107
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 28,
+     "rows_pred": 28,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "v2-mr-numeric-split-6001",
+    "lang": "mr",
+    "kind": "numeric",
+    "style": "split",
+    "digits": "latin",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     31
+    ],
+    "cols": [
+     7
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 217,
+     "correct": 216,
+     "filled": 216,
+     "found": 215,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       29,
+       30
+      ],
+      "number": [
+       179,
+       179
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 31,
+     "rows_pred": 31,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 7,
+     "cols_pred": 7,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9996,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 4,
+       "col": 1,
+       "kind": "text",
+       "truth": "शहर लंबायीं",
+       "got": "शहर लंबीं"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "v2-mr-numeric-split-6001",
+    "lang": "mr",
+    "kind": "numeric",
+    "style": "split",
+    "digits": "latin",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     31
+    ],
+    "cols": [
+     7
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "repaired",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 217,
+     "correct": 217,
+     "filled": 216,
+     "found": 216,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       30,
+       30
+      ],
+      "number": [
+       179,
+       179
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 31,
+     "rows_pred": 31,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 7,
+     "cols_pred": 7,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "repaired"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "v2-mr-numeric-split-6001",
+    "lang": "mr",
+    "kind": "numeric",
+    "style": "split",
+    "digits": "latin",
+    "ruled": false,
+    "cut": false,
+    "profile": "tough",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     31
+    ],
+    "cols": [
+     7
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "repaired",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 217,
+     "correct": 217,
+     "filled": 216,
+     "found": 216,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       30,
+       30
+      ],
+      "number": [
+       179,
+       179
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 31,
+     "rows_pred": 31,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 7,
+     "cols_pred": 7,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "repaired"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  }
+ ]
+}

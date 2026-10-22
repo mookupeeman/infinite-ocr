@@ -1,0 +1,51 @@
+{
+ "_about": "Measured coefficients for src/estimate.py (2026-10-22). Ranges are [low, high]. Refit from out/estimates.jsonl.",
+ "sarvam_inr_per_page": 0.5,
+ "bodhan_inr_per_page": 0.2,
+ "sarvam_pages_per_min": [
+  15,
+  30
+ ],
+ "bodhan_pages_per_min": 8,
+ "_bodhan_local": "BODHAN_BACKEND=local, MLX 8-bit on a fanless M4 MacBook Air, 16 slots, 6 pages in flight: 4.5-5.8 pages/min on dense Hindi pages (16 crops/page), lower when hot. Cost 0.",
+ "bodhan_local_pages_per_min": [
+  3,
+  6
+ ],
+ "stage1_overhead_min": [
+  0.3,
+  1.0
+ ],
+ "_questions": "open cells sent to the image check per table page. vector/unicode: Economic Survey ~1, Union budget ~18; vector/legacy: Marathi ~2; raster ruled: ~32 on the v2 scan benchmark (unruled scans get no model questions)",
+ "questions_per_table_page": {
+  "vector/unicode": [
+   2,
+   20
+  ],
+  "vector/legacy": [
+   2,
+   10
+  ],
+  "vector/other": [
+   2,
+   20
+  ],
+  "raster": [
+   0,
+   32
+  ]
+ },
+ "_scanned_second_model": "share of a scanned table's questions that reach the second model (Flash-lite first; Luna only where Flash-lite read an engine value)",
+ "scanned_second_model_share": 0.6,
+ "think_third_model_share": 0.25,
+ "stage2_free_s_per_table_page": [
+  0.5,
+  1.5
+ ],
+ "_sheet_latency": "seconds per sheet per model call, with AGENT_MAX_INFLIGHT calls in parallel",
+ "sheet_latency_s": [
+  10,
+  30
+ ],
+ "dense_numbers_for_table": 60
+}

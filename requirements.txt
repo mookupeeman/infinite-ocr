@@ -1,0 +1,15 @@
+pymupdf
+sarvamai>=0.1.36
+openai
+python-dotenv
+requests
+huggingface_hub>=1.0
+# benchmark (bench/) only
+numpy
+pillow
+apted
+# local Bodhan (BODHAN_BACKEND=local). Do not use the CUDA index on a Mac.
+# torch
+# torchvision
+# transformers>=5.7
+# accelerate>=1.1

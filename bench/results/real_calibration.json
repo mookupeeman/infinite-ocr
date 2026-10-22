@@ -1,0 +1,9742 @@
+{
+ "summary": {
+  "pages": 24,
+  "cells": 1374,
+  "detected": {
+   "sarvam": 24,
+   "bodhan": 24
+  },
+  "exact_pages": {
+   "sarvam": 16,
+   "bodhan": 15
+  },
+  "cells_all": {
+   "cells": 1345,
+   "sarvam_wrong": 85,
+   "bodhan_wrong": 107,
+   "union_error_rate": 0.0796,
+   "disagree": 22,
+   "shared_same": 51,
+   "both_wrong_different": 34,
+   "shared_share_of_errors": 0.4766,
+   "empty_when_truth_filled": 0
+  },
+  "cells_body": {
+   "cells": 1214,
+   "sarvam_wrong": 85,
+   "bodhan_wrong": 107,
+   "union_error_rate": 0.0881,
+   "disagree": 22,
+   "shared_same": 51,
+   "both_wrong_different": 34,
+   "shared_share_of_errors": 0.4766,
+   "empty_when_truth_filled": 0
+  },
+  "cells_header": {
+   "cells": 131,
+   "sarvam_wrong": 0,
+   "bodhan_wrong": 0,
+   "union_error_rate": 0.0,
+   "disagree": 0,
+   "shared_same": 0,
+   "both_wrong_different": 0,
+   "shared_share_of_errors": null,
+   "empty_when_truth_filled": 0
+  },
+  "cells_number": {
+   "cells": 519,
+   "sarvam_wrong": 55,
+   "bodhan_wrong": 68,
+   "union_error_rate": 0.131,
+   "disagree": 13,
+   "shared_same": 39,
+   "both_wrong_different": 16,
+   "shared_share_of_errors": 0.5735,
+   "empty_when_truth_filled": 0
+  },
+  "cells_text": {
+   "cells": 695,
+   "sarvam_wrong": 30,
+   "bodhan_wrong": 39,
+   "union_error_rate": 0.0561,
+   "disagree": 9,
+   "shared_same": 12,
+   "both_wrong_different": 18,
+   "shared_share_of_errors": 0.3077,
+   "empty_when_truth_filled": 0
+  },
+  "by_mode": {
+   "born-digital": {
+    "cells": 802,
+    "sarvam_wrong": 47,
+    "bodhan_wrong": 61,
+    "union_error_rate": 0.0761,
+    "disagree": 14,
+    "shared_same": 27,
+    "both_wrong_different": 20,
+    "shared_share_of_errors": 0.4426,
+    "empty_when_truth_filled": 0
+   },
+   "scanned": {
+    "cells": 543,
+    "sarvam_wrong": 38,
+    "bodhan_wrong": 46,
+    "union_error_rate": 0.0847,
+    "disagree": 8,
+    "shared_same": 24,
+    "both_wrong_different": 14,
+    "shared_share_of_errors": 0.5217,
+    "empty_when_truth_filled": 0
+   }
+  },
+  "by_lang": {
+   "bn": {
+    "cells": 194,
+    "sarvam_wrong": 0,
+    "bodhan_wrong": 0,
+    "union_error_rate": 0.0,
+    "disagree": 0,
+    "shared_same": 0,
+    "both_wrong_different": 0,
+    "shared_share_of_errors": null,
+    "empty_when_truth_filled": 0
+   },
+   "en": {
+    "cells": 94,
+    "sarvam_wrong": 0,
+    "bodhan_wrong": 0,
+    "union_error_rate": 0.0,
+    "disagree": 0,
+    "shared_same": 0,
+    "both_wrong_different": 0,
+    "shared_share_of_errors": null,
+    "empty_when_truth_filled": 0
+   },
+   "hi": {
+    "cells": 421,
+    "sarvam_wrong": 0,
+    "bodhan_wrong": 1,
+    "union_error_rate": 0.0024,
+    "disagree": 1,
+    "shared_same": 0,
+    "both_wrong_different": 0,
+    "shared_share_of_errors": 0.0,
+    "empty_when_truth_filled": 0
+   },
+   "mr": {
+    "cells": 196,
+    "sarvam_wrong": 0,
+    "bodhan_wrong": 0,
+    "union_error_rate": 0.0,
+    "disagree": 0,
+    "shared_same": 0,
+    "both_wrong_different": 0,
+    "shared_share_of_errors": null,
+    "empty_when_truth_filled": 0
+   },
+   "ta": {
+    "cells": 350,
+    "sarvam_wrong": 83,
+    "bodhan_wrong": 94,
+    "union_error_rate": 0.2686,
+    "disagree": 11,
+    "shared_same": 49,
+    "both_wrong_different": 34,
+    "shared_share_of_errors": 0.5213,
+    "empty_when_truth_filled": 0
+   },
+   "te": {
+    "cells": 90,
+    "sarvam_wrong": 2,
+    "bodhan_wrong": 12,
+    "union_error_rate": 0.1333,
+    "disagree": 10,
+    "shared_same": 2,
+    "both_wrong_different": 0,
+    "shared_share_of_errors": 0.1667,
+    "empty_when_truth_filled": 0
+   }
+  },
+  "structure": {
+   "sarvam": {
+    "tables": 24,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_not_ok": 0,
+    "header_depth_off": 2,
+    "split_into_pieces": 0,
+    "uses_rowspan": 2,
+    "uses_colspan": 2
+   },
+   "bodhan": {
+    "tables": 24,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_not_ok": 0,
+    "header_depth_off": 0,
+    "split_into_pieces": 0,
+    "uses_rowspan": 2,
+    "uses_colspan": 2
+   }
+  },
+  "stage2_on_real": {
+   "legacy/born-digital": {
+    "tables": 12,
+    "exact": 8,
+    "accepted": 12,
+    "accepted_and_wrong": 4,
+    "needs_review": 0,
+    "needs_review_and_wrong": 0,
+    "cells": 807,
+    "correct": 760,
+    "questions": {
+     "cell": 0,
+     "audit": 0,
+     "structure": 0
+    }
+   },
+   "legacy/scanned": {
+    "tables": 10,
+    "exact": 7,
+    "accepted": 9,
+    "accepted_and_wrong": 2,
+    "needs_review": 0,
+    "needs_review_and_wrong": 0,
+    "cells": 555,
+    "correct": 517,
+    "questions": {
+     "cell": 0,
+     "audit": 0,
+     "structure": 0
+    }
+   },
+   "standard/born-digital": {
+    "tables": 12,
+    "exact": 8,
+    "accepted": 8,
+    "accepted_and_wrong": 0,
+    "needs_review": 4,
+    "needs_review_and_wrong": 4,
+    "cells": 807,
+    "correct": 760,
+    "questions": {
+     "cell": 31,
+     "audit": 53,
+     "structure": 0
+    }
+   },
+   "standard/scanned": {
+    "tables": 10,
+    "exact": 7,
+    "accepted": 7,
+    "accepted_and_wrong": 0,
+    "needs_review": 3,
+    "needs_review_and_wrong": 3,
+    "cells": 555,
+    "correct": 517,
+    "questions": {
+     "cell": 22,
+     "audit": 33,
+     "structure": 0
+    }
+   },
+   "standard+image/born-digital": {
+    "tables": 12,
+    "exact": 8,
+    "accepted": 8,
+    "accepted_and_wrong": 0,
+    "needs_review": 4,
+    "needs_review_and_wrong": 4,
+    "cells": 807,
+    "correct": 760,
+    "questions": {
+     "cell": 31,
+     "audit": 45,
+     "structure": 0
+    }
+   },
+   "standard+image/scanned": {
+    "tables": 10,
+    "exact": 7,
+    "accepted": 7,
+    "accepted_and_wrong": 0,
+    "needs_review": 3,
+    "needs_review_and_wrong": 3,
+    "cells": 555,
+    "correct": 517,
+    "questions": {
+     "cell": 22,
+     "audit": 26,
+     "structure": 0
+    }
+   }
+  },
+  "joins_on_real/legacy": {
+   "tp": 2,
+   "fn": 0,
+   "fp": 0
+  },
+  "joins_on_real/standard": {
+   "tp": 2,
+   "fn": 0,
+   "fp": 0
+  },
+  "joins_on_real/standard+image": {
+   "tp": 2,
+   "fn": 0,
+   "fp": 0
+  },
+  "confusions": {
+   "sarvam": [
+    [
+     "௨",
+     "உ",
+     12
+    ],
+    [
+     "௮",
+     "அ",
+     11
+    ],
+    [
+     "௭",
+     "எ",
+     7
+    ],
+    [
+     "௧",
+     "க",
+     6
+    ],
+    [
+     "௧௧",
+     "கக",
+     6
+    ],
+    [
+     "௦",
+     "0",
+     6
+    ],
+    [
+     "௩",
+     "ங",
+     4
+    ],
+    [
+     "௨௧",
+     "உக",
+     4
+    ],
+    [
+     "௧௨",
+     "கஉ",
+     4
+    ],
+    [
+     "௪",
+     "ச",
+     3
+    ],
+    [
+     "௨௭",
+     "உஎ",
+     3
+    ],
+    [
+     "௬",
+     "சு",
+     2
+    ],
+    [
+     "௯",
+     "கூ",
+     2
+    ],
+    [
+     "௧௦",
+     "க0",
+     2
+    ],
+    [
+     "౩౩",
+     "33",
+     2
+    ],
+    [
+     "௪௫",
+     "சரு",
+     2
+    ],
+    [
+     "௭௧",
+     "எக",
+     2
+    ],
+    [
+     "௨௦௨",
+     "20உ",
+     2
+    ],
+    [
+     "௦௮",
+     "0அ",
+     2
+    ],
+    [
+     "௮௩",
+     "அங",
+     2
+    ],
+    [
+     "௧௫",
+     "கரு",
+     2
+    ],
+    [
+     "௫",
+     "ரு",
+     1
+    ],
+    [
+     "௮௭௭",
+     "அஎஎ",
+     1
+    ],
+    [
+     "௮௭௨",
+     "அஎஉ",
+     1
+    ],
+    [
+     "௨௩",
+     "உங",
+     1
+    ],
+    [
+     "௦௭",
+     "0எ",
+     1
+    ],
+    [
+     "௭௯",
+     "எகூ",
+     1
+    ],
+    [
+     "௩௩",
+     "ஙங",
+     1
+    ],
+    [
+     "௭௦௮",
+     "எ0அ",
+     1
+    ],
+    [
+     "௦௧",
+     "0க",
+     1
+    ],
+    [
+     "௩௯",
+     "ஙகூ",
+     1
+    ],
+    [
+     "௨௫",
+     "உரு",
+     1
+    ],
+    [
+     "௧௪",
+     "கச",
+     1
+    ],
+    [
+     "௧௬",
+     "கசு",
+     1
+    ],
+    [
+     "௧௭",
+     "கஎ",
+     1
+    ],
+    [
+     "௧௮",
+     "கஅ",
+     1
+    ],
+    [
+     "௧௯",
+     "ககூ",
+     1
+    ],
+    [
+     "௨௦",
+     "உ0",
+     1
+    ]
+   ],
+   "bodhan": [
+    [
+     "௧௧",
+     "கக",
+     9
+    ],
+    [
+     "౦",
+     "0",
+     7
+    ],
+    [
+     "௧௨",
+     "கஉ",
+     5
+    ],
+    [
+     "௧",
+     "க",
+     4
+    ],
+    [
+     "௦௯",
+     "0கூ",
+     4
+    ],
+    [
+     "௨௩",
+     "உங",
+     4
+    ],
+    [
+     "௩௯",
+     "ஙகூ",
+     4
+    ],
+    [
+     "௩௮",
+     "ஙஅ",
+     4
+    ],
+    [
+     "௦௮",
+     "0அ",
+     4
+    ],
+    [
+     "௨",
+     "உ",
+     3
+    ],
+    [
+     "௩",
+     "ங",
+     3
+    ],
+    [
+     "௪",
+     "ச",
+     3
+    ],
+    [
+     "௫",
+     "ரு",
+     3
+    ],
+    [
+     "௬",
+     "சு",
+     3
+    ],
+    [
+     "௭",
+     "எ",
+     3
+    ],
+    [
+     "௮",
+     "அ",
+     3
+    ],
+    [
+     "௯",
+     "கூ",
+     3
+    ],
+    [
+     "௧௦",
+     "க0",
+     3
+    ],
+    [
+     "௧௫",
+     "கரு",
+     3
+    ],
+    [
+     "౩౪",
+     "38",
+     2
+    ],
+    [
+     "౩౩",
+     "33",
+     2
+    ],
+    [
+     "౩",
+     "3",
+     2
+    ],
+    [
+     "௪௫",
+     "சரு",
+     2
+    ],
+    [
+     "௦௬",
+     "0சு",
+     2
+    ],
+    [
+     "௦௭",
+     "0எ",
+     2
+    ],
+    [
+     "௨௯",
+     "உகூ",
+     2
+    ],
+    [
+     "௨௧௩",
+     "உகங",
+     2
+    ],
+    [
+     "௨௬",
+     "உசு",
+     2
+    ],
+    [
+     "௦௩",
+     "0ங",
+     2
+    ],
+    [
+     "௭௯",
+     "எகூ",
+     2
+    ],
+    [
+     "௩௩",
+     "ஙங",
+     2
+    ],
+    [
+     "௨௭",
+     "உஎ",
+     2
+    ],
+    [
+     "௭௦௮",
+     "எ0அ",
+     2
+    ],
+    [
+     "௦௧",
+     "0க",
+     2
+    ],
+    [
+     "௩௨",
+     "ஙஉ",
+     2
+    ],
+    [
+     "௨௧",
+     "உக",
+     2
+    ],
+    [
+     "௮௩",
+     "அங",
+     2
+    ],
+    [
+     "௭௧",
+     "எக",
+     2
+    ],
+    [
+     "௦௫",
+     "0ரு",
+     2
+    ],
+    [
+     "௩௮௩",
+     "ஙஅங",
+     2
+    ],
+    [
+     "௨௫",
+     "உரு",
+     2
+    ],
+    [
+     "यीं",
+     "ई",
+     1
+    ],
+    [
+     "௧௪",
+     "கச",
+     1
+    ],
+    [
+     "௧௬",
+     "கசு",
+     1
+    ],
+    [
+     "௧௭",
+     "கஎ",
+     1
+    ],
+    [
+     "௧௮",
+     "கஅ",
+     1
+    ],
+    [
+     "௧௯",
+     "ககூ",
+     1
+    ],
+    [
+     "௨௦",
+     "உ0",
+     1
+    ]
+   ]
+  }
+ },
+ "pages": [
+  {
+   "case": "hi-mixed-single-1002",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "hi",
+   "kind": "mixed",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 9,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "hi-mixed-single-1002",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "hi",
+   "kind": "mixed",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 9,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "mr-text-single-1010",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "mr",
+   "kind": "text",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 9,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "mr-text-single-1010",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "mr",
+   "kind": "text",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 9,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "ta-text-single-1020",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "ta",
+   "kind": "text",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 12,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 12,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9589,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 12,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.8493,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "ta-text-single-1020",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "ta",
+   "kind": "text",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 12,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 12,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.8493,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 12,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.8493,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "te-mixed-single-1032",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "te",
+   "kind": "mixed",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 8,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 8,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9912,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 8,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9781,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "te-mixed-single-1032",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "te",
+   "kind": "mixed",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 8,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 8,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9912,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 8,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9658,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "bn-dates-single-1043",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "bn",
+   "kind": "dates",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 13,
+   "truth_cols": 4,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 13,
+    "cols": 4,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 13,
+    "cols": 4,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "bn-dates-single-1043",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "bn",
+   "kind": "dates",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 13,
+   "truth_cols": 4,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 13,
+    "cols": 4,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 13,
+    "cols": 4,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "en-numeric-single-1051",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "en",
+   "kind": "numeric",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 8,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 0,
+    "detected": true,
+    "exact": true,
+    "rows": 8,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": true
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 8,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "en-numeric-single-1051",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "en",
+   "kind": "numeric",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 8,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 0,
+    "detected": true,
+    "exact": true,
+    "rows": 8,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": true
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 8,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "hi-merged-single-1004",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "hi",
+   "kind": "merged",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 16,
+   "truth_cols": 6,
+   "truth_header_rows": 2,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 2,
+    "detected": true,
+    "exact": true,
+    "rows": 16,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 2,
+    "detected": true,
+    "exact": true,
+    "rows": 16,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.92,
+    "teds_s": 0.92,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "hi-merged-single-1004",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "hi",
+   "kind": "merged",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 16,
+   "truth_cols": 6,
+   "truth_header_rows": 2,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 2,
+    "detected": true,
+    "exact": true,
+    "rows": 16,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": true,
+    "uses_colspan": true,
+    "header_rows": 2,
+    "detected": true,
+    "exact": true,
+    "rows": 16,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "mr-numeric-single-1011",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "mr",
+   "kind": "numeric",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 9,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "mr-numeric-single-1011",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "mr",
+   "kind": "numeric",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 9,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "ta-sparse-single-1025",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "ta",
+   "kind": "sparse",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 11,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 11,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.8933,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 11,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.7403,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "ta-sparse-single-1025",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "ta",
+   "kind": "sparse",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 11,
+   "truth_cols": 6,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 11,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.772,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 11,
+    "cols": 6,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.7403,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "bn-text-single-1040",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "bn",
+   "kind": "text",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 9,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "bn-text-single-1040",
+   "mode": "scanned",
+   "scanned": true,
+   "lang": "bn",
+   "kind": "text",
+   "style": "single",
+   "page": 1,
+   "truth_rows": 9,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Header",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 9,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "hi-numeric-split_repeat-2010",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "hi",
+   "kind": "numeric",
+   "style": "split_repeat",
+   "page": 1,
+   "truth_rows": 12,
+   "truth_cols": 7,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 12,
+    "cols": 7,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 12,
+    "cols": 7,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "hi-numeric-split_repeat-2010",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "hi",
+   "kind": "numeric",
+   "style": "split_repeat",
+   "page": 2,
+   "truth_rows": 10,
+   "truth_cols": 7,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": true,
+    "rows": 10,
+    "cols": 7,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 1.0,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 10,
+    "cols": 7,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.9959,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "ta-text-split_cut-2022",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "ta",
+   "kind": "text",
+   "style": "split_cut",
+   "page": 1,
+   "truth_rows": 12,
+   "truth_cols": 5,
+   "truth_header_rows": 1,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "image-caption",
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 12,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.863,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table",
+     "Table-caption"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 1,
+    "detected": true,
+    "exact": false,
+    "rows": 12,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.8493,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  },
+  {
+   "case": "ta-text-split_cut-2022",
+   "mode": "born-digital",
+   "scanned": false,
+   "lang": "ta",
+   "kind": "text",
+   "style": "split_cut",
+   "page": 2,
+   "truth_rows": 10,
+   "truth_cols": 5,
+   "truth_header_rows": 0,
+   "sarvam": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "page-number",
+     "table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 0,
+    "detected": true,
+    "exact": false,
+    "rows": 10,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.8607,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   },
+   "bodhan": {
+    "read": true,
+    "table_blocks": 1,
+    "labels": [
+     "Footer",
+     "Page-number",
+     "Table"
+    ],
+    "uses_rowspan": false,
+    "uses_colspan": false,
+    "header_rows": 0,
+    "detected": true,
+    "exact": false,
+    "rows": 10,
+    "cols": 5,
+    "rows_missing": 0,
+    "rows_extra": 0,
+    "cols_ok": true,
+    "teds": 0.8607,
+    "teds_s": 1.0,
+    "header_depth_off": false
+   }
+  }
+ ],
+ "assembled": [
+  {
+   "case": {
+    "id": "hi-mixed-single-1002",
+    "lang": "hi",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 51,
+     "found": 51,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       33,
+       33
+      ],
+      "number": [
+       12,
+       12
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "hi-mixed-single-1002",
+    "lang": "hi",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 51,
+     "found": 51,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       33,
+       33
+      ],
+      "number": [
+       12,
+       12
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "hi-mixed-single-1002",
+    "lang": "hi",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 51,
+     "found": 51,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       33,
+       33
+      ],
+      "number": [
+       12,
+       12
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "hi-mixed-single-1002",
+    "lang": "hi",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 51,
+     "found": 51,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       33,
+       33
+      ],
+      "number": [
+       12,
+       12
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "hi-mixed-single-1002",
+    "lang": "hi",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 51,
+     "found": 51,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       33,
+       33
+      ],
+      "number": [
+       12,
+       12
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "hi-mixed-single-1002",
+    "lang": "hi",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 51,
+     "found": 51,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       33,
+       33
+      ],
+      "number": [
+       12,
+       12
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "mr-text-single-1010",
+    "lang": "mr",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "mr-text-single-1010",
+    "lang": "mr",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "mr-text-single-1010",
+    "lang": "mr",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "mr-text-single-1010",
+    "lang": "mr",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "mr-text-single-1010",
+    "lang": "mr",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "mr-text-single-1010",
+    "lang": "mr",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "ta-text-single-1020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 60,
+     "correct": 57,
+     "filled": 60,
+     "found": 57,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       44,
+       44
+      ],
+      "number": [
+       8,
+       11
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9589,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧",
+       "got": "க"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨",
+       "got": "உ"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௪",
+       "got": "ச"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "ta-text-single-1020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 8,
+      "audit": 4,
+      "structure": 0
+     },
+     "cells": 60,
+     "correct": 57,
+     "filled": 60,
+     "found": 57,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       44,
+       44
+      ],
+      "number": [
+       8,
+       11
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9589,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧",
+       "got": "க"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨",
+       "got": "உ"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௪",
+       "got": "ச"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "ta-text-single-1020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 8,
+      "audit": 4,
+      "structure": 0
+     },
+     "cells": 60,
+     "correct": 57,
+     "filled": 60,
+     "found": 57,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       44,
+       44
+      ],
+      "number": [
+       8,
+       11
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9589,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧",
+       "got": "க"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨",
+       "got": "உ"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௪",
+       "got": "ச"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "ta-text-single-1020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 60,
+     "correct": 49,
+     "filled": 60,
+     "found": 49,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       44,
+       44
+      ],
+      "number": [
+       0,
+       11
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8493,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧",
+       "got": "க"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨",
+       "got": "உ"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩",
+       "got": "ங"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௪",
+       "got": "ச"
+      },
+      {
+       "row": 5,
+       "col": 0,
+       "kind": "number",
+       "truth": "௫",
+       "got": "ரு"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬",
+       "got": "சு"
+      },
+      {
+       "row": 7,
+       "col": 0,
+       "kind": "number",
+       "truth": "௭",
+       "got": "எ"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "number",
+       "truth": "௮",
+       "got": "அ"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "number",
+       "truth": "௯",
+       "got": "கூ"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௦",
+       "got": "க0"
+      },
+      {
+       "row": 11,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௧",
+       "got": "கக"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "ta-text-single-1020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 0,
+      "audit": 11,
+      "structure": 0
+     },
+     "cells": 60,
+     "correct": 49,
+     "filled": 60,
+     "found": 49,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       44,
+       44
+      ],
+      "number": [
+       0,
+       11
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8493,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧",
+       "got": "க"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨",
+       "got": "உ"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩",
+       "got": "ங"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௪",
+       "got": "ச"
+      },
+      {
+       "row": 5,
+       "col": 0,
+       "kind": "number",
+       "truth": "௫",
+       "got": "ரு"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬",
+       "got": "சு"
+      },
+      {
+       "row": 7,
+       "col": 0,
+       "kind": "number",
+       "truth": "௭",
+       "got": "எ"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "number",
+       "truth": "௮",
+       "got": "அ"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "number",
+       "truth": "௯",
+       "got": "கூ"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௦",
+       "got": "க0"
+      },
+      {
+       "row": 11,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௧",
+       "got": "கக"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "ta-text-single-1020",
+    "lang": "ta",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     12
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 0,
+      "audit": 11,
+      "structure": 0
+     },
+     "cells": 60,
+     "correct": 49,
+     "filled": 60,
+     "found": 49,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       44,
+       44
+      ],
+      "number": [
+       0,
+       11
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 12,
+     "rows_pred": 12,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8493,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧",
+       "got": "க"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨",
+       "got": "உ"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩",
+       "got": "ங"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௪",
+       "got": "ச"
+      },
+      {
+       "row": 5,
+       "col": 0,
+       "kind": "number",
+       "truth": "௫",
+       "got": "ரு"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬",
+       "got": "சு"
+      },
+      {
+       "row": 7,
+       "col": 0,
+       "kind": "number",
+       "truth": "௭",
+       "got": "எ"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "number",
+       "truth": "௮",
+       "got": "அ"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "number",
+       "truth": "௯",
+       "got": "கூ"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௦",
+       "got": "க0"
+      },
+      {
+       "row": 11,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௧",
+       "got": "கக"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "te-mixed-single-1032",
+    "lang": "te",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 47,
+     "filled": 45,
+     "found": 44,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       27,
+       28
+      ],
+      "number": [
+       11,
+       11
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9912,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-౩౩",
+       "got": "E-33"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "te-mixed-single-1032",
+    "lang": "te",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 0,
+      "audit": 21,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 47,
+     "filled": 45,
+     "found": 44,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       27,
+       28
+      ],
+      "number": [
+       11,
+       11
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9912,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-౩౩",
+       "got": "E-33"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "te-mixed-single-1032",
+    "lang": "te",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 0,
+      "audit": 21,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 47,
+     "filled": 45,
+     "found": 44,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       27,
+       28
+      ],
+      "number": [
+       11,
+       11
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9912,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-౩౩",
+       "got": "E-33"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "te-mixed-single-1032",
+    "lang": "te",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 47,
+     "filled": 45,
+     "found": 44,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       27,
+       28
+      ],
+      "number": [
+       11,
+       11
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9912,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-౩౩",
+       "got": "E-33"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "unresolved_cells"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "te-mixed-single-1032",
+    "lang": "te",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 8,
+      "audit": 12,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 47,
+     "filled": 45,
+     "found": 44,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       27,
+       28
+      ],
+      "number": [
+       11,
+       11
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9912,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-౩౩",
+       "got": "E-33"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "te-mixed-single-1032",
+    "lang": "te",
+    "kind": "mixed",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 8,
+      "audit": 12,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 47,
+     "filled": 45,
+     "found": 44,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       27,
+       28
+      ],
+      "number": [
+       11,
+       11
+      ],
+      "empty": [
+       3,
+       3
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.9912,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-౩౩",
+       "got": "E-33"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "bn-dates-single-1043",
+    "lang": "bn",
+    "kind": "dates",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     4
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 52,
+     "correct": 52,
+     "filled": 52,
+     "found": 52,
+     "by_kind": {
+      "header": [
+       4,
+       4
+      ],
+      "text": [
+       48,
+       48
+      ],
+      "number": [
+       0,
+       0
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 4,
+     "cols_pred": 4,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "bn-dates-single-1043",
+    "lang": "bn",
+    "kind": "dates",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     4
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 52,
+     "correct": 52,
+     "filled": 52,
+     "found": 52,
+     "by_kind": {
+      "header": [
+       4,
+       4
+      ],
+      "text": [
+       48,
+       48
+      ],
+      "number": [
+       0,
+       0
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 4,
+     "cols_pred": 4,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "bn-dates-single-1043",
+    "lang": "bn",
+    "kind": "dates",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     4
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 52,
+     "correct": 52,
+     "filled": 52,
+     "found": 52,
+     "by_kind": {
+      "header": [
+       4,
+       4
+      ],
+      "text": [
+       48,
+       48
+      ],
+      "number": [
+       0,
+       0
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 4,
+     "cols_pred": 4,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "bn-dates-single-1043",
+    "lang": "bn",
+    "kind": "dates",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     4
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 52,
+     "correct": 52,
+     "filled": 52,
+     "found": 52,
+     "by_kind": {
+      "header": [
+       4,
+       4
+      ],
+      "text": [
+       48,
+       48
+      ],
+      "number": [
+       0,
+       0
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 4,
+     "cols_pred": 4,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "bn-dates-single-1043",
+    "lang": "bn",
+    "kind": "dates",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     4
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 52,
+     "correct": 52,
+     "filled": 52,
+     "found": 52,
+     "by_kind": {
+      "header": [
+       4,
+       4
+      ],
+      "text": [
+       48,
+       48
+      ],
+      "number": [
+       0,
+       0
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 4,
+     "cols_pred": 4,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "bn-dates-single-1043",
+    "lang": "bn",
+    "kind": "dates",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     13
+    ],
+    "cols": [
+     4
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 52,
+     "correct": 52,
+     "filled": 52,
+     "found": 52,
+     "by_kind": {
+      "header": [
+       4,
+       4
+      ],
+      "text": [
+       48,
+       48
+      ],
+      "number": [
+       0,
+       0
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 13,
+     "rows_pred": 13,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 4,
+     "cols_pred": 4,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "en-numeric-single-1051",
+    "lang": "en",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 48,
+     "filled": 47,
+     "found": 47,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       7,
+       7
+      ],
+      "number": [
+       34,
+       34
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "en-numeric-single-1051",
+    "lang": "en",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 5,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 48,
+     "filled": 47,
+     "found": 47,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       7,
+       7
+      ],
+      "number": [
+       34,
+       34
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "en-numeric-single-1051",
+    "lang": "en",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 48,
+     "filled": 47,
+     "found": 47,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       7,
+       7
+      ],
+      "number": [
+       34,
+       34
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "en-numeric-single-1051",
+    "lang": "en",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 48,
+     "filled": 47,
+     "found": 47,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       7,
+       7
+      ],
+      "number": [
+       34,
+       34
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "en-numeric-single-1051",
+    "lang": "en",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 5,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 48,
+     "filled": 47,
+     "found": 47,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       7,
+       7
+      ],
+      "number": [
+       34,
+       34
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "en-numeric-single-1051",
+    "lang": "en",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "latin",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     8
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 48,
+     "correct": 48,
+     "filled": 47,
+     "found": 47,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       7,
+       7
+      ],
+      "number": [
+       34,
+       34
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 8,
+     "rows_pred": 8,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "hi-merged-single-1004",
+    "lang": "hi",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 83,
+     "correct": 83,
+     "filled": 83,
+     "found": 83,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       20,
+       20
+      ],
+      "number": [
+       56,
+       56
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "hi-merged-single-1004",
+    "lang": "hi",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 83,
+     "correct": 83,
+     "filled": 83,
+     "found": 83,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       20,
+       20
+      ],
+      "number": [
+       56,
+       56
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "hi-merged-single-1004",
+    "lang": "hi",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 83,
+     "correct": 83,
+     "filled": 83,
+     "found": 83,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       20,
+       20
+      ],
+      "number": [
+       56,
+       56
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "hi-merged-single-1004",
+    "lang": "hi",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 83,
+     "correct": 83,
+     "filled": 83,
+     "found": 83,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       20,
+       20
+      ],
+      "number": [
+       56,
+       56
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "hi-merged-single-1004",
+    "lang": "hi",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 83,
+     "correct": 83,
+     "filled": 83,
+     "found": 83,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       20,
+       20
+      ],
+      "number": [
+       56,
+       56
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "hi-merged-single-1004",
+    "lang": "hi",
+    "kind": "merged",
+    "style": "single",
+    "digits": "native",
+    "ruled": false,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     16
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 83,
+     "correct": 83,
+     "filled": 83,
+     "found": 83,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       20,
+       20
+      ],
+      "number": [
+       56,
+       56
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 16,
+     "rows_pred": 16,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "mr-numeric-single-1011",
+    "lang": "mr",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 53,
+     "found": 53,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       8,
+       8
+      ],
+      "number": [
+       39,
+       39
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "mr-numeric-single-1011",
+    "lang": "mr",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 53,
+     "found": 53,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       8,
+       8
+      ],
+      "number": [
+       39,
+       39
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "mr-numeric-single-1011",
+    "lang": "mr",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 53,
+     "found": 53,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       8,
+       8
+      ],
+      "number": [
+       39,
+       39
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "mr-numeric-single-1011",
+    "lang": "mr",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 53,
+     "found": 53,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       8,
+       8
+      ],
+      "number": [
+       39,
+       39
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "mr-numeric-single-1011",
+    "lang": "mr",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 53,
+     "found": 53,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       8,
+       8
+      ],
+      "number": [
+       39,
+       39
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "mr-numeric-single-1011",
+    "lang": "mr",
+    "kind": "numeric",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 54,
+     "correct": 54,
+     "filled": 53,
+     "found": 53,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       8,
+       8
+      ],
+      "number": [
+       39,
+       39
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "ta-sparse-single-1025",
+    "lang": "ta",
+    "kind": "sparse",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     11
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 66,
+     "correct": 42,
+     "filled": 62,
+     "found": 38,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       32,
+       45
+      ],
+      "number": [
+       0,
+       11
+      ],
+      "empty": [
+       4,
+       4
+      ]
+     },
+     "rows_truth": 11,
+     "rows_pred": 11,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8933,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௯௫",
+       "got": "G-கூரு"
+      },
+      {
+       "row": 1,
+       "col": 2,
+       "kind": "number",
+       "truth": "௧௨௬.௪௫",
+       "got": "கஉசு.சரு"
+      },
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௧-௦௯-௨௦௨௨",
+       "got": "கக-0௯-௨௦௨௨"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "F-௨௩",
+       "got": "F-உ௩"
+      },
+      {
+       "row": 2,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௬-௦௭-௨௦௧௯",
+       "got": "௦௬-௦எ-௨௦௧௯"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "text",
+       "truth": "D-௨௯",
+       "got": "D-உ௯"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "number",
+       "truth": "௨௧௩.௩௯",
+       "got": "உக௩.௩௯"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௬-௦௩-௨௦௨௫",
+       "got": "உ௬-௦௩-௨௦௨௫"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௫௮௭௭",
+       "got": "௫அஎஎ"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮.௭௯",
+       "got": "௩அ.எ௯"
+      },
+      {
+       "row": 5,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௭௩௦",
+       "got": "௬எ௩௦"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௬௭.௩௩",
+       "got": "ங௬எ.௩௩"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௭-௧௧-௨௦௨௧",
+       "got": "உஎ-௧௧-௨௦௨௧"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௮௭௨",
+       "got": "௬அஎஉ"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "௭௦௮.௯௬",
+       "got": "எ௦அ.௯௬"
+      },
+      {
+       "row": 6,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௯-௦௧-௨௦௨௭",
+       "got": "௦௯-௦க-௨௦௨௭"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௩-௦௮-௨௦௨௭",
+       "got": "உ௩-௦அ-௨௦௨௭"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௨௧",
+       "got": "G-உக"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮,௬௨௭.௮௩",
+       "got": "௩அ,௬உஎ.அ௩"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-௭௧",
+       "got": "E-எக"
+      },
+      {
+       "row": 9,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௮-௦௫-௨௦௨௫",
+       "got": "௦அ-௦௫-௨௦௨௫"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩௯௦௧",
+       "got": "௩௯௦க"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௯,௩௮௩.௨௫",
+       "got": "௩௯,௩அ௩.உ௫"
+      },
+      {
+       "row": 10,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௨-௧௧-௨௦௨௭",
+       "got": "கஉ-௧௧-௨௦௨௭"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "ta-sparse-single-1025",
+    "lang": "ta",
+    "kind": "sparse",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     11
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 22,
+      "audit": 4,
+      "structure": 0
+     },
+     "cells": 66,
+     "correct": 42,
+     "filled": 62,
+     "found": 38,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       32,
+       45
+      ],
+      "number": [
+       0,
+       11
+      ],
+      "empty": [
+       4,
+       4
+      ]
+     },
+     "rows_truth": 11,
+     "rows_pred": 11,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8933,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௯௫",
+       "got": "G-கூரு"
+      },
+      {
+       "row": 1,
+       "col": 2,
+       "kind": "number",
+       "truth": "௧௨௬.௪௫",
+       "got": "கஉசு.சரு"
+      },
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௧-௦௯-௨௦௨௨",
+       "got": "கக-0௯-௨௦௨௨"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "F-௨௩",
+       "got": "F-உ௩"
+      },
+      {
+       "row": 2,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௬-௦௭-௨௦௧௯",
+       "got": "௦௬-௦எ-௨௦௧௯"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "text",
+       "truth": "D-௨௯",
+       "got": "D-உ௯"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "number",
+       "truth": "௨௧௩.௩௯",
+       "got": "உக௩.௩௯"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௬-௦௩-௨௦௨௫",
+       "got": "உ௬-௦௩-௨௦௨௫"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௫௮௭௭",
+       "got": "௫அஎஎ"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮.௭௯",
+       "got": "௩அ.எ௯"
+      },
+      {
+       "row": 5,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௭௩௦",
+       "got": "௬எ௩௦"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௬௭.௩௩",
+       "got": "ங௬எ.௩௩"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௭-௧௧-௨௦௨௧",
+       "got": "உஎ-௧௧-௨௦௨௧"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௮௭௨",
+       "got": "௬அஎஉ"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "௭௦௮.௯௬",
+       "got": "எ௦அ.௯௬"
+      },
+      {
+       "row": 6,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௯-௦௧-௨௦௨௭",
+       "got": "௦௯-௦க-௨௦௨௭"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௩-௦௮-௨௦௨௭",
+       "got": "உ௩-௦அ-௨௦௨௭"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௨௧",
+       "got": "G-உக"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮,௬௨௭.௮௩",
+       "got": "௩அ,௬உஎ.அ௩"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-௭௧",
+       "got": "E-எக"
+      },
+      {
+       "row": 9,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௮-௦௫-௨௦௨௫",
+       "got": "௦அ-௦௫-௨௦௨௫"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩௯௦௧",
+       "got": "௩௯௦க"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௯,௩௮௩.௨௫",
+       "got": "௩௯,௩அ௩.உ௫"
+      },
+      {
+       "row": 10,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௨-௧௧-௨௦௨௭",
+       "got": "கஉ-௧௧-௨௦௨௭"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "ta-sparse-single-1025",
+    "lang": "ta",
+    "kind": "sparse",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     11
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 22,
+      "audit": 1,
+      "structure": 0
+     },
+     "cells": 66,
+     "correct": 42,
+     "filled": 62,
+     "found": 38,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       32,
+       45
+      ],
+      "number": [
+       0,
+       11
+      ],
+      "empty": [
+       4,
+       4
+      ]
+     },
+     "rows_truth": 11,
+     "rows_pred": 11,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8933,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௯௫",
+       "got": "G-கூரு"
+      },
+      {
+       "row": 1,
+       "col": 2,
+       "kind": "number",
+       "truth": "௧௨௬.௪௫",
+       "got": "கஉசு.சரு"
+      },
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௧-௦௯-௨௦௨௨",
+       "got": "கக-0௯-௨௦௨௨"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "F-௨௩",
+       "got": "F-உ௩"
+      },
+      {
+       "row": 2,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௬-௦௭-௨௦௧௯",
+       "got": "௦௬-௦எ-௨௦௧௯"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "text",
+       "truth": "D-௨௯",
+       "got": "D-உ௯"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "number",
+       "truth": "௨௧௩.௩௯",
+       "got": "உக௩.௩௯"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௬-௦௩-௨௦௨௫",
+       "got": "உ௬-௦௩-௨௦௨௫"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௫௮௭௭",
+       "got": "௫அஎஎ"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮.௭௯",
+       "got": "௩அ.எ௯"
+      },
+      {
+       "row": 5,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௭௩௦",
+       "got": "௬எ௩௦"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௬௭.௩௩",
+       "got": "ங௬எ.௩௩"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௭-௧௧-௨௦௨௧",
+       "got": "உஎ-௧௧-௨௦௨௧"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௮௭௨",
+       "got": "௬அஎஉ"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "௭௦௮.௯௬",
+       "got": "எ௦அ.௯௬"
+      },
+      {
+       "row": 6,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௯-௦௧-௨௦௨௭",
+       "got": "௦௯-௦க-௨௦௨௭"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௩-௦௮-௨௦௨௭",
+       "got": "உ௩-௦அ-௨௦௨௭"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௨௧",
+       "got": "G-உக"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮,௬௨௭.௮௩",
+       "got": "௩அ,௬உஎ.அ௩"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-௭௧",
+       "got": "E-எக"
+      },
+      {
+       "row": 9,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௮-௦௫-௨௦௨௫",
+       "got": "௦அ-௦௫-௨௦௨௫"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩௯௦௧",
+       "got": "௩௯௦க"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௯,௩௮௩.௨௫",
+       "got": "௩௯,௩அ௩.உ௫"
+      },
+      {
+       "row": 10,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௨-௧௧-௨௦௨௭",
+       "got": "கஉ-௧௧-௨௦௨௭"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0268,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "ta-sparse-single-1025",
+    "lang": "ta",
+    "kind": "sparse",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     11
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 66,
+     "correct": 40,
+     "filled": 62,
+     "found": 36,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       30,
+       45
+      ],
+      "number": [
+       0,
+       11
+      ],
+      "empty": [
+       4,
+       4
+      ]
+     },
+     "rows_truth": 11,
+     "rows_pred": 11,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.772,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௯௫",
+       "got": "G-கூரு"
+      },
+      {
+       "row": 1,
+       "col": 2,
+       "kind": "number",
+       "truth": "௧௨௬.௪௫",
+       "got": "கஉசா.சரு"
+      },
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௧-௦௯-௨௦௨௨",
+       "got": "கக-0௯-2022"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "F-௨௩",
+       "got": "F-உங"
+      },
+      {
+       "row": 2,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௬-௦௭-௨௦௧௯",
+       "got": "0௬-0எ-20ககூ"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "text",
+       "truth": "D-௨௯",
+       "got": "D-உ௯"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "number",
+       "truth": "௨௧௩.௩௯",
+       "got": "உக௩.ங௯"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௬-௦௩-௨௦௨௫",
+       "got": "உ௬-0௩-20உ௫"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௫௮௭௭",
+       "got": "ருஅஎஎ"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮.௭௯",
+       "got": "௩அ.எகூ"
+      },
+      {
+       "row": 5,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௭௩௦",
+       "got": "சுஎங௦"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௬௭.௩௩",
+       "got": "ஙசுஎ.ஙங"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௭-௧௧-௨௦௨௧",
+       "got": "உஎ-கக-20உக"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௮௭௨",
+       "got": "சுஅஎஉ"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "௭௦௮.௯௬",
+       "got": "எ0அ.கூசு"
+      },
+      {
+       "row": 6,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௯-௦௧-௨௦௨௭",
+       "got": "0௯-0க-20உஎ"
+      },
+      {
+       "row": 7,
+       "col": 0,
+       "kind": "text",
+       "truth": "H-௩௨",
+       "got": "H-௩உ"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௩-௦௮-௨௦௨௭",
+       "got": "உ௩-0அ-20உஎ"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௨௧",
+       "got": "G-உக"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮,௬௨௭.௮௩",
+       "got": "௩அ,சுஉஎ.அங"
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௫-௧௨-௨௦௨௩",
+       "got": "கரு-கஉ-20உங"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-௭௧",
+       "got": "E-எக"
+      },
+      {
+       "row": 9,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௮-௦௫-௨௦௨௫",
+       "got": "0அ-0௫-20உ௫"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩௯௦௧",
+       "got": "ஙகூ0க"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௯,௩௮௩.௨௫",
+       "got": "ஙகூ,௩அங.உரு"
+      },
+      {
+       "row": 10,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௨-௧௧-௨௦௨௭",
+       "got": "கஉ-கக-20உஎ"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "ta-sparse-single-1025",
+    "lang": "ta",
+    "kind": "sparse",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     11
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 14,
+      "audit": 5,
+      "structure": 0
+     },
+     "cells": 66,
+     "correct": 40,
+     "filled": 62,
+     "found": 36,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       30,
+       45
+      ],
+      "number": [
+       0,
+       11
+      ],
+      "empty": [
+       4,
+       4
+      ]
+     },
+     "rows_truth": 11,
+     "rows_pred": 11,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.772,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௯௫",
+       "got": "G-கூரு"
+      },
+      {
+       "row": 1,
+       "col": 2,
+       "kind": "number",
+       "truth": "௧௨௬.௪௫",
+       "got": "கஉசா.சரு"
+      },
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௧-௦௯-௨௦௨௨",
+       "got": "கக-0௯-2022"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "F-௨௩",
+       "got": "F-உங"
+      },
+      {
+       "row": 2,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௬-௦௭-௨௦௧௯",
+       "got": "0௬-0எ-20ககூ"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "text",
+       "truth": "D-௨௯",
+       "got": "D-உ௯"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "number",
+       "truth": "௨௧௩.௩௯",
+       "got": "உக௩.ங௯"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௬-௦௩-௨௦௨௫",
+       "got": "உ௬-0௩-20உ௫"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௫௮௭௭",
+       "got": "ருஅஎஎ"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮.௭௯",
+       "got": "௩அ.எகூ"
+      },
+      {
+       "row": 5,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௭௩௦",
+       "got": "சுஎங௦"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௬௭.௩௩",
+       "got": "ஙசுஎ.ஙங"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௭-௧௧-௨௦௨௧",
+       "got": "உஎ-கக-20உக"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௮௭௨",
+       "got": "சுஅஎஉ"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "௭௦௮.௯௬",
+       "got": "எ0அ.கூசு"
+      },
+      {
+       "row": 6,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௯-௦௧-௨௦௨௭",
+       "got": "0௯-0க-20உஎ"
+      },
+      {
+       "row": 7,
+       "col": 0,
+       "kind": "text",
+       "truth": "H-௩௨",
+       "got": "H-௩உ"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௩-௦௮-௨௦௨௭",
+       "got": "உ௩-0அ-20உஎ"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௨௧",
+       "got": "G-உக"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮,௬௨௭.௮௩",
+       "got": "௩அ,சுஉஎ.அங"
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௫-௧௨-௨௦௨௩",
+       "got": "கரு-கஉ-20உங"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-௭௧",
+       "got": "E-எக"
+      },
+      {
+       "row": 9,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௮-௦௫-௨௦௨௫",
+       "got": "0அ-0௫-20உ௫"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩௯௦௧",
+       "got": "ஙகூ0க"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௯,௩௮௩.௨௫",
+       "got": "ஙகூ,௩அங.உரு"
+      },
+      {
+       "row": 10,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௨-௧௧-௨௦௨௭",
+       "got": "கஉ-கக-20உஎ"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "ta-sparse-single-1025",
+    "lang": "ta",
+    "kind": "sparse",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     11
+    ],
+    "cols": [
+     6
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 14,
+      "audit": 3,
+      "structure": 0
+     },
+     "cells": 66,
+     "correct": 40,
+     "filled": 62,
+     "found": 36,
+     "by_kind": {
+      "header": [
+       6,
+       6
+      ],
+      "text": [
+       30,
+       45
+      ],
+      "number": [
+       0,
+       11
+      ],
+      "empty": [
+       4,
+       4
+      ]
+     },
+     "rows_truth": 11,
+     "rows_pred": 11,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 6,
+     "cols_pred": 6,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.772,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௯௫",
+       "got": "G-கூரு"
+      },
+      {
+       "row": 1,
+       "col": 2,
+       "kind": "number",
+       "truth": "௧௨௬.௪௫",
+       "got": "கஉசா.சரு"
+      },
+      {
+       "row": 1,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௧-௦௯-௨௦௨௨",
+       "got": "கக-0௯-2022"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "text",
+       "truth": "F-௨௩",
+       "got": "F-உங"
+      },
+      {
+       "row": 2,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௬-௦௭-௨௦௧௯",
+       "got": "0௬-0எ-20ககூ"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "text",
+       "truth": "D-௨௯",
+       "got": "D-உ௯"
+      },
+      {
+       "row": 3,
+       "col": 2,
+       "kind": "number",
+       "truth": "௨௧௩.௩௯",
+       "got": "உக௩.ங௯"
+      },
+      {
+       "row": 3,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௬-௦௩-௨௦௨௫",
+       "got": "உ௬-0௩-20உ௫"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௫௮௭௭",
+       "got": "ருஅஎஎ"
+      },
+      {
+       "row": 4,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮.௭௯",
+       "got": "௩அ.எகூ"
+      },
+      {
+       "row": 5,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௭௩௦",
+       "got": "சுஎங௦"
+      },
+      {
+       "row": 5,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௬௭.௩௩",
+       "got": "ஙசுஎ.ஙங"
+      },
+      {
+       "row": 5,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௭-௧௧-௨௦௨௧",
+       "got": "உஎ-கக-20உக"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬௮௭௨",
+       "got": "சுஅஎஉ"
+      },
+      {
+       "row": 6,
+       "col": 2,
+       "kind": "number",
+       "truth": "௭௦௮.௯௬",
+       "got": "எ0அ.கூசு"
+      },
+      {
+       "row": 6,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௯-௦௧-௨௦௨௭",
+       "got": "0௯-0க-20உஎ"
+      },
+      {
+       "row": 7,
+       "col": 0,
+       "kind": "text",
+       "truth": "H-௩௨",
+       "got": "H-௩உ"
+      },
+      {
+       "row": 7,
+       "col": 3,
+       "kind": "text",
+       "truth": "௨௩-௦௮-௨௦௨௭",
+       "got": "உ௩-0அ-20உஎ"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "text",
+       "truth": "G-௨௧",
+       "got": "G-உக"
+      },
+      {
+       "row": 8,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௮,௬௨௭.௮௩",
+       "got": "௩அ,சுஉஎ.அங"
+      },
+      {
+       "row": 8,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௫-௧௨-௨௦௨௩",
+       "got": "கரு-கஉ-20உங"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "text",
+       "truth": "E-௭௧",
+       "got": "E-எக"
+      },
+      {
+       "row": 9,
+       "col": 3,
+       "kind": "text",
+       "truth": "௦௮-௦௫-௨௦௨௫",
+       "got": "0அ-0௫-20உ௫"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩௯௦௧",
+       "got": "ஙகூ0க"
+      },
+      {
+       "row": 10,
+       "col": 2,
+       "kind": "number",
+       "truth": "௩௯,௩௮௩.௨௫",
+       "got": "ஙகூ,௩அங.உரு"
+      },
+      {
+       "row": 10,
+       "col": 3,
+       "kind": "text",
+       "truth": "௧௨-௧௧-௨௦௨௭",
+       "got": "கஉ-கக-20உஎ"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0201,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "bn-text-single-1040",
+    "lang": "bn",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "bn-text-single-1040",
+    "lang": "bn",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "bn-text-single-1040",
+    "lang": "bn",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "bn-text-single-1040",
+    "lang": "bn",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "bn-text-single-1040",
+    "lang": "bn",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "bn-text-single-1040",
+    "lang": "bn",
+    "kind": "text",
+    "style": "single",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 1,
+    "page_kinds": [
+     "table"
+    ],
+    "rows": [
+     9
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "verified",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 45,
+     "correct": 45,
+     "filled": 45,
+     "found": 45,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       32,
+       32
+      ],
+      "number": [
+       8,
+       8
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 9,
+     "rows_pred": 9,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": []
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": true,
+   "mode": "scanned",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "hi-numeric-split_repeat-2010",
+    "lang": "hi",
+    "kind": "numeric",
+    "style": "split_repeat",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     21
+    ],
+    "cols": [
+     7
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 147,
+     "correct": 147,
+     "filled": 146,
+     "found": 146,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       20,
+       20
+      ],
+      "number": [
+       119,
+       119
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 21,
+     "rows_pred": 21,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 7,
+     "cols_pred": 7,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "hi-numeric-split_repeat-2010",
+    "lang": "hi",
+    "kind": "numeric",
+    "style": "split_repeat",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     21
+    ],
+    "cols": [
+     7
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "repaired",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 147,
+     "correct": 147,
+     "filled": 146,
+     "found": 146,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       20,
+       20
+      ],
+      "number": [
+       119,
+       119
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 21,
+     "rows_pred": 21,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 7,
+     "cols_pred": 7,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "repaired"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "hi-numeric-split_repeat-2010",
+    "lang": "hi",
+    "kind": "numeric",
+    "style": "split_repeat",
+    "digits": "native",
+    "ruled": true,
+    "cut": false,
+    "profile": "clean",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     21
+    ],
+    "cols": [
+     7
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": "repaired",
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 147,
+     "correct": 147,
+     "filled": 146,
+     "found": 146,
+     "by_kind": {
+      "header": [
+       7,
+       7
+      ],
+      "text": [
+       20,
+       20
+      ],
+      "number": [
+       119,
+       119
+      ],
+      "empty": [
+       1,
+       1
+      ]
+     },
+     "rows_truth": 21,
+     "rows_pred": 21,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 7,
+     "cols_pred": 7,
+     "cols_ok": true,
+     "exact": true,
+     "teds": 1.0,
+     "teds_s": 1.0,
+     "wrong": []
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "repaired"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  },
+  {
+   "case": {
+    "id": "ta-text-split_cut-2022",
+    "lang": "ta",
+    "kind": "text",
+    "style": "split_cut",
+    "digits": "native",
+    "ruled": true,
+    "cut": true,
+    "profile": "clean",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     21
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": true,
+     "status": null,
+     "questions": {
+      "cell": 0,
+      "audit": 0,
+      "structure": 0
+     },
+     "cells": 105,
+     "correct": 86,
+     "filled": 105,
+     "found": 86,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       80,
+       80
+      ],
+      "number": [
+       1,
+       20
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 21,
+     "rows_pred": 21,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8543,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧",
+       "got": "க"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨",
+       "got": "உ"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩",
+       "got": "ங"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௪",
+       "got": "ச"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬",
+       "got": "சு"
+      },
+      {
+       "row": 7,
+       "col": 0,
+       "kind": "number",
+       "truth": "௭",
+       "got": "எ"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "number",
+       "truth": "௮",
+       "got": "அ"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "number",
+       "truth": "௯",
+       "got": "கூ"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௦",
+       "got": "க0"
+      },
+      {
+       "row": 11,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௧",
+       "got": "கக"
+      },
+      {
+       "row": 12,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௨",
+       "got": "கஉ"
+      },
+      {
+       "row": 13,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௩",
+       "got": "க௩"
+      },
+      {
+       "row": 14,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௪",
+       "got": "கச"
+      },
+      {
+       "row": 15,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௫",
+       "got": "கரு"
+      },
+      {
+       "row": 16,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௬",
+       "got": "கசு"
+      },
+      {
+       "row": 17,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௭",
+       "got": "கஎ"
+      },
+      {
+       "row": 18,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௮",
+       "got": "கஅ"
+      },
+      {
+       "row": 19,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௯",
+       "got": "ககூ"
+      },
+      {
+       "row": 20,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨௦",
+       "got": "உ0"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    []
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "legacy"
+  },
+  {
+   "case": {
+    "id": "ta-text-split_cut-2022",
+    "lang": "ta",
+    "kind": "text",
+    "style": "split_cut",
+    "digits": "native",
+    "ruled": true,
+    "cut": true,
+    "profile": "clean",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     21
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 1,
+      "audit": 19,
+      "structure": 0
+     },
+     "cells": 105,
+     "correct": 86,
+     "filled": 105,
+     "found": 86,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       80,
+       80
+      ],
+      "number": [
+       1,
+       20
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 21,
+     "rows_pred": 21,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8543,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧",
+       "got": "க"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨",
+       "got": "உ"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩",
+       "got": "ங"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௪",
+       "got": "ச"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬",
+       "got": "சு"
+      },
+      {
+       "row": 7,
+       "col": 0,
+       "kind": "number",
+       "truth": "௭",
+       "got": "எ"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "number",
+       "truth": "௮",
+       "got": "அ"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "number",
+       "truth": "௯",
+       "got": "கூ"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௦",
+       "got": "க0"
+      },
+      {
+       "row": 11,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௧",
+       "got": "கக"
+      },
+      {
+       "row": 12,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௨",
+       "got": "கஉ"
+      },
+      {
+       "row": 13,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௩",
+       "got": "க௩"
+      },
+      {
+       "row": 14,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௪",
+       "got": "கச"
+      },
+      {
+       "row": 15,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௫",
+       "got": "கரு"
+      },
+      {
+       "row": 16,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௬",
+       "got": "கசு"
+      },
+      {
+       "row": 17,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௭",
+       "got": "கஎ"
+      },
+      {
+       "row": 18,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௮",
+       "got": "கஅ"
+      },
+      {
+       "row": 19,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௯",
+       "got": "ககூ"
+      },
+      {
+       "row": 20,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨௦",
+       "got": "உ0"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard"
+  },
+  {
+   "case": {
+    "id": "ta-text-split_cut-2022",
+    "lang": "ta",
+    "kind": "text",
+    "style": "split_cut",
+    "digits": "native",
+    "ruled": true,
+    "cut": true,
+    "profile": "clean",
+    "pages": 2,
+    "page_kinds": [
+     "table",
+     "table"
+    ],
+    "rows": [
+     21
+    ],
+    "cols": [
+     5
+    ]
+   },
+   "tables": [
+    {
+     "logical": 0,
+     "pages": [
+      1,
+      2
+     ],
+     "final_tables": 1,
+     "accepted": false,
+     "status": "needs_review",
+     "questions": {
+      "cell": 1,
+      "audit": 19,
+      "structure": 0
+     },
+     "cells": 105,
+     "correct": 86,
+     "filled": 105,
+     "found": 86,
+     "by_kind": {
+      "header": [
+       5,
+       5
+      ],
+      "text": [
+       80,
+       80
+      ],
+      "number": [
+       1,
+       20
+      ],
+      "empty": [
+       0,
+       0
+      ]
+     },
+     "rows_truth": 21,
+     "rows_pred": 21,
+     "rows_missing": 0,
+     "rows_extra": 0,
+     "cols_truth": 5,
+     "cols_pred": 5,
+     "cols_ok": true,
+     "exact": false,
+     "teds": 0.8543,
+     "teds_s": 1.0,
+     "wrong": [
+      {
+       "row": 1,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧",
+       "got": "க"
+      },
+      {
+       "row": 2,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨",
+       "got": "உ"
+      },
+      {
+       "row": 3,
+       "col": 0,
+       "kind": "number",
+       "truth": "௩",
+       "got": "ங"
+      },
+      {
+       "row": 4,
+       "col": 0,
+       "kind": "number",
+       "truth": "௪",
+       "got": "ச"
+      },
+      {
+       "row": 6,
+       "col": 0,
+       "kind": "number",
+       "truth": "௬",
+       "got": "சு"
+      },
+      {
+       "row": 7,
+       "col": 0,
+       "kind": "number",
+       "truth": "௭",
+       "got": "எ"
+      },
+      {
+       "row": 8,
+       "col": 0,
+       "kind": "number",
+       "truth": "௮",
+       "got": "அ"
+      },
+      {
+       "row": 9,
+       "col": 0,
+       "kind": "number",
+       "truth": "௯",
+       "got": "கூ"
+      },
+      {
+       "row": 10,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௦",
+       "got": "க0"
+      },
+      {
+       "row": 11,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௧",
+       "got": "கக"
+      },
+      {
+       "row": 12,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௨",
+       "got": "கஉ"
+      },
+      {
+       "row": 13,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௩",
+       "got": "க௩"
+      },
+      {
+       "row": 14,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௪",
+       "got": "கச"
+      },
+      {
+       "row": 15,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௫",
+       "got": "கரு"
+      },
+      {
+       "row": 16,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௬",
+       "got": "கசு"
+      },
+      {
+       "row": 17,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௭",
+       "got": "கஎ"
+      },
+      {
+       "row": 18,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௮",
+       "got": "கஅ"
+      },
+      {
+       "row": 19,
+       "col": 0,
+       "kind": "number",
+       "truth": "௧௯",
+       "got": "ககூ"
+      },
+      {
+       "row": 20,
+       "col": 0,
+       "kind": "number",
+       "truth": "௨௦",
+       "got": "உ0"
+      }
+     ]
+    }
+   ],
+   "joins": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 0,
+    "pairs": [
+     {
+      "pages": [
+       1,
+       2
+      ],
+      "join": true,
+      "gap": false,
+      "got": true
+     }
+    ]
+   },
+   "cells": [],
+   "planted": [],
+   "flags": [
+    [
+     "needs_review"
+    ]
+   ],
+   "cost_inr": 0.0,
+   "scanned": false,
+   "mode": "born-digital",
+   "checker": "standard+image"
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+[
+ {
+  "case": "v2-hi-wide-single-5006",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-hi-wide-single-5006-63a4e0ab",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-hi-wide-single-5006",
+  "mode": "scanned",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-hi-wide-single-5006-scan-a7e9830a",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-mr-wide-single-5016",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-mr-wide-single-5016-5c1c1042",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-mr-wide-single-5016",
+  "mode": "scanned",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-mr-wide-single-5016-scan-b24ca56d",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-en-wide-single-5056",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-en-wide-single-5056-40419fdd",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-en-wide-single-5056",
+  "mode": "scanned",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-en-wide-single-5056-scan-329f47fd",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-bn-wide-single-5046",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-bn-wide-single-5046-6724991f",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-bn-wide-single-5046",
+  "mode": "scanned",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-bn-wide-single-5046-scan-5a424f27",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-hi-text-single-5000",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-hi-text-single-5000-55da25cb",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-hi-text-single-5000",
+  "mode": "scanned",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-hi-text-single-5000-scan-5e2db39b",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-mr-mixed-single-5012",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-mr-mixed-single-5012-14446aa8",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-mr-mixed-single-5012",
+  "mode": "scanned",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-mr-mixed-single-5012-scan-6c675d3c",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-ta-text-single-5020",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-ta-text-single-5020-f9fdd4ce",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-ta-text-single-5020",
+  "mode": "scanned",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-ta-text-single-5020-scan-59286628",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-te-numeric-single-5031",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-te-numeric-single-5031-ebbfb415",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-te-numeric-single-5031",
+  "mode": "scanned",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-te-numeric-single-5031-scan-f48bdf18",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-bn-merged-single-5044",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-bn-merged-single-5044-9ee42f16",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-bn-merged-single-5044",
+  "mode": "scanned",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-bn-merged-single-5044-scan-4acf0a94",
+  "pages": 1,
+  "spent_inr": 0.7
+ },
+ {
+  "case": "v2-hi-numeric-split_repeat-6010",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-hi-numeric-split-repeat-6010-2f5884b2",
+  "pages": 2,
+  "spent_inr": 1.4
+ },
+ {
+  "case": "v2-mr-numeric-split-6001",
+  "mode": "born-digital",
+  "out_dir": "/Users/hygie/Recent Advances in Generative AI - Mitesh Khapra/Infinite-OCR Project/infinite_ocr/out/docs/v2-mr-numeric-split-6001-cef5de78",
+  "pages": 2,
+  "spent_inr": 1.4
+ }
+]
