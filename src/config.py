@@ -123,6 +123,7 @@ BODHAN_BACKEND = os.environ.get("BODHAN_BACKEND", "api")  # api | local
 BODHAN_REPO = os.environ.get("BODHAN_REPO", "bodhan-ai/indic-ocr")
 BODHAN_LOCAL_DIR = Path(os.environ.get("BODHAN_LOCAL_DIR", str(ROOT / "models" / "indic-ocr")))
 # mlx: Apple Metal recognizer. pytorch: official stack (CUDA kernels on the RTX 5070).
+# vllm: recognizer on a local vLLM server (./serve-bodhan-vllm.sh), layout in this process.
 BODHAN_RUNTIME = os.environ.get("BODHAN_RUNTIME", "mlx" if sys.platform == "darwin" else "pytorch")
 # 8-bit: same text as BF16 on 56 of 57 measured crops, 0.7 GB less GPU memory, as fast.
 # BF16 is hari31416/indic-ocr-mlx-bf16 in models/indic-ocr-mlx-bf16.
@@ -132,6 +133,13 @@ BODHAN_MLX_DIR = Path(os.environ.get("BODHAN_MLX_DIR", str(ROOT / "models" / BOD
 # in flight to keep them full. One model, not one copy per page. M4: 16 slots ~3 GB.
 BODHAN_MLX_BATCH = int(os.environ.get("BODHAN_MLX_BATCH", "16"))
 BODHAN_MLX_PAGES = int(os.environ.get("BODHAN_MLX_PAGES", "6"))
+# vLLM: pages in flight. RTX 5070 Laptop: 8 -> 25, 16 -> 36, 32 -> 42 pages/min.
+BODHAN_VLLM_URL = os.environ.get("BODHAN_VLLM_URL", "http://127.0.0.1:8000/v1")
+BODHAN_VLLM_MODEL = os.environ.get("BODHAN_VLLM_MODEL", "indic-ocr")
+BODHAN_VLLM_PAGES = int(os.environ.get("BODHAN_VLLM_PAGES", "32"))
+# Which engine reads every page and supplies the document: sarvam | bodhan | auto. auto = bodhan when it runs
+# locally on vLLM (free, 23-42 pages/min), sarvam otherwise (Bodhan API 8/min, MLX 3-6/min; Sarvam 15-30).
+BODHAN_LEAD = os.environ.get("BODHAN_LEAD", "auto").strip().lower()
 # Sarvam Vision: 10 requests/min per account. Status polls count.
 SARVAM_RATE_PER_MIN = float(os.environ.get("SARVAM_RATE_PER_MIN", "10"))
 SARVAM_MAX_PAGES_PER_PDF = 10

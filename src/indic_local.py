@@ -26,6 +26,9 @@ from src.config import (
 LOCAL_CACHE_NS = "indic-ocr-local"
 # Per-block cap from the official local loader. The HTTP API allows 4096.
 MAX_NEW_TOKENS = 2048
+# vLLM ceiling (each crop's cap scales with its size). 2048 cut every full-page budget table;
+# 4096 (the API's) still cut 6 of 20 Union receipt-budget pages; the longest measured is 6402.
+VLLM_MAX_NEW_TOKENS = 8192
 
 _LOCK = threading.RLock()
 _PARSER: Any = None
@@ -33,7 +36,7 @@ _PARSER_FMT: str | None = None
 
 
 def runtime() -> str:
-    return BODHAN_RUNTIME if BODHAN_RUNTIME in ("mlx", "pytorch") else "pytorch"
+    return BODHAN_RUNTIME if BODHAN_RUNTIME in ("mlx", "pytorch", "vllm") else "pytorch"
 
 
 def active_model() -> str:
@@ -44,6 +47,8 @@ def local_cache_extra(table_format: str) -> str:
     """MLX names its weights (8-bit and BF16 read differently). p2: single chat template."""
     if runtime() == "mlx":
         return f"{table_format}|mlx|{BODHAN_MLX_REPO}|{MAX_NEW_TOKENS}|p2"
+    if runtime() == "vllm":
+        return f"{table_format}|vllm|{VLLM_MAX_NEW_TOKENS}|d3"  # d3: invented text cut from runaway blocks (d2: decoded here; d1 had U+FFFD for x, c-cedilla, quotes)
     return f"{table_format}|{runtime()}|{MAX_NEW_TOKENS}"
 
 
@@ -185,9 +190,14 @@ def _load_parser(table_format: str) -> _LocalEngine:
         config=LayoutConfig(device=device),
         dedup=DedupConfig(),
     )
-    rec_cfg = RecognizerConfig(max_tokens=MAX_NEW_TOKENS, table_format=TableFormat(table_format))
     name = runtime()
-    if name == "mlx":
+    max_tokens = VLLM_MAX_NEW_TOKENS if name == "vllm" else MAX_NEW_TOKENS
+    rec_cfg = RecognizerConfig(max_tokens=max_tokens, table_format=TableFormat(table_format))
+    if name == "vllm":
+        from src.vllm_recognizer import VllmRecognizer
+
+        backend = VllmRecognizer(max_tokens=max_tokens)
+    elif name == "mlx":
         from src.mlx_recognizer import MlxRecognizer
 
         backend = MlxRecognizer(ensure_mlx(), max_tokens=MAX_NEW_TOKENS)
@@ -213,8 +223,8 @@ def _load_parser(table_format: str) -> _LocalEngine:
 def local_ocr(image: bytes, mime: str = "image/png", *, table_format: str = "html") -> dict:
     """Run both stages on one page image.
 
-    MLX pages share one model. Layouts take turns. Crops from ready pages
-    share one batched generate. PyTorch stays one page at a time.
+    MLX and vLLM pages share one model. Layouts take turns. Crops from ready
+    pages share one batch. PyTorch stays one page at a time.
     """
     suffix = ".jpg" if mime in ("image/jpeg", "image/jpg") else ".png"
     engine = parser(table_format)
@@ -222,7 +232,7 @@ def local_ocr(image: bytes, mime: str = "image/png", *, table_format: str = "htm
         handle.write(image)
         path = handle.name
     try:
-        if runtime() == "mlx":
+        if runtime() in ("mlx", "vllm"):
             page = engine.parse(path)
         else:
             with _LOCK:
