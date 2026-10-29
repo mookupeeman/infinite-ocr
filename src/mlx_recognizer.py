@@ -16,6 +16,7 @@ block crops almost never share one, so its batches ran one crop at a time.
 
 from __future__ import annotations
 
+import atexit
 import logging
 import threading
 import time
@@ -25,6 +26,27 @@ from pathlib import Path
 from src.config import BODHAN_MLX_BATCH
 
 logger = logging.getLogger("mlx_recognizer")
+
+MIN_TOKENS = 512
+# Output tokens allowed per 10k px of crop, about 2-3x the densest crop measured
+# (Hindi, Tamil and Union budget pages: text 8.3, table 21.6). Equations are unmeasured.
+_TOKENS_PER_10K_PX = {"table": 48, "equation": 32, "text": 24}
+
+
+def token_cap(prompt: str, image: object, ceiling: int) -> int:
+    """Generation limit for one crop, so a looping page number stops at MIN_TOKENS.
+
+    Crops are area-clamped to 256^2..1536^2 px before they get here, so the area is
+    still a fair size signal. The prompt tells the class apart (idp_contract.prompt_for).
+    """
+    if "table image" in prompt:
+        kind = "table"
+    elif "equation image" in prompt:
+        kind = "equation"
+    else:
+        kind = "text"
+    width, height = image.size
+    return min(ceiling, max(MIN_TOKENS, int(_TOKENS_PER_10K_PX[kind] * width * height / 1e4)))
 
 
 class _Job:
@@ -38,11 +60,12 @@ class _Job:
 
 
 class _Item:
-    def __init__(self, image: object, prompt: str, job: _Job, index: int) -> None:
+    def __init__(self, image: object, prompt: str, job: _Job, index: int, max_tokens: int) -> None:
         self.image = image
         self.prompt = prompt
         self.job = job
         self.index = index
+        self.max_tokens = max_tokens
 
 
 class _Engine:
@@ -60,8 +83,20 @@ class _Engine:
         self._gen = None
         self._active: dict[int, tuple[_Item, list[int]]] = {}
         self._stops = self._stop_ids()
+        self._closed = False
         self._thread = threading.Thread(target=self._loop, name="mlx-engine", daemon=True)
         self._thread.start()
+        # A daemon thread still inside MLX when Python exits segfaults in MLX's
+        # thread-local cleanup. Stop and join it before that happens.
+        atexit.register(self.close)
+
+    def close(self) -> None:
+        with self._state:
+            if self._closed:
+                return
+            self._closed = True
+            self._state.notify_all()
+        self._thread.join(timeout=10)
 
     def begin_layout(self) -> None:
         with self._state:
@@ -81,7 +116,8 @@ class _Engine:
         job = _Job(len(requests))
         with self._state:
             for index, req in enumerate(requests):
-                self._q.append(_Item(req.image, req.prompt, job, index))
+                cap = token_cap(req.prompt, req.image, self.max_tokens)
+                self._q.append(_Item(req.image, req.prompt, job, index, cap))
             self._state.notify_all()
         job.event.wait()
         if job.error is not None:
@@ -91,8 +127,11 @@ class _Engine:
     def _loop(self) -> None:
         while True:
             with self._state:
-                while self._layouts_waiting or (not self._q and not self._active):
+                while not self._closed and (self._layouts_waiting or (not self._q and not self._active)):
                     self._state.wait(timeout=0.5)
+                if self._closed:
+                    self._abandon()
+                    return
                 admit = []
                 while self._q and len(self._active) + len(admit) < self.slots:
                     item = self._q.popleft()
@@ -110,6 +149,14 @@ class _Engine:
                 except BaseException as exc:  # noqa: BLE001 - every waiting page must unblock
                     logger.exception("mlx batch step failed")
                     self._reset(exc)
+
+    def _abandon(self) -> None:
+        """Unblock every page still waiting on this engine."""
+        closed = RuntimeError("MLX engine closed")
+        for item in [*self._q, *(item for item, _ in self._active.values())]:
+            self._finish(item, error=closed)
+        self._q.clear()
+        self._active.clear()
 
     def _stop_ids(self) -> set[int]:
         """Stop on the chat end token. The checkpoint EOS is an ordinary word piece."""
@@ -166,7 +213,7 @@ class _Engine:
         try:
             ids, kwargs = self._embed(item)
             (uid,) = self._generator().insert(
-                [ids.squeeze(0).tolist()], max_tokens=self.max_tokens, prompt_kwargs=[kwargs]
+                [ids.squeeze(0).tolist()], max_tokens=[item.max_tokens], prompt_kwargs=[kwargs]
             )
         except BaseException as exc:  # noqa: BLE001 - one bad crop fails its page only
             self._finish(item, error=exc)
@@ -185,7 +232,7 @@ class _Engine:
             if r.finish_reason is not None:
                 del self._active[r.uid]
                 if r.finish_reason == "length":
-                    logger.info("mlx crop hit max_tokens=%d", self.max_tokens)
+                    logger.info("mlx crop hit max_tokens=%d", item.max_tokens)
                 self._finish(item, text=self._detok(tokens))
 
     def _detok(self, tokens: list[int]) -> str:
@@ -267,5 +314,6 @@ class MlxRecognizer:
         return int(getattr(self._tls, "n_crops", 0))
 
     def close(self) -> None:
+        self._engine.close()
         self._engine.model = None
         self._engine.processor = None
