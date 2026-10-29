@@ -24,8 +24,12 @@ from src.config import (
 )
 
 LOCAL_CACHE_NS = "indic-ocr-local"
-# Per-block cap from the official local loader. The HTTP API allows 4096.
-MAX_NEW_TOKENS = 2048
+# MLX ceiling per block. Each crop gets a smaller limit from its size and class
+# (src.mlx_recognizer.token_cap). 2048 cut 5 of 6 Union budget tables mid-row.
+MAX_NEW_TOKENS = 8192
+# PyTorch generates a batch to one limit, so a looping block runs all the way to it.
+# This is the official local loader's cap; the HTTP API allows 4096.
+PYTORCH_MAX_NEW_TOKENS = 2048
 # vLLM ceiling (each crop's cap scales with its size). 2048 cut every full-page budget table;
 # 4096 (the API's) still cut 6 of 20 Union receipt-budget pages; the longest measured is 6402.
 VLLM_MAX_NEW_TOKENS = 8192
@@ -44,12 +48,12 @@ def active_model() -> str:
 
 
 def local_cache_extra(table_format: str) -> str:
-    """MLX names its weights (8-bit and BF16 read differently). p2: single chat template."""
+    """MLX names its weights (8-bit and BF16 read differently). p3: per-crop token limits."""
     if runtime() == "mlx":
-        return f"{table_format}|mlx|{BODHAN_MLX_REPO}|{MAX_NEW_TOKENS}|p2"
+        return f"{table_format}|mlx|{BODHAN_MLX_REPO}|{MAX_NEW_TOKENS}|p3"
     if runtime() == "vllm":
         return f"{table_format}|vllm|{VLLM_MAX_NEW_TOKENS}|d3"  # d3: invented text cut from runaway blocks (d2: decoded here; d1 had U+FFFD for x, c-cedilla, quotes)
-    return f"{table_format}|{runtime()}|{MAX_NEW_TOKENS}"
+    return f"{table_format}|{runtime()}|{PYTORCH_MAX_NEW_TOKENS}"
 
 
 def _readable(text: str) -> str:
@@ -191,7 +195,7 @@ def _load_parser(table_format: str) -> _LocalEngine:
         dedup=DedupConfig(),
     )
     name = runtime()
-    max_tokens = VLLM_MAX_NEW_TOKENS if name == "vllm" else MAX_NEW_TOKENS
+    max_tokens = {"vllm": VLLM_MAX_NEW_TOKENS, "mlx": MAX_NEW_TOKENS}.get(name, PYTORCH_MAX_NEW_TOKENS)
     rec_cfg = RecognizerConfig(max_tokens=max_tokens, table_format=TableFormat(table_format))
     if name == "vllm":
         from src.vllm_recognizer import VllmRecognizer
@@ -200,7 +204,7 @@ def _load_parser(table_format: str) -> _LocalEngine:
     elif name == "mlx":
         from src.mlx_recognizer import MlxRecognizer
 
-        backend = MlxRecognizer(ensure_mlx(), max_tokens=MAX_NEW_TOKENS)
+        backend = MlxRecognizer(ensure_mlx(), max_tokens=max_tokens)
     else:
         from idp_recognizer import HfRecognizer
 

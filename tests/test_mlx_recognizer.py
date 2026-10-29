@@ -5,9 +5,11 @@ import time
 import unittest
 from types import SimpleNamespace
 
-from src.mlx_recognizer import _Engine
+from src.mlx_recognizer import MIN_TOKENS, _Engine, token_cap
 
 STOP = 0
+TABLE_PROMPT = "Convert this table image to HTML. Output only the HTML table."
+TEXT_PROMPT = "Transcribe the text in this image. Write any mathematical expressions in LaTeX."
 
 
 class FakeGen:
@@ -18,8 +20,10 @@ class FakeGen:
         self.seqs: dict[int, list[int]] = {}
         self.uid = 0
         self.max_live = 0
+        self.limits: list[int] = []
 
     def insert(self, prompts, max_tokens, prompt_kwargs):
+        self.limits.extend(max_tokens)
         uid = self.uid
         self.uid += 1
         self.seqs[uid] = list(prompt_kwargs[0]["answer"]) + [STOP]
@@ -67,8 +71,8 @@ class FakeEngine(_Engine):
         }
 
 
-def req(text: str):
-    return SimpleNamespace(image=None, prompt=text)
+def req(text: str, size: tuple[int, int] = (256, 256)):
+    return SimpleNamespace(image=SimpleNamespace(size=size), prompt=text)
 
 
 class EngineTests(unittest.TestCase):
@@ -132,6 +136,59 @@ class EngineTests(unittest.TestCase):
         self.assertTrue(done.wait(5))
         steps = [t for kind, t in engine.log if kind == "step"]
         self.assertFalse([t for t in steps if start <= t <= end])
+
+
+class TokenCapTests(unittest.TestCase):
+    def test_small_crops_stop_at_the_floor(self) -> None:
+        page_number = SimpleNamespace(size=(256, 256))
+        self.assertEqual(token_cap(TEXT_PROMPT, page_number, 8192), MIN_TOKENS)
+        self.assertEqual(token_cap(TABLE_PROMPT, page_number, 8192), MIN_TOKENS)
+
+    def test_large_crops_get_more_and_tables_most(self) -> None:
+        big = SimpleNamespace(size=(1536, 1536))
+        text, table = token_cap(TEXT_PROMPT, big, 8192), token_cap(TABLE_PROMPT, big, 8192)
+        self.assertGreater(text, 2048)
+        self.assertEqual(table, 8192)
+
+    def test_ceiling_wins_over_floor(self) -> None:
+        self.assertEqual(token_cap(TEXT_PROMPT, SimpleNamespace(size=(256, 256)), 64), 64)
+
+    def test_the_engine_gives_each_crop_its_own_limit(self) -> None:
+        engine = FakeEngine(slots=1)
+        engine.max_tokens = 8192
+        engine.submit([req("a"), req("b", (1536, 1536))])
+        self.assertEqual(engine.fake.limits, [MIN_TOKENS, 24 * 1536 * 1536 // 10_000])
+
+    def test_prompts_still_match_the_vendored_contract(self) -> None:
+        try:
+            from idp_contract import prompt_for
+        except ImportError:
+            self.skipTest("models/indic-ocr is not on the path")
+        crop = SimpleNamespace(size=(1536, 1536))
+        self.assertEqual(token_cap(prompt_for("Table"), crop, 8192), 8192)
+        self.assertLess(token_cap(prompt_for("Text"), crop, 8192), 8192)
+        self.assertLess(token_cap(prompt_for("Equation"), crop, 8192), 8192)
+
+
+class CloseTests(unittest.TestCase):
+    def test_close_stops_the_thread_and_unblocks_waiters(self) -> None:
+        engine = FakeEngine(slots=1)
+        outcome = {}
+
+        def page():
+            try:
+                engine.submit([req("p" * 5000)])
+            except RuntimeError as exc:
+                outcome["error"] = str(exc)
+
+        waiter = threading.Thread(target=page)
+        waiter.start()
+        time.sleep(0.05)
+        engine.close()
+        waiter.join(5)
+        self.assertFalse(engine._thread.is_alive())
+        self.assertIn("closed", outcome["error"])
+        engine.close()  # idempotent
 
 
 if __name__ == "__main__":
