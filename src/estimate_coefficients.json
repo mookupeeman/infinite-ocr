@@ -12,6 +12,11 @@
   3,
   6
  ],
+ "_bodhan_vllm": "BODHAN_RUNTIME=vllm on the RTX 5070 Laptop, 32 pages in flight: 23.3 pages/min end to end on 60 dense Hindi budget-table pages (model load included), 42 on a mixed 36-page set; 15 is the 20-heavy-page worst case. Cost 0.",
+ "bodhan_vllm_pages_per_min": [
+  15,
+  40
+ ],
  "stage1_overhead_min": [
   0.3,
   1.0

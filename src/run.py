@@ -33,6 +33,7 @@ from src.config import (
     BODHAN_BACKEND,
     BODHAN_MAX_INFLIGHT,
     BODHAN_MLX_PAGES,
+    BODHAN_VLLM_PAGES,
     BODHAN_TABLE_FORMAT,
     DOCS_OUT_DIR,
     RENDER_DPI,
@@ -61,6 +62,7 @@ from src.triage import triage_page
 
 
 class RunError(RuntimeError):
+    """A run cannot start; the message says why."""
     pass
 
 
@@ -83,6 +85,7 @@ def _fmt_states(states: dict[str, int]) -> str:
 
 
 class Run:
+    """One document run (stage 1): triage, the engine lanes, the manifest and the summary."""
     def __init__(
         self,
         pdf_path: Path,
@@ -223,8 +226,8 @@ class Run:
                 )
             from src.indic_local import runtime
 
-            # PyTorch local stays one page at a time. MLX batches crops across pages.
-            workers = 1 if isinstance(backend, BodhanLocalBackend) and runtime() != "mlx" else s.bodhan_workers
+            # PyTorch local stays one page at a time. MLX and vLLM batch crops across pages.
+            workers = 1 if isinstance(backend, BodhanLocalBackend) and runtime() == "pytorch" else s.bodhan_workers
             steal_from = "sarvam" if (s.policy == "sarvam-primary" and s.steal) else None
             backlog = sarvam_lane.per_job * s.max_open_jobs if sarvam_lane else 0
             lanes.append(PageLane(ctx, self.router, backend, workers, steal_from=steal_from, steal_min_backlog=backlog))
@@ -365,6 +368,8 @@ def parse_pages(spec: str) -> list[int]:
 def parse_args(argv: list[str]) -> argparse.Namespace:
     p = argparse.ArgumentParser(prog="python -m src.run", description="OCR a PDF of any length with Sarvam + Bodhan.")
     p.add_argument("pdf", type=Path)
+    p.add_argument("--out-root", type=Path, default=DOCS_OUT_DIR,
+                   help="folder that gets this run's <name>-<hash> output folder (default out/docs); the web app gives every job its own")
     p.add_argument("-l", "--language", default="auto",
                    help="auto (default; detected per page and per block), or a hint such as hi-IN, mr-IN, en-IN")
     p.add_argument("--mode", choices=tuple(modes.MODES), default=modes.DEFAULT_MODE,
@@ -372,7 +377,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
                         "cells; think: + Bodhan on every page, more accurate image check (src/modes.py)")
     p.add_argument("--doc-type", choices=DOC_TYPES, default="auto",
                    help="auto (default): born digital or scanned decided per page; digital or scanned: force every page")
-    p.add_argument("--policy", choices=POLICIES, help="override the mode's engine routing (fast/normal: sarvam-primary, think: both)")
+    p.add_argument("--lead", choices=modes.LEADS,
+                   help="the engine that reads every page and supplies the document (default: bodhan when it runs locally "
+                        "on vLLM, else sarvam; BODHAN_LEAD in .env)")
+    p.add_argument("--policy", choices=POLICIES,
+                   help="override the mode's engine routing (fast/normal: <lead>-primary, think: both)")
     group = p.add_mutually_exclusive_group()
     group.add_argument("--resume", action="store_true", help="continue a previous run of this PDF")
     group.add_argument("--fresh", action="store_true", help="discard the previous run's state (cache is kept)")
@@ -385,7 +394,7 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     p.add_argument("--files-per-job", type=int, default=5)
     p.add_argument("--max-open-jobs", type=int, default=3)
     p.add_argument("--bodhan-workers", type=int,
-                   help=f"Bodhan pages in flight (default: API {BODHAN_MAX_INFLIGHT}, local MLX {BODHAN_MLX_PAGES})")
+                   help=f"Bodhan pages in flight (default: API {BODHAN_MAX_INFLIGHT}, local MLX {BODHAN_MLX_PAGES}, local vLLM {BODHAN_VLLM_PAGES})")
     p.add_argument("--no-steal", action="store_true", help="Bodhan never takes pages from Sarvam's queue")
     p.add_argument("--qwen", action="store_true", help="also read English pages with Qwen (OpenRouter)")
     p.add_argument("--no-assemble", action="store_true", help="skip building doc.md, tables and report.md")
@@ -398,11 +407,11 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
 
 
 def default_bodhan_workers() -> int:
-    """API: its parallel limit. Local MLX: enough pages to keep the batch full."""
+    """API: its parallel limit. Local MLX and vLLM: enough pages to keep the batch full."""
     if BODHAN_BACKEND == "local":
         from src.indic_local import runtime
 
-        return BODHAN_MLX_PAGES if runtime() == "mlx" else 1
+        return {"mlx": BODHAN_MLX_PAGES, "vllm": BODHAN_VLLM_PAGES}.get(runtime(), 1)
     return BODHAN_MAX_INFLIGHT
 
 
@@ -415,9 +424,11 @@ def main(argv: list[str] | None = None) -> int:
         print(f"error: unknown language {args.language!r}; use auto or one of {sorted(SARVAM_LANGUAGES)}", file=sys.stderr)
         return 2
     mode = modes.get(args.mode)
+    lead = args.lead or modes.default_lead()
     settings = Settings(
         language=language,
-        policy=args.policy or mode.policy,
+        policy=args.policy or modes.policy_for(mode, lead),
+        lead=lead,
         dpi=args.dpi,
         table_format=args.table_format,
         chunk_pages=max(1, min(args.chunk_pages, 10)),
@@ -431,21 +442,22 @@ def main(argv: list[str] | None = None) -> int:
         pages=parse_pages(args.pages) if args.pages else None,
         doc_type=args.doc_type,
     )
-    run = Run(args.pdf, settings, resume=args.resume, fresh=args.fresh)
+    run = Run(args.pdf, settings, resume=args.resume, fresh=args.fresh, out_root=args.out_root)
     try:
         ctx = run.prepare()
     except RunError as exc:
         print(f"error: {exc}", file=sys.stderr)
         return 2
-    print(f"{run.pdf_path.name}: {run.n_pages} of {run.total_pages} pages, mode {mode.name}, policy {settings.policy}, "
+    print(f"{run.pdf_path.name}: {run.n_pages} of {run.total_pages} pages, mode {mode.name}, lead {settings.lead}, policy {settings.policy}, "
           f"language {language}, document type {settings.doc_type}")
     with pymupdf.open(run.pdf_path) as doc:
         pre = estimate.preflight(doc, run.selection, settings.doc_type)
-    estimates = estimate.estimate_all(pre)
+    estimates = estimate.estimate_all(pre, lead=settings.lead)
     print(estimate.render(pre, estimates, mode.name)
           + (f"\n  spending cap for this run: ₹{settings.max_cost_inr}" if settings.max_cost_inr is not None else ""))
-    if settings.policy != mode.policy:
-        print(f"  note: --policy {settings.policy} replaces the mode's {mode.policy}; the OCR estimate assumes {mode.policy}")
+    if settings.policy != modes.policy_for(mode, settings.lead):
+        print(f"  note: --policy {settings.policy} replaces the mode's {modes.policy_for(mode, settings.lead)}; "
+              f"the OCR estimate assumes the mode's")
     if not args.yes and sys.stdin.isatty():
         if input("Start? [Y/n] ").strip().lower() in ("n", "no"):
             return 0

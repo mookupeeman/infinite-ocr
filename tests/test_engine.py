@@ -145,6 +145,57 @@ class EngineTest(unittest.TestCase):
         self.assertTrue(1 <= bodhan["failed"] <= 8)
         self.assertIn("lane_dead", summary["events"])
 
+    # -- Bodhan leads (local vLLM) ----------------------------------------
+
+    def test_bodhan_lead_reads_every_page_and_sarvam_only_the_table_pages(self):
+        sarvam, bodhan = FakeSarvam(), FakeBodhan()
+        pdf = make_pdf(self.root / "plain.pdf", 4)  # no tables: Sarvam has nothing to read
+        s = Settings(language="en-IN", policy="bodhan-primary")
+        summary = self.make_run(pdf, s, sarvam=sarvam, bodhan_backend=bodhan).execute()
+        self.assertTrue(summary["complete"], summary)
+        self.assertEqual(self.states(summary, "bodhan"), {"done": 4})
+        self.assertEqual(self.states(summary, "sarvam"), {})
+        self.assertEqual(sarvam.submissions, [])
+
+        tables = self.make_run(MARATHI, Settings(language="mr-IN", policy="bodhan-primary"),
+                               sarvam=FakeSarvam(), bodhan_backend=FakeBodhan()).execute()
+        self.assertEqual(self.states(tables, "bodhan"), {"done": 8})
+        self.assertEqual(self.states(tables, "sarvam"), {"done": 8})  # every page has a ruled table
+
+    def test_bodhan_lead_sends_a_table_triage_missed_to_sarvam(self):
+        pdf = make_pdf(self.root / "plain.pdf", 3)
+        summary = self.make_run(pdf, Settings(language="en-IN", policy="bodhan-primary"),
+                                sarvam=FakeSarvam(), bodhan_backend=FakeBodhan(table=True)).execute()
+        self.assertTrue(summary["complete"], summary)
+        self.assertEqual(self.states(summary, "sarvam"), {"done": 3})
+        self.assertEqual(summary["events"].get("verify_table"), 3)
+
+    def test_bodhan_lead_falls_back_to_sarvam_when_bodhan_is_down(self):
+        pdf = make_pdf(self.root / "plain.pdf", 5)
+        summary = self.make_run(pdf, Settings(language="en-IN", policy="bodhan-primary"), sarvam=FakeSarvam(),
+                                bodhan_backend=FakeBodhan(fatal_reason="missing_runtime")).execute()
+        self.assertTrue(summary["complete"], summary)
+        self.assertEqual(summary["pages_done"], 5)
+        self.assertEqual(self.states(summary, "sarvam"), {"done": 5})
+
+    def test_assembly_takes_the_lead_engines_reading(self):
+        from src.assemble import Assembler
+
+        pdf = make_pdf(self.root / "plain.pdf", 2)
+        for lead, first in (("sarvam", "sarvam"), ("bodhan", "bodhan")):
+            summary = self.make_run(pdf, Settings(language="en-IN", policy="both", lead=lead), sarvam=FakeSarvam(),
+                                    bodhan_backend=FakeBodhan(), fresh=True).execute()
+            a = Assembler(Path(summary["out_dir"]), verbose=False, mode="fast")
+            a._load()
+            self.assertEqual(set(a.primary.values()), {first}, lead)
+            a.m.close()
+
+    def test_lead_is_recorded_only_when_bodhan_leads(self):
+        self.assertNotIn("lead", Settings(language="auto").fingerprint())
+        self.assertEqual(Settings(language="auto", policy="bodhan-primary").lead, "bodhan")
+        self.assertEqual(Settings(language="auto", policy="both", lead="bodhan").fingerprint()["lead"], "bodhan")
+        self.assertEqual(Settings(language="auto", policy="sarvam-primary", lead="bodhan").lead, "sarvam")
+
 
 if __name__ == "__main__":
     unittest.main()

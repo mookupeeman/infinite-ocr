@@ -43,6 +43,23 @@ class ModesTest(unittest.TestCase):
         self.assertIsNone(Assembler(Path("."), agent=FakeAgent(), mode="fast").agent)
         self.assertIsNotNone(Assembler(Path("."), agent=FakeAgent(), mode="normal").agent)
 
+    def test_bodhan_leads_only_when_local_on_vllm(self):
+        cases = [("api", "vllm", "sarvam"), ("local", "mlx", "sarvam"), ("local", "pytorch", "sarvam"), ("local", "vllm", "bodhan")]
+        for backend, runtime, lead in cases:
+            with mock.patch.object(modes, "BODHAN_LEAD", "auto"), mock.patch.object(modes, "BODHAN_BACKEND", backend), \
+                    mock.patch("src.indic_local.runtime", lambda r=runtime: r):
+                self.assertEqual(modes.default_lead(), lead, (backend, runtime))
+        with mock.patch.object(modes, "BODHAN_LEAD", "sarvam"):
+            self.assertEqual(modes.default_lead(), "sarvam")
+
+    def test_policy_follows_the_lead(self):
+        fast, think = modes.get("fast"), modes.get("think")
+        self.assertEqual(modes.policy_for(fast, "bodhan"), "bodhan-primary")
+        self.assertEqual(modes.policy_for(fast, "sarvam"), "sarvam-primary")
+        self.assertEqual(modes.policy_for(think, "bodhan"), "both")
+        with self.assertRaises(ValueError):
+            modes.policy_for(fast, "qwen")
+
     def test_document_type_auto_keeps_older_runs_resumable(self):
         self.assertNotIn("doc_type", Settings(language="auto").fingerprint())
         self.assertEqual(Settings(language="auto", doc_type="scanned").fingerprint()["doc_type"], "scanned")
@@ -61,11 +78,17 @@ class EstimateTest(unittest.TestCase):
         self.assertGreater(by["normal"]["checks_inr"][1], 0.0)  # no cap: the estimate is the cost, not a ceiling
         self.assertEqual(by["think"]["bodhan_inr"], [2.0, 2.0])  # Bodhan on every page
         self.assertIn("normal", estimate.render(pre, list(by.values()), "normal"))
-        with mock.patch.object(estimate, "BODHAN_BACKEND", "local"):
+        with mock.patch.object(estimate, "BODHAN_BACKEND", "local"), mock.patch("src.indic_local.runtime", lambda: "mlx"):
             local = {e["mode"]: e for e in estimate.estimate_all(pre)}
         self.assertEqual(local["think"]["bodhan_inr"], [0.0, 0.0])  # local weights cost nothing
         self.assertEqual(local["fast"]["total_inr"], [5.0, 5.0])  # Sarvam only
-        self.assertGreater(local["think"]["minutes"][1], by["think"]["minutes"][1])  # but read slower than the API
+        self.assertGreater(local["think"]["minutes"][1], by["think"]["minutes"][1])  # MLX reads slower than the API
+        with mock.patch.object(estimate, "BODHAN_BACKEND", "local"), mock.patch("src.indic_local.runtime", lambda: "vllm"):
+            led = {e["mode"]: e for e in estimate.estimate_all(pre, lead="bodhan")}
+        self.assertEqual(led["fast"]["sarvam_inr"], [2.0, 2.0])  # Sarvam reads only the 4 table pages
+        self.assertEqual(led["think"]["sarvam_inr"], [5.0, 5.0])  # Think: both engines on every page
+        self.assertEqual(led["fast"]["total_inr"], [2.0, 2.0])
+        self.assertLess(led["think"]["minutes"][1], local["think"]["minutes"][1])  # vLLM is faster than MLX
 
     def test_long_documents_are_sampled_with_a_range(self):
         doc = _pdf(120, set(range(1, 121, 3)))

@@ -63,7 +63,6 @@ from src.tables import (
     text_layer_match,
 )
 
-ENGINE_ORDER = ("sarvam", "bodhan", "qwen")
 TERMINAL_PUNCT = tuple(".?!।॥:;\"'”’)")
 
 
@@ -150,6 +149,7 @@ def table_in_text(blocks: list[Block], block: Block, reference: Table | None) ->
 
 @dataclass
 class TableRec:
+    """One table of the document: its best reading, the other engines' versions, how each cell was settled, and the pages it spans."""
     id: str
     page: int
     order: int
@@ -198,6 +198,7 @@ class TableRec:
 
 
 class Assembler:
+    """Stage 2: builds doc.md, the tables and the report from a finished stage-1 run, checking and repairing tables as far as the mode allows."""
     def __init__(
         self,
         out_dir: Path,
@@ -243,10 +244,13 @@ class Assembler:
         self.info: dict[int, dict] = {}
         self.blocks: dict[int, dict[str, list[Block]]] = {}
         self.primary: dict[int, str] = {}
+        # the run's lead engine supplies each page and each table's default reading (Settings.lead)
+        fp = json.loads(self.m.get_meta("fingerprint") or "{}")
+        self.order = table_qa.engine_order("bodhan" if fp.get("lead") == "bodhan" else "sarvam")
         for page in sorted(self.m.triaged_pages()):
             tasks = self.m.tasks_for_page(page)
             per_engine: dict[str, list[Block]] = {}
-            for engine in ENGINE_ORDER:
+            for engine in self.order:
                 path = self.out_dir / "blocks" / f"page_{page:05d}.{engine}.json"
                 if tasks.get(engine, {}).get("state") == "done" and path.is_file():
                     per_engine[engine] = load_blocks(path)
@@ -258,7 +262,7 @@ class Assembler:
                 cls = page_class.classify(self.doc[page - 1], bool(info.get("legacy_font")))
                 info.update(render=cls.render, text_layer=cls.text_layer, image_cover=cls.image_cover)
             self.blocks[page] = per_engine
-            self.primary[page] = next(e for e in ENGINE_ORDER if e in per_engine)
+            self.primary[page] = next(e for e in self.order if e in per_engine)
         self._tag_languages()
 
     def _tag_languages(self) -> None:
@@ -458,7 +462,7 @@ class Assembler:
             geometry = None
         layer_raw = self._layer_text(page, bbox)
         originals = {e: copy.deepcopy(t) for e, t in readings.items()}
-        qt = table_qa.check(readings, table_qa.Evidence(geometry, layer_raw, scanned=self._scanned(page)))
+        qt = table_qa.check(readings, table_qa.Evidence(geometry, layer_raw, scanned=self._scanned(page)), self.order)
         rec = TableRec(tid, page, block.order, bbox, qt.table, qt.reference, pages=[page])
         # a table read out of a text block can hold the neighbouring tables too: fine as a second reading of
         # cells, wrong as a stand-in for the page's table when joining, so it is not offered to the joiner
@@ -493,7 +497,7 @@ class Assembler:
         for page in self.pages:
             engines = self.blocks[page]
             primary = self.primary[page]
-            other = next((e for e in ENGINE_ORDER if e in engines and e != primary), None)
+            other = next((e for e in self.order if e in engines and e != primary), None)
             if other is None:
                 continue
             info = self.info[page]
@@ -518,7 +522,7 @@ class Assembler:
             if repaired == r.layer_raw:
                 continue
             qt = table_qa.check({e: copy.deepcopy(t) for e, t in r.readings.items()},
-                                table_qa.Evidence(r.geometry, repaired, scanned=r.scanned))
+                                table_qa.Evidence(r.geometry, repaired, scanned=r.scanned), self.order)
             qt.layer["repaired_glyphs"] = len(self.layer_rules)
             if qt.layer.get("proven") or not r.qt.layer.get("proven"):  # never trade a proven layer for an unproven one
                 r.qt = qt

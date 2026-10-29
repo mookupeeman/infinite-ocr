@@ -43,6 +43,7 @@ NUMBER_RE = re.compile(r"^[(\-]?[\d०-९০-৯௦-௯౦-౯]+([.,][\d०-९
 
 @dataclass
 class Preflight:
+    """What a free look at up to 40 pages found: page classes, and how many pages have tables."""
     pages: int
     sampled: int
     classes: dict[str, float]  # page class -> pages in the selection (scaled from the sample)
@@ -125,20 +126,27 @@ def preflight(doc: pymupdf.Document, selection: list[int], doc_type: str = "auto
     return Preflight(n, len(sample), classes, tables, time.monotonic() - started, notes)
 
 
-def mode_estimate(pre: Preflight, mode: modes.Mode, cached_pages: int = 0) -> dict:
-    """Cost (₹) and time (minutes) ranges for one mode."""
+def _bodhan_speed() -> tuple[float, float]:
+    """(low, high) pages per minute of the configured Bodhan."""
+    if BODHAN_BACKEND != "local":
+        return (COEF["bodhan_pages_per_min"],) * 2
+    from src.indic_local import runtime
+
+    return tuple(COEF["bodhan_vllm_pages_per_min" if runtime() == "vllm" else "bodhan_local_pages_per_min"])
+
+
+def mode_estimate(pre: Preflight, mode: modes.Mode, cached_pages: int = 0, lead: str = "sarvam") -> dict:
+    """Cost (₹) and time (minutes) ranges for one mode, with `lead` reading every page."""
     n = max(0, pre.pages - cached_pages)
     t_low, t_high = pre.table_range
     t_low, t_high = t_low * n / max(1, pre.pages), t_high * n / max(1, pre.pages)
-    sarvam = n * COEF["sarvam_inr_per_page"] if mode.policy != "bodhan-only" else 0.0
-    local = BODHAN_BACKEND == "local"
-    b_price = 0.0 if local else COEF["bodhan_inr_per_page"]
-    if mode.policy in ("both", "bodhan-only"):
-        bodhan = (n * b_price,) * 2
-        bodhan_pages = (n, n)
-    else:
-        bodhan = (t_low * b_price, t_high * b_price)
-        bodhan_pages = (t_low, t_high)
+    policy = modes.policy_for(mode, lead)
+    every, tables, none = (n, n), (t_low, t_high), (0.0, 0.0)
+    sarvam_pages = {"bodhan-primary": tables, "bodhan-only": none}.get(policy, every)
+    bodhan_pages = {"sarvam-primary": tables, "sarvam-only": none}.get(policy, every)
+    sarvam = tuple(p * COEF["sarvam_inr_per_page"] for p in sarvam_pages)
+    b_price = 0.0 if BODHAN_BACKEND == "local" else COEF["bodhan_inr_per_page"]
+    bodhan = tuple(p * b_price for p in bodhan_pages)
     checks, questions = [0.0, 0.0], [0.0, 0.0]
     if mode.image_check:
         prof = mode.judge
@@ -157,8 +165,9 @@ def mode_estimate(pre: Preflight, mode: modes.Mode, cached_pages: int = 0) -> di
             questions[1] += hi * q_hi * len(models)
     s_lo, s_hi = COEF["sarvam_pages_per_min"]
     o_lo, o_hi = COEF["stage1_overhead_min"]
-    b_hi, b_lo = COEF["bodhan_local_pages_per_min"][::-1] if local else (COEF["bodhan_pages_per_min"],) * 2
-    stage1 = (o_lo + max(n / s_hi, bodhan_pages[0] / b_hi), o_hi + max(n / s_lo, bodhan_pages[1] / b_lo))
+    b_lo, b_hi = _bodhan_speed()
+    stage1 = (o_lo + max(sarvam_pages[0] / s_hi, bodhan_pages[0] / b_hi),
+              o_hi + max(sarvam_pages[1] / s_lo, bodhan_pages[1] / b_lo))
     f_lo, f_hi = COEF["stage2_free_s_per_table_page"]
     l_lo, l_hi = COEF["sheet_latency_s"]
     per_sheet = mode.judge.per_sheet
@@ -168,18 +177,19 @@ def mode_estimate(pre: Preflight, mode: modes.Mode, cached_pages: int = 0) -> di
         stage2 = (t_low * f_lo / 60, t_high * f_hi / 60)
     return {
         "mode": mode.name,
+        "lead": lead,
         "pages": n,
         "table_pages": [round(t_low), round(t_high)],
-        "sarvam_inr": round(sarvam, 2),
+        "sarvam_inr": [round(sarvam[0], 2), round(sarvam[1], 2)],
         "bodhan_inr": [round(bodhan[0], 2), round(bodhan[1], 2)],
         "checks_inr": [round(checks[0], 2), round(checks[1], 2)],
-        "total_inr": [round(sarvam + bodhan[0] + checks[0], 2), round(sarvam + bodhan[1] + checks[1], 2)],
+        "total_inr": [round(sarvam[0] + bodhan[0] + checks[0], 2), round(sarvam[1] + bodhan[1] + checks[1], 2)],
         "minutes": [round(stage1[0] + stage2[0], 1), round(stage1[1] + stage2[1], 1)],
     }
 
 
-def estimate_all(pre: Preflight, cached_pages: int = 0) -> list[dict]:
-    return [mode_estimate(pre, m, cached_pages) for m in modes.MODES.values()]
+def estimate_all(pre: Preflight, cached_pages: int = 0, lead: str = "sarvam") -> list[dict]:
+    return [mode_estimate(pre, m, cached_pages, lead) for m in modes.MODES.values()]
 
 
 def _money(lo: float, hi: float) -> str:
@@ -201,7 +211,7 @@ def render(pre: Preflight, estimates: list[dict], chosen: str) -> str:
             f"about {pages} pages with tables")
     rows = [f"  {'mode':8s} {'OCR (Sarvam + Bodhan)':>24s} {'table checks':>18s} {'total':>16s} {'time':>12s}"]
     for e in estimates:
-        ocr = _money(e["sarvam_inr"] + e["bodhan_inr"][0], e["sarvam_inr"] + e["bodhan_inr"][1])
+        ocr = _money(e["sarvam_inr"][0] + e["bodhan_inr"][0], e["sarvam_inr"][1] + e["bodhan_inr"][1])
         chk = "₹0" if e["checks_inr"][1] == 0 else _money(*e["checks_inr"])
         mark = " <-" if e["mode"] == chosen else ""
         rows.append(f"  {e['mode']:8s} {ocr:>24s} {chk:>18s} {_money(*e['total_inr']):>16s} {_minutes(*e['minutes']):>12s}{mark}")
