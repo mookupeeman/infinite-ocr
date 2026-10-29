@@ -1,22 +1,30 @@
+# secrets and machine-local files
 .env
-cache/
-out/
+.venv/
+.venv-vllm/
+.DS_Store
+.cursor/
+.vscode/
+__pycache__/
+*.pyc
+*.log
+
+# downloaded or generated: model weights, results, caches
 models/
-__pycache__
-.venv
-.DS_Store
-*.log
-*.pyc
+out/
+cache/
+bench/work/    # benchmark render cache, rebuilt by bench/run_bench.py
+
+# working copies and exports, not source
+*.zip
+scratchpad_*.json
+example_sarvam.html
+header image 1.webp
+samples/*-doc.md
+samples/*-report.md
+
+# a real person's certificate used for testing: private data
+samples/vishnu-case1.jpeg
+
 # validation sets: transferred by hand, not kept in git
 samples/val-*/
-samples/val-dataset-*.zip
-# benchmark render cache, rebuilt by bench/run_bench.py
-bench/work/
-.DS_Store
-*.log
-*.pyc
-# validation sets: transferred by hand, not kept in git
-samples/val-*/
-samples/val-dataset-*.zip
-# benchmark render cache, rebuilt by bench/run_bench.py
-bench/work/

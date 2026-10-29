@@ -51,6 +51,7 @@ PROOF_SHARE = 0.9
 
 @dataclass
 class Word:
+    """One word of an engine's prose, with where it came from."""
     raw: str
     key: str  # canon(raw)
     block: int  # index into the page's block list
@@ -60,6 +61,7 @@ class Word:
 
 @dataclass
 class Dispute:
+    """A stretch where the two engines' prose differs."""
     page: int
     primary: str  # the primary engine's words in the stretch ("" if it has none)
     other: str
@@ -77,6 +79,7 @@ class Dispute:
 
 @dataclass
 class PageText:
+    """The result of comparing the two engines' prose on one page."""
     page: int
     compared: bool
     reason: str = ""

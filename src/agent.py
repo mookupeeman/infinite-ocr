@@ -96,6 +96,7 @@ def _openrouter_prices() -> dict[str, tuple[float, float]]:
 
 
 class Agent:
+    """OpenAI-compatible client for the vision and decision models, with a disk cache, a spending ledger and a budget cap."""
     def __init__(
         self,
         base_url: str = AGENT_BASE_URL,

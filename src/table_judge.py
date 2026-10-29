@@ -70,6 +70,7 @@ def _short(model: str) -> str:
 
 @dataclass
 class JudgeReport:
+    """What the image check asked, decided and cost for one table."""
     asked: int = 0
     decided: int = 0
     cost_inr: float = 0.0

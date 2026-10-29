@@ -48,12 +48,13 @@ from src.pdf_pages import RenderSpec, build_chunk_pdf, render_page
 from src.rate_limit import CallFailed, FatalError, Limiter, Outcome, RetriesExhausted, Verdict, call_with_retry
 
 FATAL_LANE_REASONS = {"http_401", "http_402", "http_403", "credit_exhausted"}
-POLICIES = ("sarvam-primary", "both", "sarvam-only", "bodhan-only")
+POLICIES = ("sarvam-primary", "bodhan-primary", "both", "sarvam-only", "bodhan-only")
 JOB_TIMEOUT_S = 60 * 60
 
 
 @dataclass
 class Settings:
+    """Everything about a run that changes its output. The fingerprint is checked when a run is resumed."""
     language: str
     policy: str = "sarvam-primary"
     dpi: int = 200
@@ -68,6 +69,14 @@ class Settings:
     max_cost_inr: float | None = None
     pages: list[int] | None = None  # explicit page selection (1-based), e.g. windows of a long PDF
     doc_type: str = "auto"  # page_class: auto (per page) | digital | scanned
+    lead: str = "sarvam"  # the engine that reads every page and supplies the document (modes.default_lead)
+
+    def __post_init__(self) -> None:
+        # the primary policies name their lead; "both" takes it from `lead`
+        if self.policy == "bodhan-primary":
+            self.lead = "bodhan"
+        elif self.policy == "sarvam-primary":
+            self.lead = "sarvam"
 
     def fingerprint(self) -> dict:
         """Settings that change outputs. A resume must match these."""
@@ -81,6 +90,7 @@ class Settings:
             "qwen": self.qwen,
             **({"doc_type": self.doc_type} if self.doc_type != "auto" else {}),  # absent for auto: older runs still resume
             **({"bodhan_backend": _local_backend_tag()} if BODHAN_BACKEND == "local" else {}),  # absent for the API: older runs still resume
+            **({"lead": self.lead} if self.lead != "sarvam" else {}),  # absent for Sarvam: older runs still resume
         }
 
 
@@ -91,6 +101,7 @@ def _local_backend_tag() -> str:
 
 
 class Budget:
+    """Spending cap shared by all lanes: reserve before a call, settle after it."""
     def __init__(self, cap_inr: float | None, spent_inr: float = 0.0) -> None:
         self.cap = cap_inr
         self.spent = spent_inr
@@ -186,6 +197,7 @@ class Context:
 
 
 class Router:
+    """Decides which engine reads which page and what happens when a page or a lane fails. It never calls an API."""
     def __init__(self, ctx: Context) -> None:
         self.ctx = ctx
         self.policy = ctx.settings.policy
@@ -193,6 +205,7 @@ class Router:
     def engines(self) -> set[str]:
         used = {
             "sarvam-primary": {"sarvam", "bodhan"},
+            "bodhan-primary": {"sarvam", "bodhan"},
             "both": {"sarvam", "bodhan"},
             "sarvam-only": {"sarvam"},
             "bodhan-only": {"bodhan"},
@@ -205,6 +218,17 @@ class Router:
             return {e: ("skipped", 0) for e in engines if e != "qwen"}
         alive = self.ctx.alive
         tasks: dict[str, tuple[str, int]] = {}
+        if self.policy == "bodhan-primary":
+            # Bodhan reads every page; Sarvam reads the table pages, or the page when Bodhan is down
+            if alive["bodhan"]:
+                tasks["bodhan"] = ("pending", 0)
+                if flags.has_table and alive["sarvam"]:
+                    tasks["sarvam"] = ("pending", 1)
+            elif alive["sarvam"]:
+                tasks["sarvam"] = ("pending", 2)
+            if "qwen" in engines and flags.language.startswith("en"):
+                tasks["qwen"] = ("pending", 0)
+            return tasks
         if "sarvam" in engines:
             if alive["sarvam"]:
                 tasks["sarvam"] = ("pending", 0)
@@ -224,8 +248,18 @@ class Router:
             if any(b.kind == "table" for b in blocks) and self.ctx.manifest.ensure_task(page, "bodhan", 1):
                 self.ctx.events.log("verify_table", page=page)
 
+    def after_bodhan_page(self, page: int, blocks: list[Block]) -> None:
+        """Bodhan leads and found a table triage did not: let Sarvam give the second reading."""
+        if self.policy == "bodhan-primary" and self.ctx.alive["sarvam"]:
+            if any(b.kind == "table" for b in blocks) and self.ctx.manifest.ensure_task(page, "sarvam", 1):
+                self.ctx.events.log("verify_table", page=page, engine="sarvam")
+
     def on_page_failed(self, page: int, engine: str) -> None:
-        if engine == "sarvam" and self.policy != "sarvam-only" and self.ctx.alive["bodhan"]:
+        if engine == "bodhan" and self.policy == "bodhan-primary" and self.ctx.alive["sarvam"]:
+            if self.ctx.manifest.ensure_task(page, "sarvam", 2):
+                self.ctx.events.log("fallback", page=page, to="sarvam")
+            return
+        if engine == "sarvam" and self.policy not in ("sarvam-only", "bodhan-primary") and self.ctx.alive["bodhan"]:
             if self.ctx.manifest.ensure_task(page, "bodhan", 2):
                 self.ctx.events.log("fallback", page=page, to="bodhan")
         if engine == "bodhan" and self.ctx.manifest.reopen_stolen(page):
@@ -249,6 +283,7 @@ class Router:
 
 
 class PageBackend(Protocol):
+    """What a per-page engine (Bodhan API, local Bodhan, Qwen) has to provide to the page lane."""
     engine: str
     cache_ns: str
     model: str
@@ -262,6 +297,7 @@ class PageBackend(Protocol):
 
 
 class BodhanAPIBackend:
+    """Bodhan through its hosted HTTP API: ₹0.20 a page, 8 requests a minute."""
     engine = "bodhan"
     cache_ns = "indic-ocr"
     model = BODHAN_MODEL
@@ -317,6 +353,8 @@ class BodhanLocalBackend:
             name = type(exc).__name__
             if name in ("GatedRepoError", "LocalEntryNotFoundError"):
                 raise FatalError(Outcome(Verdict.FATAL, "gated_model"), 1) from exc
+            if name == "VllmUnavailable":
+                raise FatalError(Outcome(Verdict.FATAL, "missing_runtime"), 1) from exc
             raise
         if on_outcome is not None:
             on_outcome(Outcome(Verdict.OK))
@@ -407,6 +445,7 @@ class QwenBackend:
 
 
 class PageLane:
+    """Worker threads that read pages with one per-page engine, serve cache hits and save the blocks."""
     def __init__(
         self,
         ctx: Context,
@@ -527,6 +566,8 @@ class PageLane:
         )
         blocks = backend.to_blocks(payload, page, rendered.width, rendered.height)
         ctx.save_page_outputs(page, self.engine, blocks)
+        if self.engine == "bodhan":
+            self.router.after_bodhan_page(page, blocks)  # before `finish`, so the run cannot end in between
         usage = payload.get("usage") or {}
         degraded = (payload.get("_infinite") or {}).get("degraded") or None
         ctx.manifest.finish(
@@ -574,6 +615,7 @@ def map_job_pages(zip_bytes: bytes, job: int, files: list[list[int]]) -> dict[in
 
 @dataclass
 class OpenJob:
+    """A Sarvam job that has been submitted and is being polled."""
     job: int
     job_id: str
     n_pages: int
@@ -585,6 +627,7 @@ class OpenJob:
 
 
 class SarvamLane:
+    """The thread that submits page chunks to Sarvam, polls the jobs, maps pages back and saves the results."""
     def __init__(self, ctx: Context, router: Router, api: ModuleType | Any = sarvam_api, max_attempts: int = 2) -> None:
         self.ctx = ctx
         self.router = router

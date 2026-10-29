@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infinite-OCR: Indian-language OCR that shows its work</title>
+  <meta name="description" content="Read PDFs in English and 22 Indian languages on your own machine. Two readers, a checker, and a record of how every table cell was decided.">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="masthead" id="top">
+    <div class="wrap">
+      <div class="bar">
+        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">अ</span>Infinite-OCR</a>
+        <p class="gpu" id="gpu" data-state="unknown" role="status"><span class="gpu-dot" aria-hidden="true"></span><span id="gpu-text">Connecting</span></p>
+      </div>
+
+      <section class="hero">
+        <div>
+          <h1 class="hero-title">Infinite OCR for Indic Languages</h1>
+          <p class="hero-lede">Drop in a PDF in Hindi, Tamil, Telugu or any of 22 supported languages. Get high quality OCR output in seconds.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#reader">Scan a document</a>
+            <a class="link" href="#measured">How it runs locally</a>
+          </div>
+        </div>
+
+        <div class="demo">
+          <div class="stage-wrap" id="stage-wrap">
+            <div class="stage-tags" aria-hidden="true"><span>Original</span><span>Digitised</span></div>
+            <div class="stage" id="stage" data-boxes="off">
+              <div class="layer twin" id="twin"></div>
+              <div class="layer scan"><img class="scan-img" id="scan-img" alt="The original page, a Tamil novel" draggable="false"></div>
+              <div class="layer" id="boxes" aria-hidden="true"></div>
+              <div class="handle" id="handle" role="slider" tabindex="0" aria-label="Compare the original page with the digitised text" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                <span class="handle-knob" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4 2 9l4 5M12 4l4 5-4 5"/></svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="demo-foot">
+            <p class="demo-caption"><strong id="demo-title">Ponniyan Selvan, page 3</strong><span id="demo-sub">Tamil, read locally, cost ₹0</span></p>
+            <label class="switch">
+              <input class="sr-only" type="checkbox" id="boxes-toggle">
+              <span class="switch-track" aria-hidden="true"></span>
+              Show detected blocks
+            </label>
+          </div>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="reader">
+      <div class="wrap">
+        <h2 class="section-title">Scan a document</h2>
+        <p class="section-lede">Choose a file, then choose the effort. More effort checks more table cells, involves more consensus decisions and costs a little more.</p>
+
+        <div class="reader">
+          <label class="drop" id="drop">
+            <span class="drop-title">Drop a PDF here, or choose one</span>
+            <span class="drop-hint">A JPEG or PNG of a single page works too.</span>
+            <span class="drop-file" id="drop-file" hidden></span>
+            <span class="drop-error" id="drop-error" role="alert" hidden></span>
+            <input type="file" id="file" accept="application/pdf,image/jpeg,image/png">
+          </label>
+
+          <fieldset class="effort">
+            <legend class="effort-legend">Effort level</legend>
+            <input class="range" id="effort" type="range" min="0" max="2" step="1" value="1" aria-describedby="readout-what">
+            <div class="stops">
+              <button class="stop" type="button" data-stop="0" aria-pressed="false">Fast</button>
+              <button class="stop" type="button" data-stop="1" aria-pressed="true">Medium</button>
+              <button class="stop" type="button" data-stop="2" aria-pressed="false">High</button>
+            </div>
+            <div class="readout" aria-live="polite">
+              <p class="readout-what" id="readout-what"></p>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="start">
+          <button class="btn" type="button" id="start" disabled>Start reading</button>
+          <p class="start-note" id="start-note">Choose a file first.</p>
+        </div>
+
+        <div class="progress" id="progress" hidden>
+          <div class="progress-head">
+            <p class="progress-stage" id="progress-stage"></p>
+            <button class="btn-quiet" type="button" id="cancel">Cancel</button>
+          </div>
+          <p class="progress-detail" id="progress-detail"></p>
+          <div class="bar-track" id="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <span class="bar-fill" id="progress-fill"></span>
+          </div>
+          <dl class="readout-figures">
+            <div class="figure"><dt>Pages</dt><dd id="p-pages"></dd></div>
+            <div class="figure"><dt>Speed</dt><dd id="p-speed"></dd></div>
+            <div class="figure"><dt>Spent</dt><dd id="p-cost"></dd></div>
+            <div class="figure"><dt>Time</dt><dd id="p-time"></dd></div>
+          </dl>
+          <p class="progress-error" id="progress-error" role="alert" hidden></p>
+          <details class="progress-log">
+            <summary>Details</summary>
+            <pre id="progress-log"></pre>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results" hidden>
+      <div class="wrap">
+        <h2 class="section-title" id="results-title">Result</h2>
+        <p class="section-lede" id="results-lede"></p>
+
+        <div class="inspector">
+          <div>
+            <dl class="result-figures" id="result-figures"></dl>
+            <div class="result-actions">
+              <a class="btn" id="dl-doc" href="#" download>Download the text</a>
+              <a class="link-ink" id="dl-report" href="#" download>Download the report</a>
+            </div>
+            <p class="result-note">Drag the line across the page to compare the original with what was read. Each block of text sits where it was on the page.</p>
+          </div>
+
+          <div class="demo">
+            <div class="stage-wrap" id="r-wrap">
+              <div class="stage-tags" aria-hidden="true"><span>Original</span><span>Digitised</span></div>
+              <div class="stage" id="r-stage" data-boxes="off">
+                <div class="layer twin" id="r-twin"></div>
+                <div class="layer scan"><img class="scan-img" id="r-img" alt="The original page" draggable="false"></div>
+                <div class="layer" id="r-boxes" aria-hidden="true"></div>
+                <div class="handle" id="r-handle" role="slider" tabindex="0" aria-label="Compare the original page with the digitised text" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+                  <span class="handle-knob" aria-hidden="true">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4 2 9l4 5M12 4l4 5-4 5"/></svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="pager">
+              <button class="btn-quiet" type="button" id="r-prev" aria-label="Previous page">Previous</button>
+              <input class="pager-range" type="range" id="r-range" min="1" max="1" value="1" aria-label="Page">
+              <button class="btn-quiet" type="button" id="r-next" aria-label="Next page">Next</button>
+            </div>
+            <div class="demo-foot">
+              <p class="demo-caption"><strong id="r-title">Page 1</strong><span id="r-sub"></span></p>
+              <label class="switch">
+                <input class="sr-only" type="checkbox" id="r-boxes-toggle">
+                <span class="switch-track" aria-hidden="true"></span>
+                Show detected blocks
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="measured">
+      <div class="wrap">
+        <h2 class="section-title">What it does locally</h2>
+        <p class="section-lede">Measured on RTX 5070 with vLLM and local Bodhan weights</p>
+        <ul class="facts">
+          <li class="fact">
+            <p class="fact-figure">23 pages a minute</p>
+            <div class="fact-body">
+              <p>On dense Hindi budget tables, with the models running locally. Compared to 8 pages/min through API.</p>
+              <p class="fact-source">example: 60 pages of the Union Receipt Budget</p>
+            </div>
+          </li>
+          <li class="fact">
+            <p class="fact-figure">₹0 a page</p>
+            <div class="fact-body">
+              <p>Bodhan OCR Model runs locally, via a vLLM server. Bodhan hosted API charges ₹0.20 a page and allows 8 requests a minute; Sarvam charges ₹0.50 a page.</p>
+              <p class="fact-source">Local weights under the Indic Open Model License</p>
+            </div>
+          </li>
+          <li class="fact">
+            <p class="fact-figure">English and 22 Indic languages</p>
+            <div class="fact-body">
+              <p>Printed text in Assamese, Bengali, Bodo, Dogri, Gujarati, Hindi, Kannada, Kashmiri, Konkani, Maithili, Malayalam, Manipuri, Marathi, Nepali, Odia, Punjabi, Sanskrit, Santali, Sindhi, Tamil, Telugu and Urdu.</p>
+              <p class="fact-source">Handwriting works for English and 12 of them</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p>Built with IndicOCR from Bodhan AI / AI4Bharat. Local Bodhan model is the default reader for scanned pages. Sarvam Vision is the second reader on table pages.</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

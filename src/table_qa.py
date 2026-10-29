@@ -35,6 +35,11 @@ from src.table_geometry import Geometry
 from src.tables import Cell, Table, _is_numbering_row, check_table, clean, parse_number
 
 ENGINE_ORDER = ("sarvam", "bodhan", "qwen")
+
+
+def engine_order(lead: str = "sarvam") -> tuple[str, ...]:
+    """Preference between readings: the run's lead engine first."""
+    return (lead,) + tuple(e for e in ENGINE_ORDER if e != lead)
 FORMULA_KINDS = ("row_formula", "col_formula")
 HINT_KINDS = ("row_consensus", "col_consensus", "row_product")
 
@@ -77,6 +82,7 @@ def similarity(a: str, b: str) -> float:
 
 @dataclass
 class QCell:
+    """One table cell with every engine's reading and how it was decided."""
     r: int
     c: int
     rowspan: int
@@ -97,6 +103,7 @@ class QCell:
 
 @dataclass
 class QTable:
+    """A table after checking: its cells, the structure decision and its status (verified, repaired, needs review)."""
     reference: str
     table: Table
     cells: list[QCell]
@@ -244,9 +251,10 @@ def numbering_confirms(t: Table) -> bool:
     return False
 
 
-def choose_structure(readings: dict[str, Table], geometry: Geometry | None) -> tuple[str, dict]:
+def choose_structure(readings: dict[str, Table], geometry: Geometry | None,
+                     preference: tuple[str, ...] = ENGINE_ORDER) -> tuple[str, dict]:
     shapes = {e: (t.n_rows, t.n_cols) for e, t in readings.items()}
-    order = [e for e in ENGINE_ORDER if e in readings] + [e for e in readings if e not in ENGINE_ORDER]
+    order = [e for e in preference if e in readings] + [e for e in readings if e not in preference]
     info: dict = {"shapes": {e: list(s) for e, s in shapes.items()}, "geometry": geometry.to_dict() if geometry else None}
     agreed = len(set(shapes.values())) == 1
     if geometry is not None and geometry.confident:
@@ -273,14 +281,15 @@ def choose_structure(readings: dict[str, Table], geometry: Geometry | None) -> t
     return order[0], info
 
 
-def check(readings: dict[str, Table], evidence: Evidence | None = None) -> QTable:
+def check(readings: dict[str, Table], evidence: Evidence | None = None,
+          preference: tuple[str, ...] = ENGINE_ORDER) -> QTable:
     evidence = evidence or Evidence()
     squeezed = {}
     for e in list(readings):
         readings[e], removed = squeeze(readings[e])
         if removed:
             squeezed[e] = removed
-    ref_engine, structure = choose_structure(readings, evidence.geometry)
+    ref_engine, structure = choose_structure(readings, evidence.geometry, preference)
     if squeezed:
         structure["phantom_columns_removed"] = squeezed
     ref = readings[ref_engine]

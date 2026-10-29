@@ -96,9 +96,10 @@ class FakeBodhan:
     price_inr = 0.2
     fatal_reasons = FATAL_LANE_REASONS
 
-    def __init__(self, *, delay_s: float = 0.0, fatal_reason: str | None = None) -> None:
+    def __init__(self, *, delay_s: float = 0.0, fatal_reason: str | None = None, table: bool = False) -> None:
         self.delay_s = delay_s
         self.fatal_reason = fatal_reason
+        self.table = table  # every page also has a table block (one triage cannot see)
         self.calls = 0
         self.lock = threading.Lock()
 
@@ -111,6 +112,8 @@ class FakeBodhan:
         if self.fatal_reason:
             raise FatalError(Outcome(Verdict.FATAL, self.fatal_reason), 1)
         time.sleep(self.delay_s)
+        table = [{"order": 4, "label": "Table", "bbox_xyxy": [10, 92, 90, 99], "conf": 0.9,
+                  "text": "<table><tr><td>a</td><td>1</td></tr></table>"}] if self.table else []
         return {
             "choices": [{"message": {"content": "hello"}}],
             "blocks": [
@@ -118,7 +121,7 @@ class FakeBodhan:
                 {"order": 1, "label": "Folio", "bbox_xyxy": [0, 0, 100, 21], "conf": 0.9, "text": "RUNNING HEAD"},
                 {"order": 2, "label": "Section-title", "bbox_xyxy": [10, 30, 90, 40], "conf": 0.9, "text": "Title"},
                 {"order": 3, "label": "Paragraph", "bbox_xyxy": [10, 50, 90, 90], "conf": 0.9, "text": "hello"},
-            ],
+            ] + table,
             "usage": {"total_tokens": 10},
             "_infinite": {"degraded": []},
         }

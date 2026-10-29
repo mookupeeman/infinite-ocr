@@ -22,6 +22,7 @@ ROTATIONS = (0, 90, 180, 270)
 
 @dataclass(frozen=True)
 class PagePng:
+    """A rendered page saved as a PNG file."""
     page_num: int
     png_path: Path
     width: int
@@ -31,6 +32,7 @@ class PagePng:
 
 @dataclass(frozen=True)
 class RenderSpec:
+    """How to render a page: dpi, extra rotation, size cap and image format."""
     dpi: int = RENDER_DPI
     max_long_px: int = RENDER_MAX_LONG_PX
     rotate: int = 0  # extra clockwise rotation on top of the displayed page
@@ -40,6 +42,7 @@ class RenderSpec:
 
 @dataclass(frozen=True)
 class Rendered:
+    """A rendered page image with the transform from PDF points to pixels."""
     page_num: int
     data: bytes
     mime: str

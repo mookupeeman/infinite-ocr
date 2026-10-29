@@ -3,6 +3,9 @@ sarvamai>=0.1.36
 openai
 python-dotenv
 requests
+fastapi          # web app (python -m web)
+uvicorn[standard]
+python-multipart
 huggingface_hub>=1.0
 # benchmark (bench/) only
 numpy

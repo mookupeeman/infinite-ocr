@@ -84,6 +84,7 @@ class EventLog:
 
 
 class Manifest:
+    """SQLite record of one run: pages, per-engine tasks, Sarvam jobs and extra costs. It is what makes resume and cost accounting possible."""
     def __init__(self, path: Path) -> None:
         self.path = path
         path.parent.mkdir(parents=True, exist_ok=True)

@@ -106,6 +106,7 @@ class Limiter:
 
 
 class Verdict(Enum):
+    """How a response is judged: ok, retry, rate limited, degrade or fatal."""
     OK = "ok"
     RETRY = "retry"
     RATE_LIMITED = "rate_limited"
@@ -115,12 +116,14 @@ class Verdict(Enum):
 
 @dataclass(frozen=True)
 class Outcome:
+    """A response's verdict, the reason, and how long to wait before the next call."""
     verdict: Verdict
     reason: str = ""
     wait_s: float | None = None
 
 
 class CallFailed(RuntimeError):
+    """A call that could not be completed; carries its outcome and the number of attempts."""
     def __init__(self, outcome: Outcome, attempts: int) -> None:
         super().__init__(f"{outcome.verdict.value}: {outcome.reason} (attempts={attempts})")
         self.outcome = outcome
@@ -290,6 +293,7 @@ def call_with_retry(
 
 
 class TokenBucket:
+    """Token-bucket limiter for the older week-1 runners: blocks until a request may start."""
     def __init__(self, rate_per_min: float, capacity: float | None = None) -> None:
         if rate_per_min <= 0:
             raise ValueError("rate_per_min must be > 0")
@@ -318,6 +322,7 @@ class TokenBucket:
 
 
 class RateLimiter:
+    """A token bucket plus a cap on requests in flight, for the older week-1 runners."""
     def __init__(
         self,
         rate_per_min: float,

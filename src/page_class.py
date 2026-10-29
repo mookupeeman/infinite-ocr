@@ -32,6 +32,7 @@ MIN_TEXT = 20  # characters; fewer is "no text" (page numbers, stray marks)
 
 @dataclass(frozen=True)
 class PageClass:
+    """Born digital or scanned, and whether the page's text layer can be used as evidence."""
     render: str  # vector | raster
     text_layer: str  # unicode | legacy | hidden_ocr | none
     image_cover: float

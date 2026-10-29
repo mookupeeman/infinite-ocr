@@ -34,6 +34,7 @@ DPI = 150
 
 @dataclass
 class Geometry:
+    """Table structure read from the page image: ruling lines, column gaps and the row and column counts they give."""
     ruled: bool
     rows: int | None  # rows between horizontal rules (ruled tables only)
     cols: int | None  # columns between vertical rules, or between whitespace gaps
@@ -83,6 +84,8 @@ def otsu(gray: np.ndarray) -> int:
     w0 = cum / total
     with np.errstate(divide="ignore", invalid="ignore"):
         between = (mean * w0 - cum_mean / total) ** 2 / (w0 * (1 - w0))
+    if np.isnan(between).all():  # one grey level: nothing to split, so no ink (a blank page or photo)
+        return max(0, int(gray.min()) - 1)
     return int(np.nanargmax(between))
 
 

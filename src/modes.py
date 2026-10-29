@@ -4,12 +4,12 @@ Every mode keeps the validator rule: a model never writes a value no engine prod
 empties a cell over printed text, and never settles rare numerals or cells a proven text layer
 contradicts. Cells nothing could settle stay "needs review" with the primary engine's reading.
 
-    fast    engines only. Sarvam on every page, Bodhan on table pages, the free table check
+    fast    engines only. The lead engine on every page, the other on table pages, the free table check
             (aligned readings, ruling lines, formulas, proven text layer) and joins. No model calls.
     normal  fast + the image check by the measured rule, in format C (24 questions a sheet,
             cell-only snippets where the ruling lines give exact boxes, row strips elsewhere),
             up to 5 audits, a seam picture for uncertain joins. Default.
-    think   more readings: Bodhan on every page; the image check in format A (12 row strips a
+    think   more readings: both engines on every page; the image check in format A (12 row strips a
             sheet, slightly more accurate in the pilot); scanned ruled tables get a third model
             (2 of 3 must agree with an engine reading: 46 of 56 decided right, harm 0, against 38 of 44
             for the pair, on the pilot's 63 scanned ruled disputes); up to 15 audits; the free
@@ -17,6 +17,12 @@ contradicts. Cells nothing could settle stay "needs review" with the primary eng
 
 There is no built-in spending cap: a capped run leaves tables unchecked, which defeats the mode.
 `--max-cost-inr` on a run remains an explicit opt-in cap.
+
+The lead engine reads every page and supplies the document (reading order, prose, headings, each
+table's default reading); the other engine reads the table pages as the second reading. Sarvam leads
+by default. Bodhan leads when it runs locally on vLLM: free and faster than Sarvam. On the real-table
+benchmark neither engine is better overall (cells wrong, Sarvam / Bodhan: v1 85 / 107 of 1345,
+v2 225 / 174 of 2544; Sarvam better on headers and Tamil, Bodhan on scanned numbers).
 """
 
 from __future__ import annotations
@@ -24,7 +30,7 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 
-from src.config import TABLE_JUDGE_MODELS, TABLE_JUDGE_SINGLE
+from src.config import BODHAN_BACKEND, BODHAN_LEAD, TABLE_JUDGE_MODELS, TABLE_JUDGE_SINGLE
 
 # Measured on the 63 scanned ruled disputes of the 2026-10-21 pilot: (3.1, Luna, 3.5) 2 of 3 gives 46 right, harm 0,
 # against 41 right with Gemini 3.8 Flash as the third (which alone harmed 13 cells and costs twice as much).
@@ -45,8 +51,9 @@ class JudgeProfile:
 
 @dataclass(frozen=True)
 class Mode:
+    """One effort level: how pages are routed and how much checking Stage 2 does."""
     name: str
-    policy: str  # Stage 1 routing (lanes.POLICIES)
+    policy: str  # Stage 1 routing (lanes.POLICIES) when Sarvam leads; see policy_for
     image_check: bool  # any model calls in Stage 2
     judge: JudgeProfile
     audits: int  # per document
@@ -61,9 +68,28 @@ MODES = {
                    "free checks + image check (format C) on open cells"),
     "think": Mode("think", "both", True,
                   JudgeProfile(scanned_ruled=TABLE_JUDGE_MODELS + (THIRD_JUDGE,), vote=2, per_sheet=12, cell_only=False), 15,
-                  "Bodhan on every page + image check (format A, 2 of 3 on scans) + page-text check", text_check=True),
+                  "both engines on every page + image check (format A, 2 of 3 on scans) + page-text check", text_check=True),
 }
 DEFAULT_MODE = "normal"
+LEADS = ("sarvam", "bodhan")
+
+
+def default_lead() -> str:
+    """BODHAN_LEAD, or for auto: Bodhan when it runs locally on vLLM, else Sarvam."""
+    if BODHAN_LEAD in LEADS:
+        return BODHAN_LEAD
+    if BODHAN_BACKEND != "local":
+        return "sarvam"
+    from src.indic_local import runtime
+
+    return "bodhan" if runtime() == "vllm" else "sarvam"
+
+
+def policy_for(mode: Mode, lead: str) -> str:
+    """The mode's Stage 1 routing with this lead engine. Think reads both engines on every page either way."""
+    if lead not in LEADS:
+        raise ValueError(f"lead must be one of {LEADS}")
+    return "bodhan-primary" if lead == "bodhan" and mode.policy == "sarvam-primary" else mode.policy
 
 
 def get(name: str | None) -> Mode:
