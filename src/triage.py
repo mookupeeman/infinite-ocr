@@ -77,6 +77,7 @@ def char_script(ch: str) -> str | None:
 
 @dataclass
 class PageFlags:
+    """Free facts about one page: rotation, blank, script, tables, OCR mode and page class."""
     page: int
     rotate: int
     blank: bool

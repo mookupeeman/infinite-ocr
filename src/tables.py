@@ -94,6 +94,7 @@ def clean(text: str) -> str:
 
 @dataclass
 class Cell:
+    """One table cell: position, span and text."""
     r: int
     c: int
     rowspan: int
@@ -104,6 +105,7 @@ class Cell:
 
 @dataclass
 class Table:
+    """A parsed table: cells on a grid, with header rows."""
     cells: list[Cell]
     n_rows: int
     n_cols: int
@@ -301,6 +303,7 @@ def parse_tables(text: str, source: dict | None = None) -> list[Table]:
 
 @dataclass
 class Check:
+    """One arithmetic check (a printed formula or a consensus rule) and whether it held."""
     kind: str
     row: int | None
     col: int | None
@@ -568,6 +571,7 @@ def text_layer_match(table: Table, layer: Counter) -> dict | None:
 
 @dataclass
 class Fusion:
+    """The result of merging two engines' readings of one table."""
     table: Table
     replaced: list[dict]
     unresolved: list[dict]
@@ -630,6 +634,7 @@ def repeated_header_rows(first: Table, second: Table) -> int:
 
 @dataclass
 class Continuation:
+    """Evidence that a table continues from one page onto the next."""
     score: int
     decision: str  # join | separate | ambiguous
     reasons: list[str]

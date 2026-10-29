@@ -27,6 +27,7 @@ LABEL_FONT = ImageFont.load_default(size=20)
 
 @dataclass
 class Strip:
+    """A cut-out of one table row or cell for the image check."""
     qid: str
     image: Image.Image
     exact: bool  # the target cell is boxed in red
@@ -34,6 +35,7 @@ class Strip:
 
 @dataclass
 class Sheet:
+    """Several numbered strips laid out in one image, with the ids of their questions."""
     png: bytes
     qids: list[str]
     exact: list[bool]

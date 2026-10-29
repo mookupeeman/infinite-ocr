@@ -83,6 +83,7 @@ SARVAM_KIND: dict[str, tuple[str, int | None]] = {
 
 @dataclass
 class Block:
+    """One block of a page in the shared format: kind, text and a 0-1 box in the upright page frame, whichever engine read it."""
     page: int
     engine: str
     order: int

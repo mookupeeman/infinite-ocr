@@ -216,6 +216,7 @@ def bodhan_request(
 
 @dataclass
 class PageOcrResult:
+    """Result of reading one page with Bodhan (week-1 runners): markdown, blocks, token counts and any error."""
     page_num: int
     markdown: str = ""
     blocks: list[object] = field(default_factory=list)
@@ -230,6 +231,7 @@ class PageOcrResult:
 
 @dataclass
 class BodhanRun:
+    """Result of a week-1 Bodhan run over several pages."""
     skipped: bool = False
     auth_failed: bool = False
     error: str | None = None

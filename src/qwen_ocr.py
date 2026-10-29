@@ -49,6 +49,7 @@ class QwenModelMissing(RuntimeError):
 
 @dataclass
 class PageOcrResult:
+    """Result of reading one page with the Qwen model (week-1 runners)."""
     page_num: int
     markdown: str = ""
     cache_hit: bool = False
@@ -62,6 +63,7 @@ class PageOcrResult:
 
 @dataclass
 class QwenRun:
+    """Result of a week-1 Qwen run over several pages."""
     skipped: bool = False
     model_missing: bool = False
     error: str | None = None

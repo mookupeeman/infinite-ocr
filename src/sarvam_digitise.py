@@ -58,6 +58,7 @@ _CLIENT: SarvamAI | None = None
 
 @dataclass
 class DigitiseResult:
+    """What a Sarvam digitise call produced: job id, status and the downloaded and unzipped files."""
     skipped: bool = False
     cache_hit: bool = False
     job_id: str | None = None

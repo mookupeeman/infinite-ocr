@@ -44,6 +44,7 @@ def kind_of(text: str) -> str:
 
 @dataclass
 class Signature:
+    """A table segment's fingerprint: columns, header, content kinds and serial numbers."""
     n_cols: int
     header: list[str]  # header text per column (all header rows joined)
     kinds: list[str]  # dominant content kind per column, body rows
@@ -89,6 +90,7 @@ def signature(table: Table, geometry: Geometry | None, caption: str = "") -> Sig
 
 @dataclass
 class JoinDecision:
+    """Whether two segments are one table, with the score, reasons and column mapping."""
     score: float
     decision: str  # join | separate | uncertain
     reasons: list[str] = field(default_factory=list)
