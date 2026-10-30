@@ -12,6 +12,7 @@ would otherwise resend 429/408/409/5xx twice behind our back, and a resent
 
 from __future__ import annotations
 
+import inspect
 import json
 import os
 import shutil
@@ -20,6 +21,7 @@ import threading
 import time
 import zipfile
 from dataclasses import dataclass, field
+from importlib import metadata
 from pathlib import Path
 from typing import Any
 
@@ -91,6 +93,20 @@ def _client() -> SarvamAI:
     if _CLIENT is None:
         _CLIENT = SarvamAI(api_subscription_key=SARVAM_API_KEY)
     return _CLIENT
+
+
+def check_sdk() -> None:
+    """Fail before any page is sent if the installed sarvamai lacks the call made here.
+
+    Newer releases renamed or dropped it; without this check every Sarvam request fails and the run
+    still ends "complete" with only the other engine's reading.
+    """
+    digitise = getattr(_client().doc_ai, "digitise", None)
+    if digitise is None or "output_format" not in inspect.signature(digitise).parameters:
+        raise RuntimeError(
+            f"sarvamai {metadata.version('sarvamai')} has no doc_ai.digitise(output_format=...); "
+            "run: pip install 'sarvamai==0.1.36'"
+        )
 
 
 def _as_dict(obj: Any) -> dict:

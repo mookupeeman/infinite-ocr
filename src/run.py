@@ -179,6 +179,11 @@ class Run:
             missing.append("OPENROUTER_API_KEY")
         if missing:
             raise RunError(f"missing keys in .env: {', '.join(missing)}")
+        if "sarvam" in engines and self.sarvam is sarvam_api:
+            try:
+                sarvam_api.check_sdk()
+            except RuntimeError as exc:
+                raise RunError(str(exc)) from exc
         return ctx
 
     # -- run --------------------------------------------------------------
