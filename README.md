@@ -86,14 +86,27 @@ src/        the pipeline
   langid.py, text_qa.py        language identification, comparison of the two engines' prose
   modes.py, estimate.py        the effort levels, and the cost and time estimate
 web/        the local web app: server.py (API), jobs.py, gpu.py (model sleep and wake), static/ (the page)
-bench/      table benchmark with planted errors, and its metrics
-tests/      unit tests: no API calls, no GPU
+bench/      our own table benchmark (tables we wrote, so the answers are known), and its scoring
+tests/      quick code checks: no API calls, no GPU
 samples/    public PDFs used for testing
 docs/       architecture report (PDF)
 serve-bodhan-vllm.sh   starts the local model server (the web app does this for you)
 ```
 
-## Tests
+## Benchmark (`bench/`) and tests (`tests/`)
+
+**Why we built our own benchmark.** To score an OCR tool you need the right answer to compare against. For most Indian-language PDFs we did not have one: no clean, checked copy of the table exists. So `bench/` makes its own.
+
+- **We write the table first.** `bench/gen.py` invents small tables (names, amounts, dates, merged headers, and so on) in Hindi, Marathi, Tamil, Telugu, Bengali and English. Because we wrote every cell, we know the correct answer for every cell.
+- **Then we turn it into a PDF.** `bench/render.py` draws the table as a real-looking PDF, and also as a scan-like copy, so we can see how much a scan hurts.
+- **Then we run the pipeline and mark it.** `bench/metrics.py` compares what the pipeline read against what we wrote, and gives a score for how many cells are right and how well the table shape was kept.
+- **Pretend readers, no cost.** `bench/engines.py` can stand in for Sarvam and Bodhan and plant known mistakes in their answers. This lets us test the checker for free, including the case where both readers make the same mistake, which agreement alone cannot catch. `python -m bench.run_bench` runs this.
+- **Real readers, a small paid run.** `bench/real.py` sends the benchmark pages to the real Sarvam and Bodhan. `bench/calibrate.py` then compares the real mistakes with what the pretend readers assumed, and `bench/pilot.py` helps pick the vision model that answers the checker's questions best for the price.
+- **A real book as the answer key.** `bench/wikisource_eval.py` scores a finished run against a proofread Wikisource book, which gives a true answer for real scanned pages.
+
+Results are saved in `bench/results/`. Benchmark PDFs are in `bench/real/`. Only `bench/real.py` and `bench/pilot.py` spend money, and both have a `--dry-run` that shows the cost first.
+
+**What `tests/` is for.** `tests/` are quick checks that the code still works. They use no API calls and no GPU, so they cost nothing and can run any time. They are not a measure of OCR accuracy. `bench/` does that.
 
 ```bash
 python -m unittest discover -s tests -t .
