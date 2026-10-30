@@ -1,5 +1,5 @@
 pymupdf
-sarvamai>=0.1.36
+sarvamai==0.1.36  # exact: 0.1.37 dropped digitise(output_format), 0.1.40 dropped digitise
 openai
 python-dotenv
 requests

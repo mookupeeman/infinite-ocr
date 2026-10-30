@@ -114,6 +114,21 @@ class SarvamClassifyTest(unittest.TestCase):
         self.assertEqual(sarvam_digitise.first_poll_delay(2), 5.0)
         self.assertEqual(sarvam_digitise.first_poll_delay(10), 10.0)
 
+    def test_sdk_without_the_digitise_call_is_refused_up_front(self):
+        class New:  # sarvamai 0.1.40: digitise became parse
+            def parse(self, *, file): ...
+
+        class Old:  # sarvamai 0.1.36
+            def digitise(self, *, file, output_format): ...
+
+        for doc_ai, ok in ((New(), False), (Old(), True)):
+            with mock.patch.object(sarvam_digitise, "_client", return_value=mock.Mock(doc_ai=doc_ai)):
+                if ok:
+                    sarvam_digitise.check_sdk()
+                else:
+                    with self.assertRaisesRegex(RuntimeError, "sarvamai==0.1.36"):
+                        sarvam_digitise.check_sdk()
+
 
 if __name__ == "__main__":
     unittest.main()

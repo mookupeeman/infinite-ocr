@@ -1,0 +1,134 @@
+{
+ "_about": "Ramanama (82 scanned pages, Hindi, hi.wikisource.org index विषयसूची:Ramanama.pdf, all 82 pages validated), read on the RTX 5070 Laptop with the vLLM server already awake, Bodhan leading. Scored by bench/wikisource_eval.py. Each mode ran cold (its own empty cache).",
+ "runs": {
+  "fast": {
+   "seconds_reading": 51.2,
+   "seconds_total": 54,
+   "inr": 0.0,
+   "pages": 79,
+   "strict_cer": 0.07222222222222222,
+   "covered_cer": 0.058063600227143665,
+   "strict_wer": 0.21243497146320522,
+   "covered_wer": 0.19738370624779028,
+   "median_covered_cer": 0.03987730061349693,
+   "overrun_over_1_5": [
+    42
+   ],
+   "covered_cer_over_10pct": [
+    4,
+    8,
+    9,
+    14,
+    41
+   ],
+   "errors_by_kind": {
+    "digraph": 0.3243492282884128,
+    "vowel sign": 0.378253858557936,
+    "digits and punctuation": 0.14121170237272518,
+    "other": 0.15618521078092606
+   }
+  },
+  "normal": {
+   "seconds_reading": 53.3,
+   "seconds_total": 56,
+   "inr": 0.0,
+   "pages": 79,
+   "strict_cer": 0.07220329358319137,
+   "covered_cer": 0.058044671588112814,
+   "strict_wer": 0.21218243345623516,
+   "covered_wer": 0.19713116824082025,
+   "median_covered_cer": 0.039909638554216864,
+   "overrun_over_1_5": [
+    42
+   ],
+   "covered_cer_over_10pct": [
+    4,
+    8,
+    9,
+    14,
+    41
+   ],
+   "errors_by_kind": {
+    "digraph": 0.3249596681262964,
+    "vowel sign": 0.3770454021663978,
+    "digits and punctuation": 0.14081585618806178,
+    "other": 0.15717907351924407
+   }
+  },
+  "think": {
+   "seconds_reading": 86.4,
+   "seconds_total": 91,
+   "inr": 41.0,
+   "pages": 79,
+   "strict_cer": 0.0722506151807685,
+   "covered_cer": 0.05809199318568995,
+   "strict_wer": 0.21258649426738724,
+   "covered_wer": 0.19753522905197232,
+   "median_covered_cer": 0.039909638554216864,
+   "overrun_over_1_5": [
+    42
+   ],
+   "covered_cer_over_10pct": [
+    4,
+    8,
+    9,
+    14,
+    41
+   ],
+   "errors_by_kind": {
+    "digraph": 0.3252706749596867,
+    "vowel sign": 0.378253858557936,
+    "digits and punctuation": 0.14121170237272518,
+    "other": 0.15526376410965215
+   }
+  },
+  "bodhan_reading_alone": {
+   "pages": 79,
+   "strict_cer": 0.06808631459398069,
+   "covered_cer": 0.0560287715313269,
+   "strict_wer": 0.20965705338653468,
+   "covered_wer": 0.19627253901712208,
+   "median_covered_cer": 0.03987730061349693,
+   "overrun_over_1_5": [
+    42
+   ],
+   "covered_cer_over_10pct": [
+    4,
+    8,
+    9,
+    41
+   ],
+   "errors_by_kind": {
+    "digraph": 0.3257523546979095,
+    "vowel sign": 0.3781300252699288,
+    "digits and punctuation": 0.14128187456926258,
+    "other": 0.15483574546289916
+   }
+  },
+  "sarvam_reading_alone": {
+   "pages": 79,
+   "strict_cer": 0.07830777967064168,
+   "covered_cer": 0.06341094075335983,
+   "strict_wer": 0.22051618768624678,
+   "covered_wer": 0.2031920804081014,
+   "median_covered_cer": 0.04141656662665066,
+   "overrun_over_1_5": [
+    42
+   ],
+   "covered_cer_over_10pct": [
+    2,
+    4,
+    8,
+    9,
+    41,
+    81
+   ],
+   "errors_by_kind": {
+    "digraph": 0.37616556743234025,
+    "vowel sign": 0.3632021833068001,
+    "digits and punctuation": 0.11371389583807141,
+    "other": 0.14691835342278828
+   }
+  }
+ }
+}
