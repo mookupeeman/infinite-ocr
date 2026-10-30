@@ -57,10 +57,10 @@ Drop a file, choose the effort, press *Start reading*. The model loads onto the 
 
 ```bash
 python -m src.run samples/marathi-fiscal-report.pdf --mode normal
-python -m src.run FILE.pdf --pages 10-30 --max-cost-inr 20 --lead sarvam
+python -m src.run FILE.pdf --pages 10-30 --max-cost-inr 20 --lead bodhan
 python -m src.run --help
 ```
-
+--mode decides the effort level. --lead decides which out of Bodhan or Sarvam will be the lead engines. --pages allows you to run the pipeline on specific pages.  --max-cost-inr caps the total cost of running. 
 Results go to `out/docs/<name>-<hash>/`: `doc.md` (the document), `tables/` (HTML, CSV and JSON for each table), `figures/` and `report.md` (what was checked, settled and left for review).
 
 ## Effort levels
