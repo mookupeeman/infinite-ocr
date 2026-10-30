@@ -40,7 +40,11 @@ cp .env.example .env            # then fill in the keys below
 - **Hosted API.** Leave `BODHAN_BACKEND=api` and set `BODHAN_API_KEY`. It is limited to 8 requests a minute.
 
 ## Run
+**Initialize the vLLM local model for CUDA. Not needed for MLX model**
 
+```bash
+./serve-bodhan-vllm.sh                  # Start vLLM server on http://127.0.0.1:8000
+```
 **Web app:**
 
 ```bash
