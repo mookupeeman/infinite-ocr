@@ -1,18 +1,32 @@
-"""Cost and time of a run, for all three modes, before anything is sent. No API calls.
+"""Guess cost and time for all three modes before any API call. No network use.
 
-Preflight reads up to 40 pages, one at a random place in each stretch of the selection (all
-of them for short documents), a few tens of milliseconds each:
+These numbers are rough. Do not treat them as a bill.
 
-    page class     born digital or scanned, and the kind of text layer (page_class.py)
-    table page     born digital: PyMuPDF's table finder, or 60+ numbers on the page;
-                   scanned: a ruled grid in a small render (unruled scanned tables are not
-                   visible this way, so they only widen the upper end of the range)
+Cost estimate procedure (estimate.preflight, then mode_estimate for each mode)
+    Step 1 — Preflight. Open the PDF with PyMuPDF only. Pick up to 40 pages spread through
+    the document (every page if the document is short). For each sampled page, record whether
+    it is born-digital or scanned and the text-layer type. Mark a page as a likely table page
+    if PyMuPDF finds a table, if the page has at least 60 number-like words, or if a small
+    scan render shows a ruled grid. Scale those counts up to the full page selection and
+    turn sample hits into a low-high range of table pages per class (vector/unicode, raster,
+    and so on).
 
-The share found in the sample is scaled to the whole selection. Each mode's cost and time
-then follow from measured coefficients (estimate_coefficients.json): engine prices and
-speeds, open table cells per table page by page class, rupees per question per model, and
-sheet latency. Every number is a range. Modes have no spending cap.
-After a run, `record` appends estimate and actual to out/estimates.jsonl for refitting.
+    Step 2 — OCR rupees. Read the mode and lead engine. From lanes routing (modes.policy_for),
+    count how many pages Sarvam would bill and how many Bodhan would bill (lead reads every
+    page; the other reads table pages only, except think reads both on every page). Multiply
+    page counts by sarvam_inr_per_page and bodhan_inr_per_page from estimate_coefficients.json.
+    Local Bodhan uses zero rupees per page in this math.
+
+    Step 3 — Vision rupees (normal and think only). For each table-page class, multiply the
+    low and high table-page counts by the low and high open-cell counts in
+    questions_per_table_page. Price each cell with table_judge.question_cost for the models
+    that mode uses (one model on digital tables, more on scanned ruled tables; think adds a
+    third on scans). Add that to checks_inr low and high. Fast mode skips this step.
+
+    Step 4 — Total. total_inr is Sarvam plus Bodhan plus checks, each as a low-high pair.
+    Time minutes use the same preflight table counts plus pages-per-minute and sheet latency
+    from the coefficients (parallel vision calls use AGENT_MAX_INFLIGHT).
+
 """
 
 from __future__ import annotations
@@ -220,7 +234,7 @@ def render(pre: Preflight, estimates: list[dict], chosen: str) -> str:
 
 
 def record(path: Path | None, *, document: str, mode: str, estimate: dict, actual: dict) -> None:
-    """Append estimate vs actual (out/estimates.jsonl) so the coefficients can be refitted."""
+    """Append one JSON line (default out/estimates.jsonl): pre-run estimate and actual rupees, minutes, table pages."""
     path = path or OUT_DIR / "estimates.jsonl"
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("a", encoding="utf-8") as fh:

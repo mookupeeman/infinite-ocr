@@ -1,19 +1,79 @@
 """Fast / Normal / Think: one switch for how much each document run reads and checks.
 
-Every mode keeps the validator rule: a model never writes a value no engine produced, never
+Every mode keeps the validator rule: a verifier model never writes a value no engine produced, never
 empties a cell over printed text, and never settles rare numerals or cells a proven text layer
 contradicts. Cells nothing could settle stay "needs review" with the primary engine's reading.
 
-    fast    engines only. The lead engine on every page, the other on table pages, the free table check
-            (aligned readings, ruling lines, formulas, proven text layer) and joins. No model calls.
-    normal  fast + the image check by the measured rule, in format C (24 questions a sheet,
-            cell-only snippets where the ruling lines give exact boxes, row strips elsewhere),
-            up to 5 audits, a seam picture for uncertain joins. Default.
-    think   more readings: both engines on every page; the image check in format A (12 row strips a
-            sheet, slightly more accurate in the pilot); scanned ruled tables get a third model
-            (2 of 3 must agree with an engine reading: 46 of 56 decided right, harm 0, against 38 of 44
-            for the pair, on the pilot's 63 scanned ruled disputes); up to 15 audits; the free
-            page-text check (src/text_qa.py): the two engines' prose compared word by word.
+    fast    Two OCR engines only. The lead engine reads every page; the other reads pages with
+            tables. Stage 2 lines up both readings and runs free checks: table formulas, ruling
+            lines, trusted PDF text, and joins across pages. No vision or LLM calls.
+
+    Note — free checks (Stage 2: src/table_qa.py and related modules; no API calls; every mode):
+            Line up both engine readings of each table in one grid, cell by cell. Accept a cell
+            when the readings match, when they differ only in spaces, dashes, or quotes, or when
+            only one engine returned that cell.
+
+            Printed formulas. When readings disagree on a number, pick the reading for which the
+            table's own formulas hold (for example column numbers १ २ ३ or a header like
+            एकूण (४ ते ७), "sum columns 4 through 7"). Every formula in that cell's row and
+            column must pass, not just fewer failures overall.
+
+            PDF text (born-digital only). Selectable text sits under the print. On cells both
+            engines already agree on, check that the PDF text contains the same value. The layer
+            is proven only after at least five such cells were tested and at least 90% matched.
+            A disputed value cell settles when the proven layer contains exactly one of the two
+            engine readings (look up both; only one may match). layer_repair.py learns legacy
+            font mappings from agreed cells, then retries the check.
+
+            Totals without a printed formula. Rows or columns or Total with no
+            printed formula: check whether the numbers add up. Flag cells where one engine's
+            totals work for most rows and the other engine's do not.
+
+            Grid shape. table_geometry.py reads the rendered page image (scans included, after
+            deskew) for ruling lines. When detection is confident, compare that row and column
+            count to each engine (choose_structure in table_qa.py). Flag a structure problem when
+            no grid matches the lines or both grids are too small. Unruled tables or faint lines
+            give weak geometry; fall back to matching engine shapes or the table's column-number
+            row.
+
+            Two engine versions. Sarvam and Bodhan may return the same table as two HTML grids.
+            tables.fuse keeps each cell from whichever engine passes more formulas, totals, and
+            text-layer checks.
+
+            Tables across pages. table_join.py compares the last table on page N with the first
+            on page N+1. Merge when columns line up, headers repeat or continue, serial numbers
+            follow on, or the PDF marks the table as continued.
+
+    normal  Same page routing as fast (lead engine on every page, the other on table pages).
+            Vision verification (table_judge.py through agent.py, usually OpenRouter): runs only
+            on cells still marked open after free checks. The model sees a crop of the printed
+            table plus the two engine readings as candidates A and B. It may pick A, B, neither,
+            or unreadable. The pipeline accepts an answer only if it equals a value Sarvam or
+            Bodhan already returned.
+
+            By page type. Born-digital tables: one vision model per open cell. 
+            For scanned tables with clear ruling lines: two models from different families must read the same value,
+            and that value must match an engine reading. Scanned tables without ruling lines: no
+            vision call; those cells stay for review.
+
+            How images are sent. Up to 24 open cells per API call. When the grid matches the
+            ruling lines, each question uses a small crop around that cell. Otherwise the model
+            sees a horizontal strip of whole rows. Up to 5 blind audits per document on agreed
+            cells tagged risky in table_qa._risks (for example proven PDF text disagrees with
+            the reading, rare or look-alike numerals, text in an empty cell or blank where text
+            was read, a non-number in a mostly numeric column, or a total or formula hint that
+            still fails). assemble.py sums RISK_WEIGHT per cell and audits the highest scores
+            document-wide; an audit can flag a cell but never change its value. When table_join
+            is unsure whether two segments continue across a page break, one seam picture goes
+            to the model. Default.
+
+    think   Stage 1 runs both engines on every page, not only table pages. Open cells use the
+            same image tie-break as normal, with a different layout: wider row strips and at most
+            12 cells per API call (no per-cell-only crops). On scanned ruled tables a third
+            vision model joins; two of the three must agree on the same engine reading. Up to 15
+            audits per document, chosen the same way as normal (RISK_WEIGHT in table_qa.py).
+            After tables, src/text_qa.py compares the two engines' prose on each page word by
+            word (no API calls). Disputes the free prose rules cannot settle stay for review.
 
 There is no built-in spending cap: a capped run leaves tables unchecked, which defeats the mode.
 `--max-cost-inr` on a run remains an explicit opt-in cap.
@@ -65,10 +125,10 @@ MODES = {
     "fast": Mode("fast", "sarvam-primary", False, JudgeProfile(), 0,
                  "engines + free checks; no model calls"),
     "normal": Mode("normal", "sarvam-primary", True, JudgeProfile(per_sheet=24, cell_only=True), 5,
-                   "free checks + image check (format C) on open cells"),
+                   "free checks + vision tie-break on open cells (24/sheet, per-cell crops when possible)"),
     "think": Mode("think", "both", True,
                   JudgeProfile(scanned_ruled=TABLE_JUDGE_MODELS + (THIRD_JUDGE,), vote=2, per_sheet=12, cell_only=False), 15,
-                  "both engines on every page + image check (format A, 2 of 3 on scans) + page-text check", text_check=True),
+                  "both engines on every page + vision tie-break (12/sheet, row strips) + third vote on scans + prose compare", text_check=True),
 }
 DEFAULT_MODE = "normal"
 LEADS = ("sarvam", "bodhan")
